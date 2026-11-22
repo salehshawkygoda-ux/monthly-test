@@ -1,0 +1,3540 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" translate="no" class="notranslate">
+<head>
+<meta charset="UTF-8">
+<meta name="google" content="notranslate">
+<meta http-equiv="Content-Language" content="ar">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الاختبار الشهري – اللغة العربية | Monthly Arabic Test</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--v:#6d28d9;--v2:#8b5cf6;--b:#2563eb;--c:#ff6b4a;--y:#ffc233;--t:#10b4a0;--p:#ec4899;--g:#16a34a;--r:#dc2626;
+--ink:#1e1b4b;--muted:#64748b;--line:#e4e2f3;--bg:#f6f4ff}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Cairo',Tahoma,Arial,sans-serif;color:var(--ink);line-height:1.7;
+ background:var(--bg) radial-gradient(circle at 10% 10%,#ffe9f3 0,transparent 30%),radial-gradient(circle at 90% 20%,#e0f2fe 0,transparent 30%),radial-gradient(circle at 50% 100%,#fef3c7 0,transparent 35%);background-attachment:fixed;min-height:100vh;padding-bottom:80px}
+.wrap{max-width:900px;margin:0 auto;padding:14px}
+.en{direction:ltr;text-align:left;color:var(--muted);font-size:.86rem;display:block;font-weight:600}
+.center{text-align:center}.center .en{text-align:center}
+.hide{display:none!important}
+header.top{background:linear-gradient(120deg,#6d28d9,#2563eb 55%,#10b4a0);color:#fff;padding:20px 16px 26px;text-align:center;border-radius:0 0 28px 28px;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+header.top .sch{font-weight:700;opacity:.95}
+header.top h1{margin:4px 0 0;font-size:1.7rem;font-weight:900}
+header.top .en{color:#e0e7ff;text-align:center}
+.card{background:#fff;border-radius:20px;box-shadow:0 6px 22px rgba(76,29,149,.08);padding:20px;margin:16px 0;border:1px solid var(--line)}
+h2,h3{margin-top:0}
+label{font-weight:800;display:block;margin-top:14px}
+input[type=text],input[type=password],select,textarea{width:100%;padding:12px 14px;border:2px solid var(--line);border-radius:14px;font-size:1.05rem;font-family:inherit;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--v2);box-shadow:0 0 0 4px #ede9fe}
+.btn{background:linear-gradient(135deg,var(--v),var(--b));color:#fff;border:0;border-radius:14px;padding:12px 22px;font-size:1.05rem;font-family:inherit;font-weight:800;cursor:pointer;box-shadow:0 4px 12px rgba(79,70,229,.3);transition:transform .1s}
+.btn:hover{transform:translateY(-2px)}.btn:active{transform:none}
+.btn.big{font-size:1.3rem;padding:15px 34px}
+.btn.sec{background:#fff;color:var(--v);border:2px solid var(--v2);box-shadow:none}
+.btn.gold{background:linear-gradient(135deg,#f59e0b,#ff6b4a)}
+.btn.green{background:linear-gradient(135deg,#16a34a,#10b4a0)}
+.btn.red{background:linear-gradient(135deg,#dc2626,#ec4899)}
+.btn.sm{padding:6px 12px;font-size:.88rem;border-radius:10px}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.sections{display:flex;gap:10px}
+.sections button{flex:1;padding:12px 0;font-size:1.4rem;font-weight:900;border:3px solid var(--line);background:#fff;border-radius:16px;cursor:pointer;font-family:inherit;color:var(--ink)}
+.sections button:nth-child(1).on{background:#ff6b4a}.sections button:nth-child(2).on{background:#ffc233}.sections button:nth-child(3).on{background:#10b4a0}.sections button:nth-child(4).on{background:#8b5cf6}
+.sections button.on{color:#fff;border-color:transparent;transform:scale(1.05)}
+.grades{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.grades button{padding:10px 0;border:3px solid var(--line);background:#fff;border-radius:16px;cursor:pointer;font-family:inherit;font-weight:900;font-size:1.35rem;color:var(--ink);line-height:1.2}
+.grades button small{display:block;font-size:.7rem;font-weight:700;color:var(--muted)}
+.grades button.on{background:linear-gradient(135deg,var(--v),var(--b));color:#fff;border-color:transparent}
+.grades button.on small{color:#e0e7ff}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:6px 0 4px}
+.step{border-radius:16px;padding:10px;text-align:center;color:#fff;font-weight:800;font-size:.95rem}
+.step b{display:block;font-size:1.7rem}
+.step .en{color:#fff;opacity:.9;text-align:center;font-size:.75rem}
+.err{color:var(--r);font-weight:800;min-height:1.4em}
+.closed{background:#fee2e2;border:2px solid #fca5a5;color:#991b1b;border-radius:14px;padding:12px;font-weight:800;text-align:center}
+/* exam */
+.bar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.bar .wrap{display:flex;align-items:center;gap:12px;padding:8px 14px}
+.timer{font-size:1.5rem;font-weight:900;color:#fff;direction:ltr;font-variant-numeric:tabular-nums;background:linear-gradient(135deg,var(--t),var(--b));padding:2px 16px;border-radius:14px}
+.timer.warn{background:linear-gradient(135deg,var(--r),var(--p));animation:pulse 1s infinite}
+@keyframes pulse{50%{transform:scale(1.07)}}
+.prog{flex:1;height:12px;background:#ede9fe;border-radius:10px;overflow:hidden}
+.prog i{display:block;height:100%;background:linear-gradient(90deg,var(--y),var(--c),var(--p));width:0;transition:width .3s}
+.who{font-size:.85rem;color:var(--muted);font-weight:700;white-space:nowrap}
+.qhead{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.qnum{background:linear-gradient(135deg,var(--c),var(--p));color:#fff;border-radius:12px;padding:2px 14px;font-weight:900}
+.tag{font-size:.75rem;border-radius:20px;padding:2px 10px;font-weight:800;color:#fff}
+.qtext{font-size:1.3rem;font-weight:800;margin:12px 0 2px}
+.qtext .s{font-family:'Amiri',serif;font-size:1.6rem;color:var(--v);font-weight:700}
+.opts{display:grid;gap:10px;margin-top:14px;grid-template-columns:1fr 1fr}
+@media(max-width:560px){.opts{grid-template-columns:1fr}}
+.opt{border:3px solid var(--line);border-radius:16px;padding:10px 12px;cursor:pointer;font-size:1.35rem;font-family:'Amiri',serif;background:#fff;text-align:right;display:flex;align-items:center;gap:10px;color:var(--ink)}
+.opt .l{flex:none;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cairo';font-weight:900;font-size:1rem;color:#fff}
+.opt:hover{border-color:var(--v2);background:#faf8ff}
+.opt.sel{border-color:var(--v);background:#ede9fe;box-shadow:0 0 0 3px #ddd6fe}
+.passage{background:linear-gradient(135deg,#fff7e6,#fffbeb);border:2px solid #fcd34d;border-radius:16px;padding:14px 18px;font-family:'Amiri',serif;font-size:1.42rem;line-height:2.1;margin:12px 0}
+.passage:before{content:"📖 النص · Text";display:block;font-family:Cairo;font-size:.85rem;font-weight:800;color:#b45309}
+.ansIn{font-size:1.45rem!important;font-family:'Amiri',serif!important;margin-top:12px}
+.tiles{display:flex;flex-wrap:wrap;gap:8px;min-height:58px;padding:10px;border:3px dashed #c4b5fd;border-radius:16px;margin:10px 0;background:#faf8ff;align-items:center}
+.tiles.src{border-style:solid;border-color:var(--line);background:#fff}
+.tile{background:linear-gradient(135deg,#fef3c7,#fde68a);border:2px solid #f59e0b;border-radius:12px;padding:4px 16px;font-family:'Amiri',serif;font-size:1.45rem;cursor:pointer;font-weight:700}
+.tile.used{visibility:hidden}
+.pics{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:flex-end;background:linear-gradient(135deg,#ecfeff,#f0fdf4);border:2px solid #a7f3d0;border-radius:18px;padding:14px;margin:12px 0;position:relative}
+.pic svg{width:120px;height:120px;display:block}
+.pics.far .pic svg{width:70px;height:70px;opacity:.85}
+.pics.far{padding-top:34px}
+.farTag{position:absolute;top:8px;right:12px;background:#0f766e;color:#fff;border-radius:20px;padding:0 12px;font-size:.8rem;font-weight:800}
+.kb{display:none;margin-top:8px;background:#f5f3ff;border-radius:14px;padding:8px;direction:rtl}
+.kb.show{display:block}
+.kb .row{display:flex;flex-wrap:wrap;gap:4px;justify-content:center;margin:3px 0}
+.kb button{min-width:36px;padding:7px 6px;font-size:1.2rem;border:1px solid #ddd6fe;background:#fff;border-radius:9px;cursor:pointer;font-family:inherit}
+.kb button.wide{min-width:120px}
+.kbt{font-size:.88rem;margin-top:8px;background:#ede9fe;border:0;color:var(--v);border-radius:10px;padding:4px 12px;cursor:pointer;font-family:inherit;font-weight:800}
+.navq{display:flex;justify-content:space-between;gap:10px}
+.dots{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:14px 0}
+.dots button{width:36px;height:36px;border-radius:50%;border:2px solid var(--line);background:#fff;font-weight:800;cursor:pointer;font-family:inherit;color:var(--ink)}
+.dots button.done{background:linear-gradient(135deg,#34d399,#10b4a0);border-color:transparent;color:#fff}
+.dots button.cur{outline:3px solid var(--c);outline-offset:2px}
+.legend{text-align:center;font-size:.8rem;color:var(--muted)}
+.modal{position:fixed;inset:0;background:rgba(30,27,75,.5);display:none;align-items:center;justify-content:center;z-index:80;padding:16px}
+.modal.show{display:flex}
+.modal .box{background:#fff;border-radius:20px;padding:22px;max-width:560px;width:100%;max-height:90vh;overflow:auto}
+.helpBtn{position:fixed;bottom:16px;left:16px;z-index:40;background:linear-gradient(135deg,var(--p),var(--c));color:#fff;border:0;border-radius:30px;padding:10px 16px;font-family:inherit;font-weight:800;cursor:pointer;box-shadow:0 6px 16px rgba(236,72,153,.35)}
+/* results */
+.score{font-size:3.6rem;font-weight:900;margin:0;line-height:1.2}
+.pass{color:var(--g)} .fail{color:var(--r)}
+.badge{display:inline-block;padding:4px 20px;border-radius:30px;color:#fff;font-weight:900;font-size:1.2rem}
+.badge.pass{background:linear-gradient(135deg,#16a34a,#10b4a0)}.badge.fail{background:linear-gradient(135deg,#dc2626,#ec4899)}
+.sent{display:inline-block;margin-top:10px;border-radius:20px;padding:2px 14px;font-size:.85rem;font-weight:800}
+table.br{width:100%;border-collapse:collapse;margin-top:10px;font-size:.95rem}
+table.br td,table.br th{border:1px solid var(--line);padding:6px 8px;text-align:right;vertical-align:middle}
+table.br th{background:#f5f3ff}
+.meter{height:11px;background:#eee;border-radius:6px;overflow:hidden;min-width:60px}
+.meter i{display:block;height:100%}
+.mist{border-right:6px solid var(--r);background:#fff5f5;border-radius:14px;padding:10px 14px;margin:10px 0}
+.mist.okk{border-right-color:var(--g);background:#f0fdf4}
+.mist .a{font-family:'Amiri',serif;font-size:1.25rem}
+.yours{color:var(--r)} .right{color:var(--g);font-weight:700}
+.rec li{margin:6px 0}
+/* certificate */
+.cert{background:#fff;border:12px solid transparent;border-image:linear-gradient(135deg,#f59e0b,#ec4899,#6d28d9,#10b4a0) 1;padding:24px 22px;margin:16px 0;text-align:center;position:relative}
+.cert .school{font-weight:900;color:var(--v);font-size:1.15rem}
+.cert h2{font-family:'Amiri',serif;font-size:2.2rem;margin:6px 0 0;color:#b45309}
+.cert .nm{font-size:1.9rem;font-weight:900;direction:ltr;color:var(--b);border-bottom:3px dotted var(--y);display:inline-block;padding:0 20px;margin:6px 0}
+.cert .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}
+.cert .grid div{background:#f5f3ff;border-radius:12px;padding:6px}
+.cert .grid b{display:block;font-size:1.25rem}
+.sign{display:flex;justify-content:space-between;margin-top:20px;font-size:.9rem;gap:10px}
+.sign div{border-top:1px solid #999;padding-top:4px;min-width:190px}
+/* dashboard */
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.tabs button{border:0;background:#fff;border-radius:12px;padding:8px 14px;font-family:inherit;font-weight:800;cursor:pointer;color:var(--ink);box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.tabs button.on{background:linear-gradient(135deg,var(--v),var(--b));color:#fff}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.kpi{border-radius:18px;padding:14px;color:#fff;text-align:center}
+.kpi b{display:block;font-size:2rem;font-weight:900;line-height:1.2}
+.kpi .en{color:#fff;opacity:.9;text-align:center}
+@media(max-width:640px){.kpis,.steps{grid-template-columns:1fr 1fr}.cert .grid{grid-template-columns:1fr 1fr}.grades{grid-template-columns:repeat(5,1fr)}}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.filters select,.filters input{width:auto;min-width:120px;padding:8px 10px;font-size:.95rem}
+.tblwrap{overflow-x:auto}
+.warnc{color:var(--r);font-weight:800}
+.pill{display:inline-block;border-radius:20px;padding:0 10px;font-size:.8rem;font-weight:800;color:#fff}
+.qrbox{display:flex;justify-content:center;margin:14px 0}
+.qrbox svg{width:250px;height:250px}
+.linkbox{direction:ltr;background:#f5f3ff;padding:10px;border-radius:10px;word-break:break-all;font-family:monospace}
+.confetti{position:fixed;top:-20px;width:10px;height:14px;z-index:70;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
+
+/* ===== present mode (smart board) ===== */
+#vPresent{position:fixed;inset:0;z-index:55;background:linear-gradient(135deg,#1e1b4b,#312e81 50%,#0f766e);color:#fff;overflow:auto;padding:18px 26px}
+#vPresent .ptop{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+#vPresent .pnum{font-size:2.4rem;font-weight:900;background:linear-gradient(135deg,#ff6b4a,#ec4899);border-radius:18px;padding:0 22px}
+#vPresent .ptime{font-size:2.4rem;font-weight:900;direction:ltr;background:rgba(255,255,255,.15);border-radius:18px;padding:0 20px;font-variant-numeric:tabular-nums}
+#vPresent .ptime.warn{background:#dc2626}
+#vPresent .pbar{flex:1;min-width:160px;height:18px;background:rgba(255,255,255,.18);border-radius:12px;overflow:hidden}
+#vPresent .pbar i{display:block;height:100%;background:linear-gradient(90deg,#ffc233,#ff6b4a);transition:width .5s linear}
+#vPresent .pq{font-size:3.1rem;font-weight:800;line-height:1.6;margin:18px 0 6px}
+#vPresent .pq .s{font-family:'Amiri',serif;font-size:3.6rem;color:#fde68a}
+#vPresent .pen{font-size:1.6rem;color:#c7d2fe;direction:ltr;text-align:left}
+#vPresent .ppass{background:#fffbeb;color:#1e1b4b;border-radius:20px;padding:16px 24px;font-family:'Amiri',serif;font-size:2.4rem;line-height:1.9;margin:10px 0}
+#vPresent .popts{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+#vPresent .popt{background:#fff;color:#1e1b4b;border-radius:22px;padding:14px 20px;font-family:'Amiri',serif;font-size:3rem;font-weight:700;display:flex;align-items:center;gap:18px}
+#vPresent .popt .l{flex:none;width:70px;height:70px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-family:Cairo;font-weight:900;font-size:2.2rem}
+#vPresent .pwrite{border:4px dashed #fde68a;border-radius:22px;padding:22px;font-size:2.3rem;text-align:center;margin-top:18px;color:#fde68a;font-weight:800}
+#vPresent .ptiles{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin-top:18px}
+#vPresent .ptiles span{background:#fde68a;color:#1e1b4b;border-radius:18px;padding:6px 26px;font-family:'Amiri',serif;font-size:3rem;font-weight:700}
+#vPresent .pics{background:#fff}
+#vPresent .pic svg{width:190px;height:190px}
+#vPresent .pics.far .pic svg{width:110px;height:110px}
+#vPresent .pctl{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:10px;background:rgba(0,0,0,.35);padding:8px 12px;border-radius:18px;z-index:2}
+#vPresent .pctl button{background:#fff;color:#1e1b4b;border:0;border-radius:12px;padding:8px 16px;font-family:inherit;font-weight:900;font-size:1.05rem;cursor:pointer}
+#vPresent .keygrid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:16px}
+#vPresent .keygrid div{background:#fff;color:#1e1b4b;border-radius:14px;padding:8px;font-size:1.5rem;font-weight:800;text-align:center;font-family:'Amiri',serif}
+#vPresent .keygrid b{color:#6d28d9;font-family:Cairo}
+@media(max-width:900px){#vPresent .pq{font-size:2rem}#vPresent .pq .s{font-size:2.3rem}#vPresent .popt{font-size:2rem}#vPresent .popts{grid-template-columns:1fr}}
+.sheet table{width:100%;border-collapse:collapse}.sheet td,.sheet th{border:1px solid #444;padding:10px;font-size:1.1rem}
+#shield,#transBlock{position:fixed;inset:0;z-index:90;display:none;align-items:center;justify-content:center;text-align:center;font-size:2rem;font-weight:900}
+#shield{background:#1e1b4b;color:#fff}#transBlock{background:#7f1d1d;color:#fff;padding:20px;font-size:1.3rem}
+#shield.show,#transBlock.show{display:flex}
+body.exam-on #vExam{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+#printArea{display:none}
+@media print{
+ body{background:#fff}
+ header.top,.noprint,.bar,.helpBtn,.modal,#vPresent{display:none!important}
+ body.exam-on *{display:none!important}
+ .card{box-shadow:none;border:0;padding:0}
+ .cert{page-break-after:always;margin:0}
+ .mist{page-break-inside:avoid}
+ body.pc > *:not(#printArea){display:none!important}
+ body.pc #printArea{display:block!important}
+ *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+<header class="top noprint">
+  <div class="sch">مدرسة الطلاب الهندية الخاصة – قسم اللغة العربية</div>
+  <h1>✨ الاختبار الشهري في اللغة العربية ✨</h1>
+  <div class="en">Scholars Indian Private School – Arabic Department · Monthly Arabic Test</div>
+</header>
+
+<!-- ============ START ============ -->
+<section id="vStart" class="wrap">
+  <div id="closedBox" class="closed hide"></div>
+  <div class="card">
+    <div class="steps">
+      <div class="step" style="background:linear-gradient(135deg,#ff6b4a,#ec4899)"><b>1</b>اكتب اسمك<span class="en">Your name</span></div>
+      <div class="step" style="background:linear-gradient(135deg,#f59e0b,#ff6b4a)"><b>2</b>اختر صفك<span class="en">Your grade</span></div>
+      <div class="step" style="background:linear-gradient(135deg,#10b4a0,#2563eb)"><b>3</b>اختر شعبتك<span class="en">Your section</span></div>
+      <div class="step" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9)"><b>4</b>ابدأ!<span class="en">Start!</span></div>
+    </div>
+    <label>① الاسم الكامل بالإنجليزية <span class="en">Your full name in English</span></label>
+    <input type="text" id="inName" dir="ltr" placeholder="e.g. Mohammed Ashraf" autocomplete="off">
+    <label>② الصف <span class="en">Grade</span></label>
+    <div class="grades" id="inGrade">
+      <button type="button" data-g="5">5<small>الخامس</small></button><button type="button" data-g="6">6<small>السادس</small></button>
+      <button type="button" data-g="7">7<small>السابع</small></button><button type="button" data-g="8">8<small>الثامن</small></button>
+      <button type="button" data-g="9">9<small>التاسع</small></button>
+    </div>
+    <label>③ الشعبة <span class="en">Section</span></label>
+    <div class="sections" id="inSec">
+      <button type="button" data-s="A">A</button><button type="button" data-s="B">B</button>
+      <button type="button" data-s="C">C</button><button type="button" data-s="D">D</button>
+    </div>
+    <p class="err" id="startErr"></p>
+    <div class="card" style="background:#faf8ff;margin:6px 0 14px">
+      <b>📋 التعليمات · Instructions</b>
+      <ul style="margin:6px 0;padding-right:20px">
+        <li>⏱ مدة الاختبار <b>25 دقيقة</b>، والمؤقت يبدأ فور الضغط على «ابدأ». <span class="en">25 minutes. The timer starts when you press Start.</span></li>
+        <li>📝 عدد الأسئلة <b>25 سؤالًا</b> في القراءة والكتابة ولغة الصف. <span class="en">25 questions: reading, writing and classroom words.</span></li>
+        <li>👆 في أسئلة الاختيار: اضغط على الإجابة الصحيحة. <span class="en">Multiple choice: tap the correct answer.</span></li>
+        <li>✍️ في أسئلة الكتابة: اكتب بالعربية. تستطيع استعمال زر «⌨ لوحة المفاتيح العربية». <span class="en">Writing questions: type in Arabic. You can use the «⌨ Arabic keyboard» button.</span></li>
+        <li>🧩 في أسئلة الترتيب: اضغط على الكلمات بالترتيب الصحيح، واضغط على الكلمة مرة أخرى لإرجاعها. <span class="en">Ordering: tap the words in the right order; tap a word again to remove it.</span></li>
+        <li>🔢 تستطيع التنقل بين الأسئلة بالأرقام، والرقم الأخضر يعني أنك أجبت. <span class="en">Use the numbers to move between questions. Green = answered.</span></li>
+        <li>⏰ عند انتهاء الوقت يُسلَّم الاختبار تلقائيًّا وتظهر نتيجتك وشهادتك فورًا. <span class="en">When time is up, the test is submitted automatically and your result and certificate appear at once.</span></li>
+        <li>✅ درجة النجاح: <b>13 من 25</b>. <span class="en">Pass mark: 13 out of 25.</span></li>
+      </ul>
+      <b style="color:var(--r)">🛡 قواعد الاختبار (مهمة جدًّا) · Test rules (very important)</b>
+      <ul style="margin:6px 0;padding-right:20px">
+        <li>🌐 <b>الترجمة ممنوعة.</b> الأسئلة بالعربية فقط، ولا تستعمل ترجمة المتصفح أو أي برنامج ترجمة. إذا حاولت الترجمة يظهر تحذير وتختفي الأسئلة حتى توقف الترجمة، ويرى المعلم المحاولة. <span class="en">Translation is not allowed. Questions are in Arabic only. If you try to translate, a warning appears, the questions are hidden until you turn translation off, and your teacher sees it.</span></li>
+        <li>🚪 <b>لا تخرج من صفحة الاختبار</b> (لا تفتح صفحة أو برنامجًا آخر، ولا تغلق الصفحة). المرة الأولى: تحذير. <b>المرة الثانية: يُغلق الاختبار ويُسلَّم فورًا.</b> <span class="en">Do not leave the test page. 1st time: warning. 2nd time: the test is closed and submitted immediately.</span></li>
+        <li>📋 <b>النسخ واللصق ممنوعان.</b> أي محاولة نسخ <b>تُغلق الاختبار فورًا.</b> <span class="en">Copying is not allowed — any copy attempt closes the test immediately.</span></li>
+        <li>📸 <b>تصوير الشاشة ممنوع.</b> أي محاولة تصوير <b>تُغلق الاختبار فورًا.</b> <span class="en">Screenshots are not allowed — any attempt closes the test immediately.</span></li>
+        <li>🖨 الطباعة والضغط بالزر الأيمن ممنوعان. <span class="en">Printing and right-click are not allowed.</span></li>
+        <li>👀 المعلم يرى كل مخالفة في تقرير النتائج. <span class="en">Your teacher sees every violation in the results report.</span></li>
+      </ul>
+      <label style="font-weight:800;display:flex;gap:8px;align-items:center;margin-top:10px;cursor:pointer"><input type="checkbox" id="agree" style="width:22px;height:22px"> قرأت التعليمات والقواعد وأوافق عليها <span class="en" style="display:inline">· I have read and accept the rules</span></label>
+    </div>
+    <div class="center"><button class="btn big" id="btnStart">🚀 ابدأ الاختبار <small>Start the test</small></button></div>
+  </div>
+  <p class="center" style="font-size:.8rem;color:var(--muted)">إعداد: أ. صالح شوقي جودة – رئيس قسم اللغة العربية · Prepared by Mr. Saleh Shawky Goda, Head of Arabic Department<br>
+  <a href="?teacher" style="color:var(--v)">👩‍🏫 دخول المعلمين والمشرف · Teachers & supervisor login</a></p>
+  <p class="center"><button class="btn sec" id="btnPresent">🖥 عرض على السبورة الذكية (للمعلم) · Present on smart board</button></p>
+</section>
+
+<!-- ============ EXAM ============ -->
+<section id="vExam" class="hide">
+  <div class="bar"><div class="wrap">
+    <div class="timer" id="timer">25:00</div>
+    <div class="prog"><i id="progBar"></i></div>
+    <div class="who" id="whoBox"></div>
+  </div></div>
+  <div class="wrap">
+    <div class="card" id="qCard"></div>
+    <div class="navq">
+      <button class="btn sec" id="btnPrev">→ السابق</button>
+      <button class="btn" id="btnNext">التالي ←</button>
+    </div>
+    <div class="dots" id="dots"></div>
+    <div class="legend">🟢 تمت الإجابة &nbsp; ⚪ لم تتم الإجابة</div>
+    <div class="center" style="margin-top:12px"><button class="btn gold" id="btnFinish">✔ تسليم الاختبار</button></div>
+  </div>
+</section>
+
+<section id="vResult" class="wrap hide"></section>
+<section id="vTeacher" class="wrap hide"></section>
+<div id="printArea"></div>
+<div id="shield" class="noprint"><div>🔒<br>عُد إلى صفحة الاختبار</div></div>
+<div id="transBlock" class="noprint"><div>🚫🌐<h2 style="margin:6px 0">الترجمة غير مسموحة!</h2><p>أوقف الترجمة الآن لتظهر الأسئلة مرة أخرى. المعلم يرى هذه المحاولة.</p><p class="en" style="color:#fecaca;text-align:center">Translation is not allowed! Turn it off now to see the questions again. Your teacher can see this attempt.</p></div></div>
+<span id="canary" aria-hidden="true" style="position:fixed;top:0;right:0;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;white-space:nowrap">الاختبار الشهري في اللغة العربية</span>
+<section id="vPresent" class="hide"></section>
+
+<button class="helpBtn noprint" id="helpBtn">🆘 مساعدة</button>
+<div class="modal" id="modal"><div class="box" id="modalBox"></div></div>
+
+<script>
+//---------------------------------------------------------------------
+//
+// QR Code Generator for JavaScript
+//
+// Copyright (c) 2009 Kazuhiko Arase
+//
+// URL: http://www.d-project.com/
+//
+// Licensed under the MIT license:
+//  http://www.opensource.org/licenses/mit-license.php
+//
+// The word 'QR Code' is registered trademark of
+// DENSO WAVE INCORPORATED
+//  http://www.denso-wave.com/qrcode/faqpatent-e.html
+//
+//---------------------------------------------------------------------
+
+var qrcode = function() {
+
+  //---------------------------------------------------------------------
+  // qrcode
+  //---------------------------------------------------------------------
+
+  /**
+   * qrcode
+   * @param typeNumber 1 to 40
+   * @param errorCorrectionLevel 'L','M','Q','H'
+   */
+  var qrcode = function(typeNumber, errorCorrectionLevel) {
+
+    var PAD0 = 0xEC;
+    var PAD1 = 0x11;
+
+    var _typeNumber = typeNumber;
+    var _errorCorrectionLevel = QRErrorCorrectionLevel[errorCorrectionLevel];
+    var _modules = null;
+    var _moduleCount = 0;
+    var _dataCache = null;
+    var _dataList = [];
+
+    var _this = {};
+
+    var makeImpl = function(test, maskPattern) {
+
+      _moduleCount = _typeNumber * 4 + 17;
+      _modules = function(moduleCount) {
+        var modules = new Array(moduleCount);
+        for (var row = 0; row < moduleCount; row += 1) {
+          modules[row] = new Array(moduleCount);
+          for (var col = 0; col < moduleCount; col += 1) {
+            modules[row][col] = null;
+          }
+        }
+        return modules;
+      }(_moduleCount);
+
+      setupPositionProbePattern(0, 0);
+      setupPositionProbePattern(_moduleCount - 7, 0);
+      setupPositionProbePattern(0, _moduleCount - 7);
+      setupPositionAdjustPattern();
+      setupTimingPattern();
+      setupTypeInfo(test, maskPattern);
+
+      if (_typeNumber >= 7) {
+        setupTypeNumber(test);
+      }
+
+      if (_dataCache == null) {
+        _dataCache = createData(_typeNumber, _errorCorrectionLevel, _dataList);
+      }
+
+      mapData(_dataCache, maskPattern);
+    };
+
+    var setupPositionProbePattern = function(row, col) {
+
+      for (var r = -1; r <= 7; r += 1) {
+
+        if (row + r <= -1 || _moduleCount <= row + r) continue;
+
+        for (var c = -1; c <= 7; c += 1) {
+
+          if (col + c <= -1 || _moduleCount <= col + c) continue;
+
+          if ( (0 <= r && r <= 6 && (c == 0 || c == 6) )
+              || (0 <= c && c <= 6 && (r == 0 || r == 6) )
+              || (2 <= r && r <= 4 && 2 <= c && c <= 4) ) {
+            _modules[row + r][col + c] = true;
+          } else {
+            _modules[row + r][col + c] = false;
+          }
+        }
+      }
+    };
+
+    var getBestMaskPattern = function() {
+
+      var minLostPoint = 0;
+      var pattern = 0;
+
+      for (var i = 0; i < 8; i += 1) {
+
+        makeImpl(true, i);
+
+        var lostPoint = QRUtil.getLostPoint(_this);
+
+        if (i == 0 || minLostPoint > lostPoint) {
+          minLostPoint = lostPoint;
+          pattern = i;
+        }
+      }
+
+      return pattern;
+    };
+
+    var setupTimingPattern = function() {
+
+      for (var r = 8; r < _moduleCount - 8; r += 1) {
+        if (_modules[r][6] != null) {
+          continue;
+        }
+        _modules[r][6] = (r % 2 == 0);
+      }
+
+      for (var c = 8; c < _moduleCount - 8; c += 1) {
+        if (_modules[6][c] != null) {
+          continue;
+        }
+        _modules[6][c] = (c % 2 == 0);
+      }
+    };
+
+    var setupPositionAdjustPattern = function() {
+
+      var pos = QRUtil.getPatternPosition(_typeNumber);
+
+      for (var i = 0; i < pos.length; i += 1) {
+
+        for (var j = 0; j < pos.length; j += 1) {
+
+          var row = pos[i];
+          var col = pos[j];
+
+          if (_modules[row][col] != null) {
+            continue;
+          }
+
+          for (var r = -2; r <= 2; r += 1) {
+
+            for (var c = -2; c <= 2; c += 1) {
+
+              if (r == -2 || r == 2 || c == -2 || c == 2
+                  || (r == 0 && c == 0) ) {
+                _modules[row + r][col + c] = true;
+              } else {
+                _modules[row + r][col + c] = false;
+              }
+            }
+          }
+        }
+      }
+    };
+
+    var setupTypeNumber = function(test) {
+
+      var bits = QRUtil.getBCHTypeNumber(_typeNumber);
+
+      for (var i = 0; i < 18; i += 1) {
+        var mod = (!test && ( (bits >> i) & 1) == 1);
+        _modules[Math.floor(i / 3)][i % 3 + _moduleCount - 8 - 3] = mod;
+      }
+
+      for (var i = 0; i < 18; i += 1) {
+        var mod = (!test && ( (bits >> i) & 1) == 1);
+        _modules[i % 3 + _moduleCount - 8 - 3][Math.floor(i / 3)] = mod;
+      }
+    };
+
+    var setupTypeInfo = function(test, maskPattern) {
+
+      var data = (_errorCorrectionLevel << 3) | maskPattern;
+      var bits = QRUtil.getBCHTypeInfo(data);
+
+      // vertical
+      for (var i = 0; i < 15; i += 1) {
+
+        var mod = (!test && ( (bits >> i) & 1) == 1);
+
+        if (i < 6) {
+          _modules[i][8] = mod;
+        } else if (i < 8) {
+          _modules[i + 1][8] = mod;
+        } else {
+          _modules[_moduleCount - 15 + i][8] = mod;
+        }
+      }
+
+      // horizontal
+      for (var i = 0; i < 15; i += 1) {
+
+        var mod = (!test && ( (bits >> i) & 1) == 1);
+
+        if (i < 8) {
+          _modules[8][_moduleCount - i - 1] = mod;
+        } else if (i < 9) {
+          _modules[8][15 - i - 1 + 1] = mod;
+        } else {
+          _modules[8][15 - i - 1] = mod;
+        }
+      }
+
+      // fixed module
+      _modules[_moduleCount - 8][8] = (!test);
+    };
+
+    var mapData = function(data, maskPattern) {
+
+      var inc = -1;
+      var row = _moduleCount - 1;
+      var bitIndex = 7;
+      var byteIndex = 0;
+      var maskFunc = QRUtil.getMaskFunction(maskPattern);
+
+      for (var col = _moduleCount - 1; col > 0; col -= 2) {
+
+        if (col == 6) col -= 1;
+
+        while (true) {
+
+          for (var c = 0; c < 2; c += 1) {
+
+            if (_modules[row][col - c] == null) {
+
+              var dark = false;
+
+              if (byteIndex < data.length) {
+                dark = ( ( (data[byteIndex] >>> bitIndex) & 1) == 1);
+              }
+
+              var mask = maskFunc(row, col - c);
+
+              if (mask) {
+                dark = !dark;
+              }
+
+              _modules[row][col - c] = dark;
+              bitIndex -= 1;
+
+              if (bitIndex == -1) {
+                byteIndex += 1;
+                bitIndex = 7;
+              }
+            }
+          }
+
+          row += inc;
+
+          if (row < 0 || _moduleCount <= row) {
+            row -= inc;
+            inc = -inc;
+            break;
+          }
+        }
+      }
+    };
+
+    var createBytes = function(buffer, rsBlocks) {
+
+      var offset = 0;
+
+      var maxDcCount = 0;
+      var maxEcCount = 0;
+
+      var dcdata = new Array(rsBlocks.length);
+      var ecdata = new Array(rsBlocks.length);
+
+      for (var r = 0; r < rsBlocks.length; r += 1) {
+
+        var dcCount = rsBlocks[r].dataCount;
+        var ecCount = rsBlocks[r].totalCount - dcCount;
+
+        maxDcCount = Math.max(maxDcCount, dcCount);
+        maxEcCount = Math.max(maxEcCount, ecCount);
+
+        dcdata[r] = new Array(dcCount);
+
+        for (var i = 0; i < dcdata[r].length; i += 1) {
+          dcdata[r][i] = 0xff & buffer.getBuffer()[i + offset];
+        }
+        offset += dcCount;
+
+        var rsPoly = QRUtil.getErrorCorrectPolynomial(ecCount);
+        var rawPoly = qrPolynomial(dcdata[r], rsPoly.getLength() - 1);
+
+        var modPoly = rawPoly.mod(rsPoly);
+        ecdata[r] = new Array(rsPoly.getLength() - 1);
+        for (var i = 0; i < ecdata[r].length; i += 1) {
+          var modIndex = i + modPoly.getLength() - ecdata[r].length;
+          ecdata[r][i] = (modIndex >= 0)? modPoly.getAt(modIndex) : 0;
+        }
+      }
+
+      var totalCodeCount = 0;
+      for (var i = 0; i < rsBlocks.length; i += 1) {
+        totalCodeCount += rsBlocks[i].totalCount;
+      }
+
+      var data = new Array(totalCodeCount);
+      var index = 0;
+
+      for (var i = 0; i < maxDcCount; i += 1) {
+        for (var r = 0; r < rsBlocks.length; r += 1) {
+          if (i < dcdata[r].length) {
+            data[index] = dcdata[r][i];
+            index += 1;
+          }
+        }
+      }
+
+      for (var i = 0; i < maxEcCount; i += 1) {
+        for (var r = 0; r < rsBlocks.length; r += 1) {
+          if (i < ecdata[r].length) {
+            data[index] = ecdata[r][i];
+            index += 1;
+          }
+        }
+      }
+
+      return data;
+    };
+
+    var createData = function(typeNumber, errorCorrectionLevel, dataList) {
+
+      var rsBlocks = QRRSBlock.getRSBlocks(typeNumber, errorCorrectionLevel);
+
+      var buffer = qrBitBuffer();
+
+      for (var i = 0; i < dataList.length; i += 1) {
+        var data = dataList[i];
+        buffer.put(data.getMode(), 4);
+        buffer.put(data.getLength(), QRUtil.getLengthInBits(data.getMode(), typeNumber) );
+        data.write(buffer);
+      }
+
+      // calc num max data.
+      var totalDataCount = 0;
+      for (var i = 0; i < rsBlocks.length; i += 1) {
+        totalDataCount += rsBlocks[i].dataCount;
+      }
+
+      if (buffer.getLengthInBits() > totalDataCount * 8) {
+        throw 'code length overflow. ('
+          + buffer.getLengthInBits()
+          + '>'
+          + totalDataCount * 8
+          + ')';
+      }
+
+      // end code
+      if (buffer.getLengthInBits() + 4 <= totalDataCount * 8) {
+        buffer.put(0, 4);
+      }
+
+      // padding
+      while (buffer.getLengthInBits() % 8 != 0) {
+        buffer.putBit(false);
+      }
+
+      // padding
+      while (true) {
+
+        if (buffer.getLengthInBits() >= totalDataCount * 8) {
+          break;
+        }
+        buffer.put(PAD0, 8);
+
+        if (buffer.getLengthInBits() >= totalDataCount * 8) {
+          break;
+        }
+        buffer.put(PAD1, 8);
+      }
+
+      return createBytes(buffer, rsBlocks);
+    };
+
+    _this.addData = function(data, mode) {
+
+      mode = mode || 'Byte';
+
+      var newData = null;
+
+      switch(mode) {
+      case 'Numeric' :
+        newData = qrNumber(data);
+        break;
+      case 'Alphanumeric' :
+        newData = qrAlphaNum(data);
+        break;
+      case 'Byte' :
+        newData = qr8BitByte(data);
+        break;
+      case 'Kanji' :
+        newData = qrKanji(data);
+        break;
+      default :
+        throw 'mode:' + mode;
+      }
+
+      _dataList.push(newData);
+      _dataCache = null;
+    };
+
+    _this.isDark = function(row, col) {
+      if (row < 0 || _moduleCount <= row || col < 0 || _moduleCount <= col) {
+        throw row + ',' + col;
+      }
+      return _modules[row][col];
+    };
+
+    _this.getModuleCount = function() {
+      return _moduleCount;
+    };
+
+    _this.make = function() {
+      if (_typeNumber < 1) {
+        var typeNumber = 1;
+
+        for (; typeNumber < 40; typeNumber++) {
+          var rsBlocks = QRRSBlock.getRSBlocks(typeNumber, _errorCorrectionLevel);
+          var buffer = qrBitBuffer();
+
+          for (var i = 0; i < _dataList.length; i++) {
+            var data = _dataList[i];
+            buffer.put(data.getMode(), 4);
+            buffer.put(data.getLength(), QRUtil.getLengthInBits(data.getMode(), typeNumber) );
+            data.write(buffer);
+          }
+
+          var totalDataCount = 0;
+          for (var i = 0; i < rsBlocks.length; i++) {
+            totalDataCount += rsBlocks[i].dataCount;
+          }
+
+          if (buffer.getLengthInBits() <= totalDataCount * 8) {
+            break;
+          }
+        }
+
+        _typeNumber = typeNumber;
+      }
+
+      makeImpl(false, getBestMaskPattern() );
+    };
+
+    _this.createTableTag = function(cellSize, margin) {
+
+      cellSize = cellSize || 2;
+      margin = (typeof margin == 'undefined')? cellSize * 4 : margin;
+
+      var qrHtml = '';
+
+      qrHtml += '<table style="';
+      qrHtml += ' border-width: 0px; border-style: none;';
+      qrHtml += ' border-collapse: collapse;';
+      qrHtml += ' padding: 0px; margin: ' + margin + 'px;';
+      qrHtml += '">';
+      qrHtml += '<tbody>';
+
+      for (var r = 0; r < _this.getModuleCount(); r += 1) {
+
+        qrHtml += '<tr>';
+
+        for (var c = 0; c < _this.getModuleCount(); c += 1) {
+          qrHtml += '<td style="';
+          qrHtml += ' border-width: 0px; border-style: none;';
+          qrHtml += ' border-collapse: collapse;';
+          qrHtml += ' padding: 0px; margin: 0px;';
+          qrHtml += ' width: ' + cellSize + 'px;';
+          qrHtml += ' height: ' + cellSize + 'px;';
+          qrHtml += ' background-color: ';
+          qrHtml += _this.isDark(r, c)? '#000000' : '#ffffff';
+          qrHtml += ';';
+          qrHtml += '"/>';
+        }
+
+        qrHtml += '</tr>';
+      }
+
+      qrHtml += '</tbody>';
+      qrHtml += '</table>';
+
+      return qrHtml;
+    };
+
+    _this.createSvgTag = function(cellSize, margin, alt, title) {
+
+      var opts = {};
+      if (typeof arguments[0] == 'object') {
+        // Called by options.
+        opts = arguments[0];
+        // overwrite cellSize and margin.
+        cellSize = opts.cellSize;
+        margin = opts.margin;
+        alt = opts.alt;
+        title = opts.title;
+      }
+
+      cellSize = cellSize || 2;
+      margin = (typeof margin == 'undefined')? cellSize * 4 : margin;
+
+      // Compose alt property surrogate
+      alt = (typeof alt === 'string') ? {text: alt} : alt || {};
+      alt.text = alt.text || null;
+      alt.id = (alt.text) ? alt.id || 'qrcode-description' : null;
+
+      // Compose title property surrogate
+      title = (typeof title === 'string') ? {text: title} : title || {};
+      title.text = title.text || null;
+      title.id = (title.text) ? title.id || 'qrcode-title' : null;
+
+      var size = _this.getModuleCount() * cellSize + margin * 2;
+      var c, mc, r, mr, qrSvg='', rect;
+
+      rect = 'l' + cellSize + ',0 0,' + cellSize +
+        ' -' + cellSize + ',0 0,-' + cellSize + 'z ';
+
+      qrSvg += '<svg version="1.1" xmlns="http://www.w3.org/2000/svg"';
+      qrSvg += !opts.scalable ? ' width="' + size + 'px" height="' + size + 'px"' : '';
+      qrSvg += ' viewBox="0 0 ' + size + ' ' + size + '" ';
+      qrSvg += ' preserveAspectRatio="xMinYMin meet"';
+      qrSvg += (title.text || alt.text) ? ' role="img" aria-labelledby="' +
+          escapeXml([title.id, alt.id].join(' ').trim() ) + '"' : '';
+      qrSvg += '>';
+      qrSvg += (title.text) ? '<title id="' + escapeXml(title.id) + '">' +
+          escapeXml(title.text) + '</title>' : '';
+      qrSvg += (alt.text) ? '<description id="' + escapeXml(alt.id) + '">' +
+          escapeXml(alt.text) + '</description>' : '';
+      qrSvg += '<rect width="100%" height="100%" fill="white" cx="0" cy="0"/>';
+      qrSvg += '<path d="';
+
+      for (r = 0; r < _this.getModuleCount(); r += 1) {
+        mr = r * cellSize + margin;
+        for (c = 0; c < _this.getModuleCount(); c += 1) {
+          if (_this.isDark(r, c) ) {
+            mc = c*cellSize+margin;
+            qrSvg += 'M' + mc + ',' + mr + rect;
+          }
+        }
+      }
+
+      qrSvg += '" stroke="transparent" fill="black"/>';
+      qrSvg += '</svg>';
+
+      return qrSvg;
+    };
+
+    _this.createDataURL = function(cellSize, margin) {
+
+      cellSize = cellSize || 2;
+      margin = (typeof margin == 'undefined')? cellSize * 4 : margin;
+
+      var size = _this.getModuleCount() * cellSize + margin * 2;
+      var min = margin;
+      var max = size - margin;
+
+      return createDataURL(size, size, function(x, y) {
+        if (min <= x && x < max && min <= y && y < max) {
+          var c = Math.floor( (x - min) / cellSize);
+          var r = Math.floor( (y - min) / cellSize);
+          return _this.isDark(r, c)? 0 : 1;
+        } else {
+          return 1;
+        }
+      } );
+    };
+
+    _this.createImgTag = function(cellSize, margin, alt) {
+
+      cellSize = cellSize || 2;
+      margin = (typeof margin == 'undefined')? cellSize * 4 : margin;
+
+      var size = _this.getModuleCount() * cellSize + margin * 2;
+
+      var img = '';
+      img += '<img';
+      img += '\u0020src="';
+      img += _this.createDataURL(cellSize, margin);
+      img += '"';
+      img += '\u0020width="';
+      img += size;
+      img += '"';
+      img += '\u0020height="';
+      img += size;
+      img += '"';
+      if (alt) {
+        img += '\u0020alt="';
+        img += escapeXml(alt);
+        img += '"';
+      }
+      img += '/>';
+
+      return img;
+    };
+
+    var escapeXml = function(s) {
+      var escaped = '';
+      for (var i = 0; i < s.length; i += 1) {
+        var c = s.charAt(i);
+        switch(c) {
+        case '<': escaped += '&lt;'; break;
+        case '>': escaped += '&gt;'; break;
+        case '&': escaped += '&amp;'; break;
+        case '"': escaped += '&quot;'; break;
+        default : escaped += c; break;
+        }
+      }
+      return escaped;
+    };
+
+    var _createHalfASCII = function(margin) {
+      var cellSize = 1;
+      margin = (typeof margin == 'undefined')? cellSize * 2 : margin;
+
+      var size = _this.getModuleCount() * cellSize + margin * 2;
+      var min = margin;
+      var max = size - margin;
+
+      var y, x, r1, r2, p;
+
+      var blocks = {
+        '██': '█',
+        '█ ': '▀',
+        ' █': '▄',
+        '  ': ' '
+      };
+
+      var blocksLastLineNoMargin = {
+        '██': '▀',
+        '█ ': '▀',
+        ' █': ' ',
+        '  ': ' '
+      };
+
+      var ascii = '';
+      for (y = 0; y < size; y += 2) {
+        r1 = Math.floor((y - min) / cellSize);
+        r2 = Math.floor((y + 1 - min) / cellSize);
+        for (x = 0; x < size; x += 1) {
+          p = '█';
+
+          if (min <= x && x < max && min <= y && y < max && _this.isDark(r1, Math.floor((x - min) / cellSize))) {
+            p = ' ';
+          }
+
+          if (min <= x && x < max && min <= y+1 && y+1 < max && _this.isDark(r2, Math.floor((x - min) / cellSize))) {
+            p += ' ';
+          }
+          else {
+            p += '█';
+          }
+
+          // Output 2 characters per pixel, to create full square. 1 character per pixels gives only half width of square.
+          ascii += (margin < 1 && y+1 >= max) ? blocksLastLineNoMargin[p] : blocks[p];
+        }
+
+        ascii += '\n';
+      }
+
+      if (size % 2 && margin > 0) {
+        return ascii.substring(0, ascii.length - size - 1) + Array(size+1).join('▀');
+      }
+
+      return ascii.substring(0, ascii.length-1);
+    };
+
+    _this.createASCII = function(cellSize, margin) {
+      cellSize = cellSize || 1;
+
+      if (cellSize < 2) {
+        return _createHalfASCII(margin);
+      }
+
+      cellSize -= 1;
+      margin = (typeof margin == 'undefined')? cellSize * 2 : margin;
+
+      var size = _this.getModuleCount() * cellSize + margin * 2;
+      var min = margin;
+      var max = size - margin;
+
+      var y, x, r, p;
+
+      var white = Array(cellSize+1).join('██');
+      var black = Array(cellSize+1).join('  ');
+
+      var ascii = '';
+      var line = '';
+      for (y = 0; y < size; y += 1) {
+        r = Math.floor( (y - min) / cellSize);
+        line = '';
+        for (x = 0; x < size; x += 1) {
+          p = 1;
+
+          if (min <= x && x < max && min <= y && y < max && _this.isDark(r, Math.floor((x - min) / cellSize))) {
+            p = 0;
+          }
+
+          // Output 2 characters per pixel, to create full square. 1 character per pixels gives only half width of square.
+          line += p ? white : black;
+        }
+
+        for (r = 0; r < cellSize; r += 1) {
+          ascii += line + '\n';
+        }
+      }
+
+      return ascii.substring(0, ascii.length-1);
+    };
+
+    _this.renderTo2dContext = function(context, cellSize) {
+      cellSize = cellSize || 2;
+      var length = _this.getModuleCount();
+      for (var row = 0; row < length; row++) {
+        for (var col = 0; col < length; col++) {
+          context.fillStyle = _this.isDark(row, col) ? 'black' : 'white';
+          context.fillRect(row * cellSize, col * cellSize, cellSize, cellSize);
+        }
+      }
+    }
+
+    return _this;
+  };
+
+  //---------------------------------------------------------------------
+  // qrcode.stringToBytes
+  //---------------------------------------------------------------------
+
+  qrcode.stringToBytesFuncs = {
+    'default' : function(s) {
+      var bytes = [];
+      for (var i = 0; i < s.length; i += 1) {
+        var c = s.charCodeAt(i);
+        bytes.push(c & 0xff);
+      }
+      return bytes;
+    }
+  };
+
+  qrcode.stringToBytes = qrcode.stringToBytesFuncs['default'];
+
+  //---------------------------------------------------------------------
+  // qrcode.createStringToBytes
+  //---------------------------------------------------------------------
+
+  /**
+   * @param unicodeData base64 string of byte array.
+   * [16bit Unicode],[16bit Bytes], ...
+   * @param numChars
+   */
+  qrcode.createStringToBytes = function(unicodeData, numChars) {
+
+    // create conversion map.
+
+    var unicodeMap = function() {
+
+      var bin = base64DecodeInputStream(unicodeData);
+      var read = function() {
+        var b = bin.read();
+        if (b == -1) throw 'eof';
+        return b;
+      };
+
+      var count = 0;
+      var unicodeMap = {};
+      while (true) {
+        var b0 = bin.read();
+        if (b0 == -1) break;
+        var b1 = read();
+        var b2 = read();
+        var b3 = read();
+        var k = String.fromCharCode( (b0 << 8) | b1);
+        var v = (b2 << 8) | b3;
+        unicodeMap[k] = v;
+        count += 1;
+      }
+      if (count != numChars) {
+        throw count + ' != ' + numChars;
+      }
+
+      return unicodeMap;
+    }();
+
+    var unknownChar = '?'.charCodeAt(0);
+
+    return function(s) {
+      var bytes = [];
+      for (var i = 0; i < s.length; i += 1) {
+        var c = s.charCodeAt(i);
+        if (c < 128) {
+          bytes.push(c);
+        } else {
+          var b = unicodeMap[s.charAt(i)];
+          if (typeof b == 'number') {
+            if ( (b & 0xff) == b) {
+              // 1byte
+              bytes.push(b);
+            } else {
+              // 2bytes
+              bytes.push(b >>> 8);
+              bytes.push(b & 0xff);
+            }
+          } else {
+            bytes.push(unknownChar);
+          }
+        }
+      }
+      return bytes;
+    };
+  };
+
+  //---------------------------------------------------------------------
+  // QRMode
+  //---------------------------------------------------------------------
+
+  var QRMode = {
+    MODE_NUMBER :    1 << 0,
+    MODE_ALPHA_NUM : 1 << 1,
+    MODE_8BIT_BYTE : 1 << 2,
+    MODE_KANJI :     1 << 3
+  };
+
+  //---------------------------------------------------------------------
+  // QRErrorCorrectionLevel
+  //---------------------------------------------------------------------
+
+  var QRErrorCorrectionLevel = {
+    L : 1,
+    M : 0,
+    Q : 3,
+    H : 2
+  };
+
+  //---------------------------------------------------------------------
+  // QRMaskPattern
+  //---------------------------------------------------------------------
+
+  var QRMaskPattern = {
+    PATTERN000 : 0,
+    PATTERN001 : 1,
+    PATTERN010 : 2,
+    PATTERN011 : 3,
+    PATTERN100 : 4,
+    PATTERN101 : 5,
+    PATTERN110 : 6,
+    PATTERN111 : 7
+  };
+
+  //---------------------------------------------------------------------
+  // QRUtil
+  //---------------------------------------------------------------------
+
+  var QRUtil = function() {
+
+    var PATTERN_POSITION_TABLE = [
+      [],
+      [6, 18],
+      [6, 22],
+      [6, 26],
+      [6, 30],
+      [6, 34],
+      [6, 22, 38],
+      [6, 24, 42],
+      [6, 26, 46],
+      [6, 28, 50],
+      [6, 30, 54],
+      [6, 32, 58],
+      [6, 34, 62],
+      [6, 26, 46, 66],
+      [6, 26, 48, 70],
+      [6, 26, 50, 74],
+      [6, 30, 54, 78],
+      [6, 30, 56, 82],
+      [6, 30, 58, 86],
+      [6, 34, 62, 90],
+      [6, 28, 50, 72, 94],
+      [6, 26, 50, 74, 98],
+      [6, 30, 54, 78, 102],
+      [6, 28, 54, 80, 106],
+      [6, 32, 58, 84, 110],
+      [6, 30, 58, 86, 114],
+      [6, 34, 62, 90, 118],
+      [6, 26, 50, 74, 98, 122],
+      [6, 30, 54, 78, 102, 126],
+      [6, 26, 52, 78, 104, 130],
+      [6, 30, 56, 82, 108, 134],
+      [6, 34, 60, 86, 112, 138],
+      [6, 30, 58, 86, 114, 142],
+      [6, 34, 62, 90, 118, 146],
+      [6, 30, 54, 78, 102, 126, 150],
+      [6, 24, 50, 76, 102, 128, 154],
+      [6, 28, 54, 80, 106, 132, 158],
+      [6, 32, 58, 84, 110, 136, 162],
+      [6, 26, 54, 82, 110, 138, 166],
+      [6, 30, 58, 86, 114, 142, 170]
+    ];
+    var G15 = (1 << 10) | (1 << 8) | (1 << 5) | (1 << 4) | (1 << 2) | (1 << 1) | (1 << 0);
+    var G18 = (1 << 12) | (1 << 11) | (1 << 10) | (1 << 9) | (1 << 8) | (1 << 5) | (1 << 2) | (1 << 0);
+    var G15_MASK = (1 << 14) | (1 << 12) | (1 << 10) | (1 << 4) | (1 << 1);
+
+    var _this = {};
+
+    var getBCHDigit = function(data) {
+      var digit = 0;
+      while (data != 0) {
+        digit += 1;
+        data >>>= 1;
+      }
+      return digit;
+    };
+
+    _this.getBCHTypeInfo = function(data) {
+      var d = data << 10;
+      while (getBCHDigit(d) - getBCHDigit(G15) >= 0) {
+        d ^= (G15 << (getBCHDigit(d) - getBCHDigit(G15) ) );
+      }
+      return ( (data << 10) | d) ^ G15_MASK;
+    };
+
+    _this.getBCHTypeNumber = function(data) {
+      var d = data << 12;
+      while (getBCHDigit(d) - getBCHDigit(G18) >= 0) {
+        d ^= (G18 << (getBCHDigit(d) - getBCHDigit(G18) ) );
+      }
+      return (data << 12) | d;
+    };
+
+    _this.getPatternPosition = function(typeNumber) {
+      return PATTERN_POSITION_TABLE[typeNumber - 1];
+    };
+
+    _this.getMaskFunction = function(maskPattern) {
+
+      switch (maskPattern) {
+
+      case QRMaskPattern.PATTERN000 :
+        return function(i, j) { return (i + j) % 2 == 0; };
+      case QRMaskPattern.PATTERN001 :
+        return function(i, j) { return i % 2 == 0; };
+      case QRMaskPattern.PATTERN010 :
+        return function(i, j) { return j % 3 == 0; };
+      case QRMaskPattern.PATTERN011 :
+        return function(i, j) { return (i + j) % 3 == 0; };
+      case QRMaskPattern.PATTERN100 :
+        return function(i, j) { return (Math.floor(i / 2) + Math.floor(j / 3) ) % 2 == 0; };
+      case QRMaskPattern.PATTERN101 :
+        return function(i, j) { return (i * j) % 2 + (i * j) % 3 == 0; };
+      case QRMaskPattern.PATTERN110 :
+        return function(i, j) { return ( (i * j) % 2 + (i * j) % 3) % 2 == 0; };
+      case QRMaskPattern.PATTERN111 :
+        return function(i, j) { return ( (i * j) % 3 + (i + j) % 2) % 2 == 0; };
+
+      default :
+        throw 'bad maskPattern:' + maskPattern;
+      }
+    };
+
+    _this.getErrorCorrectPolynomial = function(errorCorrectLength) {
+      var a = qrPolynomial([1], 0);
+      for (var i = 0; i < errorCorrectLength; i += 1) {
+        a = a.multiply(qrPolynomial([1, QRMath.gexp(i)], 0) );
+      }
+      return a;
+    };
+
+    _this.getLengthInBits = function(mode, type) {
+
+      if (1 <= type && type < 10) {
+
+        // 1 - 9
+
+        switch(mode) {
+        case QRMode.MODE_NUMBER    : return 10;
+        case QRMode.MODE_ALPHA_NUM : return 9;
+        case QRMode.MODE_8BIT_BYTE : return 8;
+        case QRMode.MODE_KANJI     : return 8;
+        default :
+          throw 'mode:' + mode;
+        }
+
+      } else if (type < 27) {
+
+        // 10 - 26
+
+        switch(mode) {
+        case QRMode.MODE_NUMBER    : return 12;
+        case QRMode.MODE_ALPHA_NUM : return 11;
+        case QRMode.MODE_8BIT_BYTE : return 16;
+        case QRMode.MODE_KANJI     : return 10;
+        default :
+          throw 'mode:' + mode;
+        }
+
+      } else if (type < 41) {
+
+        // 27 - 40
+
+        switch(mode) {
+        case QRMode.MODE_NUMBER    : return 14;
+        case QRMode.MODE_ALPHA_NUM : return 13;
+        case QRMode.MODE_8BIT_BYTE : return 16;
+        case QRMode.MODE_KANJI     : return 12;
+        default :
+          throw 'mode:' + mode;
+        }
+
+      } else {
+        throw 'type:' + type;
+      }
+    };
+
+    _this.getLostPoint = function(qrcode) {
+
+      var moduleCount = qrcode.getModuleCount();
+
+      var lostPoint = 0;
+
+      // LEVEL1
+
+      for (var row = 0; row < moduleCount; row += 1) {
+        for (var col = 0; col < moduleCount; col += 1) {
+
+          var sameCount = 0;
+          var dark = qrcode.isDark(row, col);
+
+          for (var r = -1; r <= 1; r += 1) {
+
+            if (row + r < 0 || moduleCount <= row + r) {
+              continue;
+            }
+
+            for (var c = -1; c <= 1; c += 1) {
+
+              if (col + c < 0 || moduleCount <= col + c) {
+                continue;
+              }
+
+              if (r == 0 && c == 0) {
+                continue;
+              }
+
+              if (dark == qrcode.isDark(row + r, col + c) ) {
+                sameCount += 1;
+              }
+            }
+          }
+
+          if (sameCount > 5) {
+            lostPoint += (3 + sameCount - 5);
+          }
+        }
+      };
+
+      // LEVEL2
+
+      for (var row = 0; row < moduleCount - 1; row += 1) {
+        for (var col = 0; col < moduleCount - 1; col += 1) {
+          var count = 0;
+          if (qrcode.isDark(row, col) ) count += 1;
+          if (qrcode.isDark(row + 1, col) ) count += 1;
+          if (qrcode.isDark(row, col + 1) ) count += 1;
+          if (qrcode.isDark(row + 1, col + 1) ) count += 1;
+          if (count == 0 || count == 4) {
+            lostPoint += 3;
+          }
+        }
+      }
+
+      // LEVEL3
+
+      for (var row = 0; row < moduleCount; row += 1) {
+        for (var col = 0; col < moduleCount - 6; col += 1) {
+          if (qrcode.isDark(row, col)
+              && !qrcode.isDark(row, col + 1)
+              &&  qrcode.isDark(row, col + 2)
+              &&  qrcode.isDark(row, col + 3)
+              &&  qrcode.isDark(row, col + 4)
+              && !qrcode.isDark(row, col + 5)
+              &&  qrcode.isDark(row, col + 6) ) {
+            lostPoint += 40;
+          }
+        }
+      }
+
+      for (var col = 0; col < moduleCount; col += 1) {
+        for (var row = 0; row < moduleCount - 6; row += 1) {
+          if (qrcode.isDark(row, col)
+              && !qrcode.isDark(row + 1, col)
+              &&  qrcode.isDark(row + 2, col)
+              &&  qrcode.isDark(row + 3, col)
+              &&  qrcode.isDark(row + 4, col)
+              && !qrcode.isDark(row + 5, col)
+              &&  qrcode.isDark(row + 6, col) ) {
+            lostPoint += 40;
+          }
+        }
+      }
+
+      // LEVEL4
+
+      var darkCount = 0;
+
+      for (var col = 0; col < moduleCount; col += 1) {
+        for (var row = 0; row < moduleCount; row += 1) {
+          if (qrcode.isDark(row, col) ) {
+            darkCount += 1;
+          }
+        }
+      }
+
+      var ratio = Math.abs(100 * darkCount / moduleCount / moduleCount - 50) / 5;
+      lostPoint += ratio * 10;
+
+      return lostPoint;
+    };
+
+    return _this;
+  }();
+
+  //---------------------------------------------------------------------
+  // QRMath
+  //---------------------------------------------------------------------
+
+  var QRMath = function() {
+
+    var EXP_TABLE = new Array(256);
+    var LOG_TABLE = new Array(256);
+
+    // initialize tables
+    for (var i = 0; i < 8; i += 1) {
+      EXP_TABLE[i] = 1 << i;
+    }
+    for (var i = 8; i < 256; i += 1) {
+      EXP_TABLE[i] = EXP_TABLE[i - 4]
+        ^ EXP_TABLE[i - 5]
+        ^ EXP_TABLE[i - 6]
+        ^ EXP_TABLE[i - 8];
+    }
+    for (var i = 0; i < 255; i += 1) {
+      LOG_TABLE[EXP_TABLE[i] ] = i;
+    }
+
+    var _this = {};
+
+    _this.glog = function(n) {
+
+      if (n < 1) {
+        throw 'glog(' + n + ')';
+      }
+
+      return LOG_TABLE[n];
+    };
+
+    _this.gexp = function(n) {
+
+      while (n < 0) {
+        n += 255;
+      }
+
+      while (n >= 256) {
+        n -= 255;
+      }
+
+      return EXP_TABLE[n];
+    };
+
+    return _this;
+  }();
+
+  //---------------------------------------------------------------------
+  // qrPolynomial
+  //---------------------------------------------------------------------
+
+  function qrPolynomial(num, shift) {
+
+    if (typeof num.length == 'undefined') {
+      throw num.length + '/' + shift;
+    }
+
+    var _num = function() {
+      var offset = 0;
+      while (offset < num.length && num[offset] == 0) {
+        offset += 1;
+      }
+      var _num = new Array(num.length - offset + shift);
+      for (var i = 0; i < num.length - offset; i += 1) {
+        _num[i] = num[i + offset];
+      }
+      return _num;
+    }();
+
+    var _this = {};
+
+    _this.getAt = function(index) {
+      return _num[index];
+    };
+
+    _this.getLength = function() {
+      return _num.length;
+    };
+
+    _this.multiply = function(e) {
+
+      var num = new Array(_this.getLength() + e.getLength() - 1);
+
+      for (var i = 0; i < _this.getLength(); i += 1) {
+        for (var j = 0; j < e.getLength(); j += 1) {
+          num[i + j] ^= QRMath.gexp(QRMath.glog(_this.getAt(i) ) + QRMath.glog(e.getAt(j) ) );
+        }
+      }
+
+      return qrPolynomial(num, 0);
+    };
+
+    _this.mod = function(e) {
+
+      if (_this.getLength() - e.getLength() < 0) {
+        return _this;
+      }
+
+      var ratio = QRMath.glog(_this.getAt(0) ) - QRMath.glog(e.getAt(0) );
+
+      var num = new Array(_this.getLength() );
+      for (var i = 0; i < _this.getLength(); i += 1) {
+        num[i] = _this.getAt(i);
+      }
+
+      for (var i = 0; i < e.getLength(); i += 1) {
+        num[i] ^= QRMath.gexp(QRMath.glog(e.getAt(i) ) + ratio);
+      }
+
+      // recursive call
+      return qrPolynomial(num, 0).mod(e);
+    };
+
+    return _this;
+  };
+
+  //---------------------------------------------------------------------
+  // QRRSBlock
+  //---------------------------------------------------------------------
+
+  var QRRSBlock = function() {
+
+    var RS_BLOCK_TABLE = [
+
+      // L
+      // M
+      // Q
+      // H
+
+      // 1
+      [1, 26, 19],
+      [1, 26, 16],
+      [1, 26, 13],
+      [1, 26, 9],
+
+      // 2
+      [1, 44, 34],
+      [1, 44, 28],
+      [1, 44, 22],
+      [1, 44, 16],
+
+      // 3
+      [1, 70, 55],
+      [1, 70, 44],
+      [2, 35, 17],
+      [2, 35, 13],
+
+      // 4
+      [1, 100, 80],
+      [2, 50, 32],
+      [2, 50, 24],
+      [4, 25, 9],
+
+      // 5
+      [1, 134, 108],
+      [2, 67, 43],
+      [2, 33, 15, 2, 34, 16],
+      [2, 33, 11, 2, 34, 12],
+
+      // 6
+      [2, 86, 68],
+      [4, 43, 27],
+      [4, 43, 19],
+      [4, 43, 15],
+
+      // 7
+      [2, 98, 78],
+      [4, 49, 31],
+      [2, 32, 14, 4, 33, 15],
+      [4, 39, 13, 1, 40, 14],
+
+      // 8
+      [2, 121, 97],
+      [2, 60, 38, 2, 61, 39],
+      [4, 40, 18, 2, 41, 19],
+      [4, 40, 14, 2, 41, 15],
+
+      // 9
+      [2, 146, 116],
+      [3, 58, 36, 2, 59, 37],
+      [4, 36, 16, 4, 37, 17],
+      [4, 36, 12, 4, 37, 13],
+
+      // 10
+      [2, 86, 68, 2, 87, 69],
+      [4, 69, 43, 1, 70, 44],
+      [6, 43, 19, 2, 44, 20],
+      [6, 43, 15, 2, 44, 16],
+
+      // 11
+      [4, 101, 81],
+      [1, 80, 50, 4, 81, 51],
+      [4, 50, 22, 4, 51, 23],
+      [3, 36, 12, 8, 37, 13],
+
+      // 12
+      [2, 116, 92, 2, 117, 93],
+      [6, 58, 36, 2, 59, 37],
+      [4, 46, 20, 6, 47, 21],
+      [7, 42, 14, 4, 43, 15],
+
+      // 13
+      [4, 133, 107],
+      [8, 59, 37, 1, 60, 38],
+      [8, 44, 20, 4, 45, 21],
+      [12, 33, 11, 4, 34, 12],
+
+      // 14
+      [3, 145, 115, 1, 146, 116],
+      [4, 64, 40, 5, 65, 41],
+      [11, 36, 16, 5, 37, 17],
+      [11, 36, 12, 5, 37, 13],
+
+      // 15
+      [5, 109, 87, 1, 110, 88],
+      [5, 65, 41, 5, 66, 42],
+      [5, 54, 24, 7, 55, 25],
+      [11, 36, 12, 7, 37, 13],
+
+      // 16
+      [5, 122, 98, 1, 123, 99],
+      [7, 73, 45, 3, 74, 46],
+      [15, 43, 19, 2, 44, 20],
+      [3, 45, 15, 13, 46, 16],
+
+      // 17
+      [1, 135, 107, 5, 136, 108],
+      [10, 74, 46, 1, 75, 47],
+      [1, 50, 22, 15, 51, 23],
+      [2, 42, 14, 17, 43, 15],
+
+      // 18
+      [5, 150, 120, 1, 151, 121],
+      [9, 69, 43, 4, 70, 44],
+      [17, 50, 22, 1, 51, 23],
+      [2, 42, 14, 19, 43, 15],
+
+      // 19
+      [3, 141, 113, 4, 142, 114],
+      [3, 70, 44, 11, 71, 45],
+      [17, 47, 21, 4, 48, 22],
+      [9, 39, 13, 16, 40, 14],
+
+      // 20
+      [3, 135, 107, 5, 136, 108],
+      [3, 67, 41, 13, 68, 42],
+      [15, 54, 24, 5, 55, 25],
+      [15, 43, 15, 10, 44, 16],
+
+      // 21
+      [4, 144, 116, 4, 145, 117],
+      [17, 68, 42],
+      [17, 50, 22, 6, 51, 23],
+      [19, 46, 16, 6, 47, 17],
+
+      // 22
+      [2, 139, 111, 7, 140, 112],
+      [17, 74, 46],
+      [7, 54, 24, 16, 55, 25],
+      [34, 37, 13],
+
+      // 23
+      [4, 151, 121, 5, 152, 122],
+      [4, 75, 47, 14, 76, 48],
+      [11, 54, 24, 14, 55, 25],
+      [16, 45, 15, 14, 46, 16],
+
+      // 24
+      [6, 147, 117, 4, 148, 118],
+      [6, 73, 45, 14, 74, 46],
+      [11, 54, 24, 16, 55, 25],
+      [30, 46, 16, 2, 47, 17],
+
+      // 25
+      [8, 132, 106, 4, 133, 107],
+      [8, 75, 47, 13, 76, 48],
+      [7, 54, 24, 22, 55, 25],
+      [22, 45, 15, 13, 46, 16],
+
+      // 26
+      [10, 142, 114, 2, 143, 115],
+      [19, 74, 46, 4, 75, 47],
+      [28, 50, 22, 6, 51, 23],
+      [33, 46, 16, 4, 47, 17],
+
+      // 27
+      [8, 152, 122, 4, 153, 123],
+      [22, 73, 45, 3, 74, 46],
+      [8, 53, 23, 26, 54, 24],
+      [12, 45, 15, 28, 46, 16],
+
+      // 28
+      [3, 147, 117, 10, 148, 118],
+      [3, 73, 45, 23, 74, 46],
+      [4, 54, 24, 31, 55, 25],
+      [11, 45, 15, 31, 46, 16],
+
+      // 29
+      [7, 146, 116, 7, 147, 117],
+      [21, 73, 45, 7, 74, 46],
+      [1, 53, 23, 37, 54, 24],
+      [19, 45, 15, 26, 46, 16],
+
+      // 30
+      [5, 145, 115, 10, 146, 116],
+      [19, 75, 47, 10, 76, 48],
+      [15, 54, 24, 25, 55, 25],
+      [23, 45, 15, 25, 46, 16],
+
+      // 31
+      [13, 145, 115, 3, 146, 116],
+      [2, 74, 46, 29, 75, 47],
+      [42, 54, 24, 1, 55, 25],
+      [23, 45, 15, 28, 46, 16],
+
+      // 32
+      [17, 145, 115],
+      [10, 74, 46, 23, 75, 47],
+      [10, 54, 24, 35, 55, 25],
+      [19, 45, 15, 35, 46, 16],
+
+      // 33
+      [17, 145, 115, 1, 146, 116],
+      [14, 74, 46, 21, 75, 47],
+      [29, 54, 24, 19, 55, 25],
+      [11, 45, 15, 46, 46, 16],
+
+      // 34
+      [13, 145, 115, 6, 146, 116],
+      [14, 74, 46, 23, 75, 47],
+      [44, 54, 24, 7, 55, 25],
+      [59, 46, 16, 1, 47, 17],
+
+      // 35
+      [12, 151, 121, 7, 152, 122],
+      [12, 75, 47, 26, 76, 48],
+      [39, 54, 24, 14, 55, 25],
+      [22, 45, 15, 41, 46, 16],
+
+      // 36
+      [6, 151, 121, 14, 152, 122],
+      [6, 75, 47, 34, 76, 48],
+      [46, 54, 24, 10, 55, 25],
+      [2, 45, 15, 64, 46, 16],
+
+      // 37
+      [17, 152, 122, 4, 153, 123],
+      [29, 74, 46, 14, 75, 47],
+      [49, 54, 24, 10, 55, 25],
+      [24, 45, 15, 46, 46, 16],
+
+      // 38
+      [4, 152, 122, 18, 153, 123],
+      [13, 74, 46, 32, 75, 47],
+      [48, 54, 24, 14, 55, 25],
+      [42, 45, 15, 32, 46, 16],
+
+      // 39
+      [20, 147, 117, 4, 148, 118],
+      [40, 75, 47, 7, 76, 48],
+      [43, 54, 24, 22, 55, 25],
+      [10, 45, 15, 67, 46, 16],
+
+      // 40
+      [19, 148, 118, 6, 149, 119],
+      [18, 75, 47, 31, 76, 48],
+      [34, 54, 24, 34, 55, 25],
+      [20, 45, 15, 61, 46, 16]
+    ];
+
+    var qrRSBlock = function(totalCount, dataCount) {
+      var _this = {};
+      _this.totalCount = totalCount;
+      _this.dataCount = dataCount;
+      return _this;
+    };
+
+    var _this = {};
+
+    var getRsBlockTable = function(typeNumber, errorCorrectionLevel) {
+
+      switch(errorCorrectionLevel) {
+      case QRErrorCorrectionLevel.L :
+        return RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 0];
+      case QRErrorCorrectionLevel.M :
+        return RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 1];
+      case QRErrorCorrectionLevel.Q :
+        return RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 2];
+      case QRErrorCorrectionLevel.H :
+        return RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 3];
+      default :
+        return undefined;
+      }
+    };
+
+    _this.getRSBlocks = function(typeNumber, errorCorrectionLevel) {
+
+      var rsBlock = getRsBlockTable(typeNumber, errorCorrectionLevel);
+
+      if (typeof rsBlock == 'undefined') {
+        throw 'bad rs block @ typeNumber:' + typeNumber +
+            '/errorCorrectionLevel:' + errorCorrectionLevel;
+      }
+
+      var length = rsBlock.length / 3;
+
+      var list = [];
+
+      for (var i = 0; i < length; i += 1) {
+
+        var count = rsBlock[i * 3 + 0];
+        var totalCount = rsBlock[i * 3 + 1];
+        var dataCount = rsBlock[i * 3 + 2];
+
+        for (var j = 0; j < count; j += 1) {
+          list.push(qrRSBlock(totalCount, dataCount) );
+        }
+      }
+
+      return list;
+    };
+
+    return _this;
+  }();
+
+  //---------------------------------------------------------------------
+  // qrBitBuffer
+  //---------------------------------------------------------------------
+
+  var qrBitBuffer = function() {
+
+    var _buffer = [];
+    var _length = 0;
+
+    var _this = {};
+
+    _this.getBuffer = function() {
+      return _buffer;
+    };
+
+    _this.getAt = function(index) {
+      var bufIndex = Math.floor(index / 8);
+      return ( (_buffer[bufIndex] >>> (7 - index % 8) ) & 1) == 1;
+    };
+
+    _this.put = function(num, length) {
+      for (var i = 0; i < length; i += 1) {
+        _this.putBit( ( (num >>> (length - i - 1) ) & 1) == 1);
+      }
+    };
+
+    _this.getLengthInBits = function() {
+      return _length;
+    };
+
+    _this.putBit = function(bit) {
+
+      var bufIndex = Math.floor(_length / 8);
+      if (_buffer.length <= bufIndex) {
+        _buffer.push(0);
+      }
+
+      if (bit) {
+        _buffer[bufIndex] |= (0x80 >>> (_length % 8) );
+      }
+
+      _length += 1;
+    };
+
+    return _this;
+  };
+
+  //---------------------------------------------------------------------
+  // qrNumber
+  //---------------------------------------------------------------------
+
+  var qrNumber = function(data) {
+
+    var _mode = QRMode.MODE_NUMBER;
+    var _data = data;
+
+    var _this = {};
+
+    _this.getMode = function() {
+      return _mode;
+    };
+
+    _this.getLength = function(buffer) {
+      return _data.length;
+    };
+
+    _this.write = function(buffer) {
+
+      var data = _data;
+
+      var i = 0;
+
+      while (i + 2 < data.length) {
+        buffer.put(strToNum(data.substring(i, i + 3) ), 10);
+        i += 3;
+      }
+
+      if (i < data.length) {
+        if (data.length - i == 1) {
+          buffer.put(strToNum(data.substring(i, i + 1) ), 4);
+        } else if (data.length - i == 2) {
+          buffer.put(strToNum(data.substring(i, i + 2) ), 7);
+        }
+      }
+    };
+
+    var strToNum = function(s) {
+      var num = 0;
+      for (var i = 0; i < s.length; i += 1) {
+        num = num * 10 + chatToNum(s.charAt(i) );
+      }
+      return num;
+    };
+
+    var chatToNum = function(c) {
+      if ('0' <= c && c <= '9') {
+        return c.charCodeAt(0) - '0'.charCodeAt(0);
+      }
+      throw 'illegal char :' + c;
+    };
+
+    return _this;
+  };
+
+  //---------------------------------------------------------------------
+  // qrAlphaNum
+  //---------------------------------------------------------------------
+
+  var qrAlphaNum = function(data) {
+
+    var _mode = QRMode.MODE_ALPHA_NUM;
+    var _data = data;
+
+    var _this = {};
+
+    _this.getMode = function() {
+      return _mode;
+    };
+
+    _this.getLength = function(buffer) {
+      return _data.length;
+    };
+
+    _this.write = function(buffer) {
+
+      var s = _data;
+
+      var i = 0;
+
+      while (i + 1 < s.length) {
+        buffer.put(
+          getCode(s.charAt(i) ) * 45 +
+          getCode(s.charAt(i + 1) ), 11);
+        i += 2;
+      }
+
+      if (i < s.length) {
+        buffer.put(getCode(s.charAt(i) ), 6);
+      }
+    };
+
+    var getCode = function(c) {
+
+      if ('0' <= c && c <= '9') {
+        return c.charCodeAt(0) - '0'.charCodeAt(0);
+      } else if ('A' <= c && c <= 'Z') {
+        return c.charCodeAt(0) - 'A'.charCodeAt(0) + 10;
+      } else {
+        switch (c) {
+        case ' ' : return 36;
+        case '$' : return 37;
+        case '%' : return 38;
+        case '*' : return 39;
+        case '+' : return 40;
+        case '-' : return 41;
+        case '.' : return 42;
+        case '/' : return 43;
+        case ':' : return 44;
+        default :
+          throw 'illegal char :' + c;
+        }
+      }
+    };
+
+    return _this;
+  };
+
+  //---------------------------------------------------------------------
+  // qr8BitByte
+  //---------------------------------------------------------------------
+
+  var qr8BitByte = function(data) {
+
+    var _mode = QRMode.MODE_8BIT_BYTE;
+    var _data = data;
+    var _bytes = qrcode.stringToBytes(data);
+
+    var _this = {};
+
+    _this.getMode = function() {
+      return _mode;
+    };
+
+    _this.getLength = function(buffer) {
+      return _bytes.length;
+    };
+
+    _this.write = function(buffer) {
+      for (var i = 0; i < _bytes.length; i += 1) {
+        buffer.put(_bytes[i], 8);
+      }
+    };
+
+    return _this;
+  };
+
+  //---------------------------------------------------------------------
+  // qrKanji
+  //---------------------------------------------------------------------
+
+  var qrKanji = function(data) {
+
+    var _mode = QRMode.MODE_KANJI;
+    var _data = data;
+
+    var stringToBytes = qrcode.stringToBytesFuncs['SJIS'];
+    if (!stringToBytes) {
+      throw 'sjis not supported.';
+    }
+    !function(c, code) {
+      // self test for sjis support.
+      var test = stringToBytes(c);
+      if (test.length != 2 || ( (test[0] << 8) | test[1]) != code) {
+        throw 'sjis not supported.';
+      }
+    }('\u53cb', 0x9746);
+
+    var _bytes = stringToBytes(data);
+
+    var _this = {};
+
+    _this.getMode = function() {
+      return _mode;
+    };
+
+    _this.getLength = function(buffer) {
+      return ~~(_bytes.length / 2);
+    };
+
+    _this.write = function(buffer) {
+
+      var data = _bytes;
+
+      var i = 0;
+
+      while (i + 1 < data.length) {
+
+        var c = ( (0xff & data[i]) << 8) | (0xff & data[i + 1]);
+
+        if (0x8140 <= c && c <= 0x9FFC) {
+          c -= 0x8140;
+        } else if (0xE040 <= c && c <= 0xEBBF) {
+          c -= 0xC140;
+        } else {
+          throw 'illegal char at ' + (i + 1) + '/' + c;
+        }
+
+        c = ( (c >>> 8) & 0xff) * 0xC0 + (c & 0xff);
+
+        buffer.put(c, 13);
+
+        i += 2;
+      }
+
+      if (i < data.length) {
+        throw 'illegal char at ' + (i + 1);
+      }
+    };
+
+    return _this;
+  };
+
+  //=====================================================================
+  // GIF Support etc.
+  //
+
+  //---------------------------------------------------------------------
+  // byteArrayOutputStream
+  //---------------------------------------------------------------------
+
+  var byteArrayOutputStream = function() {
+
+    var _bytes = [];
+
+    var _this = {};
+
+    _this.writeByte = function(b) {
+      _bytes.push(b & 0xff);
+    };
+
+    _this.writeShort = function(i) {
+      _this.writeByte(i);
+      _this.writeByte(i >>> 8);
+    };
+
+    _this.writeBytes = function(b, off, len) {
+      off = off || 0;
+      len = len || b.length;
+      for (var i = 0; i < len; i += 1) {
+        _this.writeByte(b[i + off]);
+      }
+    };
+
+    _this.writeString = function(s) {
+      for (var i = 0; i < s.length; i += 1) {
+        _this.writeByte(s.charCodeAt(i) );
+      }
+    };
+
+    _this.toByteArray = function() {
+      return _bytes;
+    };
+
+    _this.toString = function() {
+      var s = '';
+      s += '[';
+      for (var i = 0; i < _bytes.length; i += 1) {
+        if (i > 0) {
+          s += ',';
+        }
+        s += _bytes[i];
+      }
+      s += ']';
+      return s;
+    };
+
+    return _this;
+  };
+
+  //---------------------------------------------------------------------
+  // base64EncodeOutputStream
+  //---------------------------------------------------------------------
+
+  var base64EncodeOutputStream = function() {
+
+    var _buffer = 0;
+    var _buflen = 0;
+    var _length = 0;
+    var _base64 = '';
+
+    var _this = {};
+
+    var writeEncoded = function(b) {
+      _base64 += String.fromCharCode(encode(b & 0x3f) );
+    };
+
+    var encode = function(n) {
+      if (n < 0) {
+        // error.
+      } else if (n < 26) {
+        return 0x41 + n;
+      } else if (n < 52) {
+        return 0x61 + (n - 26);
+      } else if (n < 62) {
+        return 0x30 + (n - 52);
+      } else if (n == 62) {
+        return 0x2b;
+      } else if (n == 63) {
+        return 0x2f;
+      }
+      throw 'n:' + n;
+    };
+
+    _this.writeByte = function(n) {
+
+      _buffer = (_buffer << 8) | (n & 0xff);
+      _buflen += 8;
+      _length += 1;
+
+      while (_buflen >= 6) {
+        writeEncoded(_buffer >>> (_buflen - 6) );
+        _buflen -= 6;
+      }
+    };
+
+    _this.flush = function() {
+
+      if (_buflen > 0) {
+        writeEncoded(_buffer << (6 - _buflen) );
+        _buffer = 0;
+        _buflen = 0;
+      }
+
+      if (_length % 3 != 0) {
+        // padding
+        var padlen = 3 - _length % 3;
+        for (var i = 0; i < padlen; i += 1) {
+          _base64 += '=';
+        }
+      }
+    };
+
+    _this.toString = function() {
+      return _base64;
+    };
+
+    return _this;
+  };
+
+  //---------------------------------------------------------------------
+  // base64DecodeInputStream
+  //---------------------------------------------------------------------
+
+  var base64DecodeInputStream = function(str) {
+
+    var _str = str;
+    var _pos = 0;
+    var _buffer = 0;
+    var _buflen = 0;
+
+    var _this = {};
+
+    _this.read = function() {
+
+      while (_buflen < 8) {
+
+        if (_pos >= _str.length) {
+          if (_buflen == 0) {
+            return -1;
+          }
+          throw 'unexpected end of file./' + _buflen;
+        }
+
+        var c = _str.charAt(_pos);
+        _pos += 1;
+
+        if (c == '=') {
+          _buflen = 0;
+          return -1;
+        } else if (c.match(/^\s$/) ) {
+          // ignore if whitespace.
+          continue;
+        }
+
+        _buffer = (_buffer << 6) | decode(c.charCodeAt(0) );
+        _buflen += 6;
+      }
+
+      var n = (_buffer >>> (_buflen - 8) ) & 0xff;
+      _buflen -= 8;
+      return n;
+    };
+
+    var decode = function(c) {
+      if (0x41 <= c && c <= 0x5a) {
+        return c - 0x41;
+      } else if (0x61 <= c && c <= 0x7a) {
+        return c - 0x61 + 26;
+      } else if (0x30 <= c && c <= 0x39) {
+        return c - 0x30 + 52;
+      } else if (c == 0x2b) {
+        return 62;
+      } else if (c == 0x2f) {
+        return 63;
+      } else {
+        throw 'c:' + c;
+      }
+    };
+
+    return _this;
+  };
+
+  //---------------------------------------------------------------------
+  // gifImage (B/W)
+  //---------------------------------------------------------------------
+
+  var gifImage = function(width, height) {
+
+    var _width = width;
+    var _height = height;
+    var _data = new Array(width * height);
+
+    var _this = {};
+
+    _this.setPixel = function(x, y, pixel) {
+      _data[y * _width + x] = pixel;
+    };
+
+    _this.write = function(out) {
+
+      //---------------------------------
+      // GIF Signature
+
+      out.writeString('GIF87a');
+
+      //---------------------------------
+      // Screen Descriptor
+
+      out.writeShort(_width);
+      out.writeShort(_height);
+
+      out.writeByte(0x80); // 2bit
+      out.writeByte(0);
+      out.writeByte(0);
+
+      //---------------------------------
+      // Global Color Map
+
+      // black
+      out.writeByte(0x00);
+      out.writeByte(0x00);
+      out.writeByte(0x00);
+
+      // white
+      out.writeByte(0xff);
+      out.writeByte(0xff);
+      out.writeByte(0xff);
+
+      //---------------------------------
+      // Image Descriptor
+
+      out.writeString(',');
+      out.writeShort(0);
+      out.writeShort(0);
+      out.writeShort(_width);
+      out.writeShort(_height);
+      out.writeByte(0);
+
+      //---------------------------------
+      // Local Color Map
+
+      //---------------------------------
+      // Raster Data
+
+      var lzwMinCodeSize = 2;
+      var raster = getLZWRaster(lzwMinCodeSize);
+
+      out.writeByte(lzwMinCodeSize);
+
+      var offset = 0;
+
+      while (raster.length - offset > 255) {
+        out.writeByte(255);
+        out.writeBytes(raster, offset, 255);
+        offset += 255;
+      }
+
+      out.writeByte(raster.length - offset);
+      out.writeBytes(raster, offset, raster.length - offset);
+      out.writeByte(0x00);
+
+      //---------------------------------
+      // GIF Terminator
+      out.writeString(';');
+    };
+
+    var bitOutputStream = function(out) {
+
+      var _out = out;
+      var _bitLength = 0;
+      var _bitBuffer = 0;
+
+      var _this = {};
+
+      _this.write = function(data, length) {
+
+        if ( (data >>> length) != 0) {
+          throw 'length over';
+        }
+
+        while (_bitLength + length >= 8) {
+          _out.writeByte(0xff & ( (data << _bitLength) | _bitBuffer) );
+          length -= (8 - _bitLength);
+          data >>>= (8 - _bitLength);
+          _bitBuffer = 0;
+          _bitLength = 0;
+        }
+
+        _bitBuffer = (data << _bitLength) | _bitBuffer;
+        _bitLength = _bitLength + length;
+      };
+
+      _this.flush = function() {
+        if (_bitLength > 0) {
+          _out.writeByte(_bitBuffer);
+        }
+      };
+
+      return _this;
+    };
+
+    var getLZWRaster = function(lzwMinCodeSize) {
+
+      var clearCode = 1 << lzwMinCodeSize;
+      var endCode = (1 << lzwMinCodeSize) + 1;
+      var bitLength = lzwMinCodeSize + 1;
+
+      // Setup LZWTable
+      var table = lzwTable();
+
+      for (var i = 0; i < clearCode; i += 1) {
+        table.add(String.fromCharCode(i) );
+      }
+      table.add(String.fromCharCode(clearCode) );
+      table.add(String.fromCharCode(endCode) );
+
+      var byteOut = byteArrayOutputStream();
+      var bitOut = bitOutputStream(byteOut);
+
+      // clear code
+      bitOut.write(clearCode, bitLength);
+
+      var dataIndex = 0;
+
+      var s = String.fromCharCode(_data[dataIndex]);
+      dataIndex += 1;
+
+      while (dataIndex < _data.length) {
+
+        var c = String.fromCharCode(_data[dataIndex]);
+        dataIndex += 1;
+
+        if (table.contains(s + c) ) {
+
+          s = s + c;
+
+        } else {
+
+          bitOut.write(table.indexOf(s), bitLength);
+
+          if (table.size() < 0xfff) {
+
+            if (table.size() == (1 << bitLength) ) {
+              bitLength += 1;
+            }
+
+            table.add(s + c);
+          }
+
+          s = c;
+        }
+      }
+
+      bitOut.write(table.indexOf(s), bitLength);
+
+      // end code
+      bitOut.write(endCode, bitLength);
+
+      bitOut.flush();
+
+      return byteOut.toByteArray();
+    };
+
+    var lzwTable = function() {
+
+      var _map = {};
+      var _size = 0;
+
+      var _this = {};
+
+      _this.add = function(key) {
+        if (_this.contains(key) ) {
+          throw 'dup key:' + key;
+        }
+        _map[key] = _size;
+        _size += 1;
+      };
+
+      _this.size = function() {
+        return _size;
+      };
+
+      _this.indexOf = function(key) {
+        return _map[key];
+      };
+
+      _this.contains = function(key) {
+        return typeof _map[key] != 'undefined';
+      };
+
+      return _this;
+    };
+
+    return _this;
+  };
+
+  var createDataURL = function(width, height, getPixel) {
+    var gif = gifImage(width, height);
+    for (var y = 0; y < height; y += 1) {
+      for (var x = 0; x < width; x += 1) {
+        gif.setPixel(x, y, getPixel(x, y) );
+      }
+    }
+
+    var b = byteArrayOutputStream();
+    gif.write(b);
+
+    var base64 = base64EncodeOutputStream();
+    var bytes = b.toByteArray();
+    for (var i = 0; i < bytes.length; i += 1) {
+      base64.writeByte(bytes[i]);
+    }
+    base64.flush();
+
+    return 'data:image/gif;base64,' + base64;
+  };
+
+  //---------------------------------------------------------------------
+  // returns qrcode function.
+
+  return qrcode;
+}();
+
+// multibyte support
+!function() {
+
+  qrcode.stringToBytesFuncs['UTF-8'] = function(s) {
+    // http://stackoverflow.com/questions/18729405/how-to-convert-utf8-string-to-byte-array
+    function toUTF8Array(str) {
+      var utf8 = [];
+      for (var i=0; i < str.length; i++) {
+        var charcode = str.charCodeAt(i);
+        if (charcode < 0x80) utf8.push(charcode);
+        else if (charcode < 0x800) {
+          utf8.push(0xc0 | (charcode >> 6),
+              0x80 | (charcode & 0x3f));
+        }
+        else if (charcode < 0xd800 || charcode >= 0xe000) {
+          utf8.push(0xe0 | (charcode >> 12),
+              0x80 | ((charcode>>6) & 0x3f),
+              0x80 | (charcode & 0x3f));
+        }
+        // surrogate pair
+        else {
+          i++;
+          // UTF-16 encodes 0x10000-0x10FFFF by
+          // subtracting 0x10000 and splitting the
+          // 20 bits of 0x0-0xFFFFF into two halves
+          charcode = 0x10000 + (((charcode & 0x3ff)<<10)
+            | (str.charCodeAt(i) & 0x3ff));
+          utf8.push(0xf0 | (charcode >>18),
+              0x80 | ((charcode>>12) & 0x3f),
+              0x80 | ((charcode>>6) & 0x3f),
+              0x80 | (charcode & 0x3f));
+        }
+      }
+      return utf8;
+    }
+    return toUTF8Array(s);
+  };
+
+}();
+
+(function (factory) {
+  if (typeof define === 'function' && define.amd) {
+      define([], factory);
+  } else if (typeof exports === 'object') {
+      module.exports = factory();
+  }
+}(function () {
+    return qrcode;
+}));
+
+</script>
+<script>
+"use strict";
+/* =============================================================
+   الإعدادات · SETTINGS
+   ============================================================= */
+const CFG = {
+  minutes: 25,
+  passPercent: 50,          // 13 / 25
+  // ضع هنا رابط Web app من Google Apps Script (ينتهي بـ /exec)
+  // Paste the Google Apps Script Web-app URL here (ends with /exec)
+  scriptURL: "",
+  testName: "الاختبار الشهري – نوفمبر 2026",
+  testNameEn: "Monthly Test – November 2026",
+  hod: "أ. صالح شوقي جودة",
+  hodEn: "Mr. Saleh Shawky Goda"
+};
+
+/* ============================================================= TOPICS */
+const TOPICS = {
+  class:{ar:"لغة الصف (بالصور)",en:"Classroom words (pictures)",c:"#10b4a0",
+    tip:"راجع مفردات الصف: باب، نافذة، ستارة، مكيّف، سبورة، كرسي، طاولة، ساعة، حاسوب… وقل اسم كل شيء تراه في فصلك بالعربية، مفردًا ومثنى وجمعًا.",
+    tipEn:"Review classroom words (door, window, curtain, air conditioner, board, chair, table, clock, computer…). Name everything you see in your class in Arabic — singular, dual and plural."},
+  gender:{ar:"المذكر والمؤنث",en:"Masculine & feminine",c:"#ec4899",
+    tip:"راجع درس المذكر والمؤنث: علامة التأنيث (ة)، ومطابقة الصفة والفعل للاسم (الطالبةُ ذهبتْ – البنتُ طويلةٌ).",
+    tipEn:"Review masculine & feminine: the feminine marker (ة), and making the adjective and verb agree with the noun."},
+  number:{ar:"المفرد والمثنى والجمع",en:"Singular, dual & plural",c:"#f59e0b",
+    tip:"راجع درس المفرد والمثنى والجمع: المثنى (ـانِ / ـينِ)، جمع المذكر (ـونَ / ـينَ)، جمع المؤنث (ـات)، وجمع التكسير.",
+    tipEn:"Review singular, dual & plural: dual (-ān / -ayn), masculine plural (-ūn / -īn), feminine plural (-āt) and broken plurals."},
+  demo:{ar:"أسماء الإشارة",en:"Demonstratives",c:"#8b5cf6",
+    tip:"راجع أسماء الإشارة: هذا، هذه، هذانِ، هاتانِ، هؤلاءِ (للقريب)، وذلك، تلك، أولئك (للبعيد).",
+    tipEn:"Review demonstratives: هذا، هذه، هذان، هاتان، هؤلاء (near) and ذلك، تلك، أولئك (far)."},
+  pron:{ar:"الضمائر المنفصلة",en:"Personal pronouns",c:"#2563eb",
+    tip:"راجع الضمائر: أنا، نحن، أنتَ، أنتِ، أنتما، أنتم، أنتنَّ، هو، هي، هما، هم، هنَّ.",
+    tipEn:"Review the personal pronouns (I, we, you m./f./dual/pl., he, she, they)."},
+  suffix:{ar:"الضمائر مع الأسماء والأفعال",en:"Pronouns with nouns & verbs",c:"#0ea5e9",
+    tip:"راجع الضمائر المتصلة: كتابي، كتابُكَ، كتابُكِ، كتابُه، كتابُها، كتابُهم… وتصريف الفعل مع الضمائر (كتبتُ، كتبتْ، كتبوا، كتبْنَ).",
+    tipEn:"Review attached pronouns (كتابي، كتابه، كتابها، كتابهم…) and conjugating verbs with pronouns."},
+  prep:{ar:"حروف الجر",en:"Prepositions",c:"#ff6b4a",
+    tip:"راجع حروف الجر: في، من، إلى، على، عن، بـ، لـ، واستعمالها الصحيح مع الأفعال.",
+    tipEn:"Review prepositions (في، من، إلى، على، عن، بـ، لـ) and which verbs take which preposition."},
+  conj:{ar:"حروف العطف",en:"Conjunctions",c:"#16a34a",
+    tip:"راجع حروف العطف: و (للجمع)، ف (للترتيب السريع)، ثمّ (للترتيب مع مهلة)، أو (للتخيير)، لكنّ، بل.",
+    tipEn:"Review conjunctions: و (and), ف (then, at once), ثمّ (then, later), أو (or), لكنّ (but), بل (rather)."},
+  read:{ar:"فهم المقروء",en:"Reading comprehension",c:"#b45309",
+    tip:"اقرأ النص مرتين: مرة لفهم الفكرة العامة، ومرة للبحث عن الإجابة. ابحث في النص عن كلمات السؤال نفسها.",
+    tipEn:"Read the text twice: once for the main idea, once to find the answer. Look for the question's words in the text."}
+};
+
+/* ============================================================= PICTURES (drawn, no internet needed) */
+const ICON={
+curtain:'<svg viewBox="0 0 100 100"><rect x="4" y="6" width="92" height="7" rx="3" fill="#8d5524"/><path d="M8 13Q15 52 6 94H44Q34 52 46 13Z" fill="#e11d48"/><path d="M92 13Q85 52 94 94H56Q66 52 54 13Z" fill="#e11d48"/><path d="M17 13Q22 52 15 94M27 13Q31 52 25 94M37 13Q39 52 34 94M83 13Q78 52 85 94M73 13Q69 52 75 94M63 13Q61 52 66 94" stroke="#9f1239" stroke-width="2" fill="none"/></svg>',
+ac:'<svg viewBox="0 0 100 100"><rect x="6" y="20" width="88" height="36" rx="9" fill="#f8fafc" stroke="#94a3b8" stroke-width="3"/><rect x="14" y="44" width="72" height="6" rx="3" fill="#cbd5e1"/><circle cx="83" cy="31" r="3.5" fill="#22c55e"/><text x="18" y="36" font-size="10" font-family="Arial" fill="#64748b">24°</text><path d="M22 63q5 8 0 16M38 63q5 8 0 16M54 63q5 8 0 16M70 63q5 8 0 16" stroke="#38bdf8" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg>',
+door:'<svg viewBox="0 0 100 100"><rect x="24" y="5" width="52" height="91" rx="3" fill="#a0522d" stroke="#6b3410" stroke-width="3"/><rect x="31" y="13" width="38" height="30" rx="2" fill="#b8693a"/><rect x="31" y="51" width="38" height="37" rx="2" fill="#b8693a"/><circle cx="67" cy="50" r="4" fill="#ffd166"/></svg>',
+window:'<svg viewBox="0 0 100 100"><rect x="12" y="8" width="76" height="84" rx="4" fill="#fff" stroke="#475569" stroke-width="4"/><rect x="18" y="14" width="29" height="34" fill="#7dd3fc"/><rect x="53" y="14" width="29" height="34" fill="#7dd3fc"/><rect x="18" y="52" width="29" height="34" fill="#7dd3fc"/><rect x="53" y="52" width="29" height="34" fill="#7dd3fc"/><circle cx="32" cy="29" r="7" fill="#fde047"/><path d="M57 42q9-11 20 0" stroke="#fff" stroke-width="4" fill="none"/></svg>',
+chair:'<svg viewBox="0 0 100 100"><rect x="28" y="6" width="44" height="42" rx="7" fill="#3b82f6"/><rect x="22" y="50" width="56" height="10" rx="3" fill="#1d4ed8"/><rect x="26" y="60" width="6" height="35" fill="#475569"/><rect x="68" y="60" width="6" height="35" fill="#475569"/></svg>',
+clock:'<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="#fff" stroke="#f97316" stroke-width="7"/><path d="M50 50V24M50 50l18 10" stroke="#1e293b" stroke-width="5" stroke-linecap="round"/><circle cx="50" cy="50" r="4" fill="#1e293b"/><g fill="#1e293b"><circle cx="50" cy="17" r="2.5"/><circle cx="83" cy="50" r="2.5"/><circle cx="50" cy="83" r="2.5"/><circle cx="17" cy="50" r="2.5"/></g></svg>',
+board:'<svg viewBox="0 0 100 100"><rect x="5" y="12" width="90" height="60" rx="4" fill="#15803d" stroke="#a16207" stroke-width="5"/><text x="50" y="50" font-size="20" fill="#fff" text-anchor="middle" font-family="Amiri,serif">أ ب ت</text><rect x="20" y="72" width="60" height="5" fill="#a16207"/><path d="M30 77l-8 18M70 77l8 18" stroke="#a16207" stroke-width="4"/></svg>',
+book:'<svg viewBox="0 0 100 100"><rect x="22" y="10" width="56" height="80" rx="4" fill="#8b5cf6"/><rect x="22" y="10" width="9" height="80" fill="#6d28d9"/><rect x="38" y="28" width="32" height="12" rx="2" fill="#fff"/><rect x="75" y="14" width="4" height="72" fill="#f1f5f9"/></svg>',
+bag:'<svg viewBox="0 0 100 100"><path d="M36 24q0-14 14-14t14 14" stroke="#c2410c" stroke-width="6" fill="none"/><rect x="20" y="22" width="60" height="72" rx="14" fill="#f97316"/><rect x="30" y="58" width="40" height="26" rx="6" fill="#fb923c"/><rect x="44" y="55" width="12" height="6" rx="2" fill="#7c2d12"/></svg>',
+pen:'<svg viewBox="0 0 100 100"><g transform="rotate(-35 50 50)"><rect x="44" y="6" width="12" height="68" rx="3" fill="#2563eb"/><path d="M44 74h12l-6 16z" fill="#fcd34d"/><path d="M48 84h4l-2 6z" fill="#1e293b"/><rect x="44" y="6" width="12" height="10" fill="#1e3a8a"/></g></svg>',
+computer:'<svg viewBox="0 0 100 100"><rect x="8" y="10" width="84" height="56" rx="5" fill="#1e293b"/><rect x="13" y="15" width="74" height="46" fill="#38bdf8"/><path d="M30 50l12-14 10 10 8-6 12 10z" fill="#fff" opacity=".8"/><rect x="44" y="66" width="12" height="14" fill="#64748b"/><rect x="28" y="80" width="44" height="7" rx="3" fill="#475569"/></svg>',
+table:'<svg viewBox="0 0 100 100"><rect x="6" y="50" width="88" height="10" rx="3" fill="#b45309"/><rect x="13" y="60" width="7" height="36" fill="#92400e"/><rect x="80" y="60" width="7" height="36" fill="#92400e"/></svg>'
+};
+const inner=s=>s.replace(/^<svg[^>]*>/,"").replace(/<\/svg>$/,"");
+ICON.bagOnTable='<svg viewBox="0 0 100 100">'+inner(ICON.table)+'<g transform="translate(29 3) scale(.46)">'+inner(ICON.bag)+'</g></svg>';
+ICON.penInBag='<svg viewBox="0 0 100 100"><g transform="translate(34 -14) scale(.55)">'+inner(ICON.pen)+'</g><g transform="translate(5 12) scale(.88)">'+inner(ICON.bag)+'</g></svg>';
+ICON.bookInBag='<svg viewBox="0 0 100 100"><g transform="translate(32 -10) scale(.4)">'+inner(ICON.book)+'</g><g transform="translate(5 12) scale(.88)">'+inner(ICON.bag)+'</g></svg>';
+function picHTML(img){ if(!img)return"";
+  return `<div class="pics ${img.far?"far":""}">${img.far?'<span class="farTag">🔭 بعيد</span>':""}${Array(img.n||1).fill(`<div class="pic">${ICON[img.i]}</div>`).join("")}</div>`;}
+
+/* ============================================================= BUILDERS */
+// M = اختيار من متعدد (قراءة) · W = كتابة · O = ترتيب كلمات (كتابة) · I = إضافة صورة
+const M=(tp,q,en,opts,a,ex,exEn,p)=>({t:"m",tp,q,en,opts,a,ex,exEn,p:!!p});
+const W=(tp,q,en,acc,ex,exEn,p)=>({t:"w",tp,q,en,acc,ex,exEn,p:!!p});
+const O=(tp,words,acc,ex,exEn)=>({t:"o",tp,q:"رتّب الكلمات لتكوّن جملة صحيحة:",en:"Put the words in order to make a correct sentence.",words,acc,ex,exEn});
+const I=(q,img)=>Object.assign(q,{img});
+
+/* ============================================================= QUESTION BANKS */
+const BANK = {
+/* ---------------- GRADE 5 ---------------- */
+5:{passage:"اسمي سارةُ. أنا طالبةٌ في الصفِّ الخامسِ. عندي أخٌ اسمُه خالدٌ. خالدٌ طالبٌ في الصفِّ الثالثِ. نذهبُ إلى المدرسةِ بالحافلةِ. في حقيبتي كتابانِ وثلاثةُ أقلامٍ. أحبُّ اللغةَ العربيةَ كثيرًا.",
+qs:[
+I(W("class","ما هذه؟ اكتب اسمها بالعربية.","What is this? Write its name in Arabic.",["ستارة","الستارة","هذه ستارة"],"هذه «ستارة».","This is a curtain: ستارة."),{i:"curtain"}),
+I(W("class","كم مكيّفًا في الصورة؟ اكتب الكلمة بالمثنى.","How many air conditioners are there? Write the word in the dual.",["مكيفان","المكيفان","هذان مكيفان"],"في الصورة مكيّفانِ اثنانِ: مكيّف + انِ.","Two air conditioners: مكيّف + ان = مكيّفان."),{i:"ac",n:2}),
+I(M("class","ما هذا؟","What is this?",["بابٌ","نافذةٌ","كرسيٌّ","سبورةٌ"],0,"هذا «باب».","This is a door: باب."),{i:"door"}),
+I(M("class",'أكمل: <span class="s">هذا ………</span>',"Complete: «This is a ……»",["كرسيٌّ","ساعةٌ","حقيبةٌ","طاولةٌ"],0,"هذا «كرسيّ».","This is a chair: كرسيّ."),{i:"chair"}),
+I(W("class","ما هذه؟ اكتب الكلمة بالجمع.","What are these? Write the word in the plural.",["كتب","الكتب","هذه كتب"],"جمع «كتاب»: كُتُب.","The plural of كتاب is كُتُب."),{i:"book",n:3}),
+M("gender",'حوّل الجملة إلى المؤنث (الطالبة): <span class="s">ذهبَ الطالبُ إلى المدرسةِ.</span>',"Change the sentence to the feminine (الطالبة). Choose the correct sentence.",
+ ["ذهبتِ الطالبةُ إلى المدرسةِ.","ذهبَ الطالبةُ إلى المدرسةِ.","ذهبتِ الطالبُ إلى المدرسةِ.","ذهبوا الطالبةُ إلى المدرسةِ."],0,
+ "مع الفاعل المؤنث نضيف تاء التأنيث إلى الفعل: ذهبَ ← ذهبتْ.","With a feminine subject, the verb takes the feminine ت: ذهبَ ← ذهبتْ."),
+W("gender",'اكتب مؤنث كلمة: <span class="s">مُعلِّم</span>',"Write the feminine of «مُعلِّم» (teacher).",["معلمة"],"نضيف التاء المربوطة (ة): معلِّم ← معلِّمة.","Add ة: معلم ← معلمة."),
+M("gender","اختر الكلمة المؤنثة:","Choose the feminine word.",["سيارة","قلم","باب","كتاب"],0,"«سيارة» مؤنثة لأنها تنتهي بالتاء المربوطة (ة).","«سيارة» is feminine because it ends with ة."),
+M("number",'ما المثنى من كلمة <span class="s">كتاب</span>؟',"What is the dual of «كتاب» (book)?",["كتابانِ","كتبٌ","كتابونَ","كتاباتٌ"],0,"المثنى = الكلمة + انِ: كتاب ← كتابانِ.","Dual = word + ان: كتابان."),
+M("number",'أكمل: <span class="s">في الفصلِ عشرونَ ……… .</span>',"Complete: «In the class there are twenty ……»",["طالبًا","طالبانِ","طالبةٌ واحدةٌ","طلابٌ اثنانِ"],0,"نقول: عشرون طالبًا.","We say عشرون طالبًا (twenty students)."),
+W("number",'اكتب جمع كلمة: <span class="s">مُعلِّمة</span>',"Write the plural of «مُعلِّمة».",["معلمات"],"جمع المؤنث: نحذف (ة) ونضيف (ات): معلِّمات.","Drop ة and add ات: معلمات."),
+M("demo",'اختر اسم الإشارة: <span class="s">……… بنتٌ مجتهدةٌ.</span>',"Choose the demonstrative: «…… is a hard-working girl.»",["هذه","هذا","هؤلاءِ","هذانِ"],0,"«بنت» مفرد مؤنث، فنستعمل «هذه».","«بنت» is singular feminine: هذه."),
+M("demo",'اختر اسم الإشارة: <span class="s">……… طالبانِ في الصفِّ الخامسِ.</span>',"Choose the demonstrative: «These two are students in Grade 5.»",["هذانِ","هاتانِ","هذا","هؤلاءِ"],0,"«طالبان» مثنى مذكر: هذانِ.","«طالبان» is masculine dual: هذان."),
+M("demo",'أكمل: <span class="s">……… الطائرةُ في السماءِ.</span>',"The plane is far away. Complete the sentence.",["تلك","ذلك","هذا","هؤلاءِ"],0,"«الطائرة» مؤنث وبعيدة: تلك.","«الطائرة» is feminine and far: تلك."),
+M("pron",'أكمل بالضمير: <span class="s">مريمُ طالبةٌ. ……… في الصفِّ الخامسِ.</span>',"Complete with the pronoun: «Maryam is a student. …… is in Grade 5.»",["هي","هو","هم","أنتَ"],0,"مريم مؤنث مفرد غائب: هي.","Maryam is one female: هي (she)."),
+M("pron",'أكمل: <span class="s">أحمدُ وعليٌّ صديقانِ. ……… في المدرسةِ.</span>',"Complete: «Ahmed and Ali are friends. …… are at school.»",["هما","هو","هي","أنا"],0,"أحمد وعلي اثنان: هما.","Two people: هما."),
+M("suffix",'<span class="s">هذا كتابُ أحمدَ.</span> = هذا ………',"«This is Ahmed's book» = «This is ……»",["كتابُه","كتابُها","كتابُكِ","كتابي"],0,"أحمد مذكر غائب: كتابُه.","Ahmed is «he»: كتابُه (his book)."),
+M("suffix",'اختر الفعل: <span class="s">أنا ……… الدرسَ أمسِ.</span>',"Choose the verb: «I …… the lesson yesterday.»",["كتبتُ","كتبَ","كتبتْ","كتبوا"],0,"مع «أنا» نقول: كتبتُ.","With أنا: كتبتُ."),
+M("prep",'اختر حرف الجر: <span class="s">ذهبتُ ……… السوقِ.</span>',"Choose the preposition: «I went …… the market.»",["إلى","على","عن","في"],0,"ذهبتُ إلى السوقِ (إلى = to).","إلى means «to»."),
+M("prep",'اختر حرف الجر: <span class="s">القلمُ ……… الطاولةِ.</span>',"Choose the preposition: «The pen is …… the table.»",["على","إلى","عن","من"],0,"القلم فوق الطاولة: على الطاولةِ.","On the table: على."),
+M("conj",'اختر حرف العطف: <span class="s">أكلتُ تفاحةً ……… موزةً.</span>',"Choose the conjunction: «I ate an apple …… a banana.»",["و","في","على","من"],0,"«و» تجمع بين شيئين.","و means «and»."),
+M("read","اقرأ النص ثم أجب: ما اسمُ أخي سارةَ؟","Read the text: What is the name of Sara's brother?",["خالد","أحمد","علي","سعيد"],0,"في النص: «عندي أخٌ اسمُه خالدٌ».","The text says his name is Khalid.",true),
+M("read","كم كتابًا في حقيبةِ سارةَ؟","How many books are in Sara's bag?",["كتابانِ","ثلاثةُ كتبٍ","كتابٌ واحدٌ","أربعةُ كتبٍ"],0,"في النص: «في حقيبتي كتابانِ» = 2.","«كتابان» means two books.",true),
+M("read",'في جملة <span class="s">«اسمُه خالدٌ»</span> الضمير (ـه) يعود على:',"In «اسمُه خالد», the pronoun ـه refers to:",["الأخ","سارة","المدرسة","الحافلة"],0,"الضمير يعود على «أخ».","It refers to «أخ» (brother).",true),
+O("gender",["المدرسةِ","إلى","ذهبتْ","الطالبةُ"],["ذهبت الطالبة الى المدرسة","الطالبة ذهبت الى المدرسة"],"الجملة الصحيحة: ذهبتِ الطالبةُ إلى المدرسةِ.","«The student (f.) went to school.»")
+]},
+/* ---------------- GRADE 6 ---------------- */
+6:{passage:"يسكنُ عمرُ مع أسرتِه في رأسِ الخيمةِ. أبوه طبيبٌ يعملُ في المستشفى، وأمُّه معلمةٌ تعملُ في مدرسةٍ قريبةٍ. لعمرَ أختانِ: ليلى ونورةُ. في يومِ السبتِ تذهبُ الأسرةُ إلى البحرِ، ثمَّ تأكلُ في مطعمٍ جميلٍ.",
+qs:[
+I(W("class","ما هذه؟ اكتب اسمها بالعربية.","What is this? Write its name in Arabic.",["نافذة","النافذة","هذه نافذة","شباك","هذا شباك"],"هذه «نافذة» (أو شُبّاك).","This is a window: نافذة / شبّاك."),{i:"window"}),
+I(W("class","اكتب ما في الصورة بالمثنى.","Write what you see in the dual.",["مكيفان","المكيفان","هذان مكيفان"],"مكيّف + انِ = مكيّفانِ.","مكيّف + ان = مكيّفان."),{i:"ac",n:2}),
+I(M("class",'أكمل: <span class="s">في الفصلِ ……… .</span>',"Look at the picture and complete: «In the class there are ……»",["كرسيّانِ","كرسيٌّ","كرسيّاتٌ","كرسيّونَ"],0,"في الصورة كرسيّان اثنان.","Two chairs: كرسيّان."),{i:"chair",n:2}),
+I(W("class","ما هذه؟ اكتب اسمها بالعربية.","What is this? Write its name in Arabic.",["ساعة","الساعة","هذه ساعة"],"هذه «ساعة».","This is a clock: ساعة."),{i:"clock"}),
+I(M("class",'أكمل: <span class="s">……… سبورةٌ كبيرةٌ.</span>',"Complete: «…… is a big board.»",["هذه","هذا","هؤلاءِ","هذانِ"],0,"«سبورة» مؤنث مفرد: هذه.","«سبورة» is feminine: هذه."),{i:"board"}),
+W("gender",'حوّل إلى المؤنث (المهندسة): <span class="s">المهندسُ يعملُ في الشركةِ.</span>',"Change to the feminine (المهندسة) and write the whole sentence.",["المهندسة تعمل في الشركة","تعمل المهندسة في الشركة"],"المهندسُ ← المهندسةُ، يعملُ ← تعملُ.","المهندس ← المهندسة, يعمل ← تعمل."),
+M("gender",'اختر الفعل: <span class="s">الأمُّ ……… الطعامَ.</span>',"Choose the verb: «The mother …… the food.»",["تطبخُ","يطبخُ","يطبخونَ","أطبخُ"],0,"«الأم» مؤنث: تطبخُ.","«الأم» is feminine: تطبخ."),
+M("gender","اختر الجملة الصحيحة:","Choose the correct sentence.",["البنتُ طويلةٌ.","البنتُ طويلٌ.","الولدُ طويلةٌ.","البنتُ طويلونَ."],0,"الصفة تطابق الاسم: البنتُ طويلةٌ.","The adjective agrees with the noun."),
+M("number",'أكمل: <span class="s">في الحديقةِ ……… كبيرتانِ.</span>',"Complete: «In the garden there are two big trees.»",["شجرتانِ","شجرةٌ","أشجارٌ","شجراتٌ"],0,"المثنى من «شجرة»: شجرتانِ.","Dual of شجرة: شجرتان."),
+W("number",'اكتب جمع كلمة: <span class="s">قَلَم</span>',"Write the plural of «قلم» (pen).",["اقلام"],"جمع «قلم»: أقلام.","The plural of قلم: أقلام."),
+M("number",'اختر الكلمة: <span class="s">المعلمونَ ……… .</span>',"Choose the word: «The teachers are ……»",["مجتهدونَ","مجتهدٌ","مجتهدةٌ","مجتهدانِ"],0,"جمع مذكر ← صفة جمع مذكر: مجتهدونَ.","Masculine plural adjective: مجتهدون."),
+M("demo",'اختر اسم الإشارة: <span class="s">……… الطالباتُ مجتهداتٌ.</span>',"Choose: «…… students (f.) are hard-working.»",["هؤلاءِ","هذه","هاتانِ","هذا"],0,"للجمع (عاقل): هؤلاءِ.","Plural of people: هؤلاء."),
+M("demo",'اختر اسم الإشارة: <span class="s">……… بنتانِ صديقتانِ.</span>',"Choose: «These two are girls who are friends.»",["هاتانِ","هذانِ","هذه","هؤلاءِ"],0,"«بنتان» مثنى مؤنث: هاتانِ.","Feminine dual: هاتان."),
+M("demo","اختر الجملة الصحيحة:","Choose the correct sentence.",["هذه سيارةٌ جديدةٌ.","هذا سيارةٌ جديدةٌ.","هذه كتابٌ جديدٌ.","هذانِ سيارةٌ جديدةٌ."],0,"«سيارة» مؤنث مفرد: هذه سيارةٌ.","سيارة is feminine: هذه."),
+M("pron",'أكمل: <span class="s">الطلابُ في الملعبِ. ……… يلعبونَ كرةَ القدمِ.</span>',"Complete: «The students are in the playground. …… are playing football.»",["هم","هو","هي","هما"],0,"«الطلاب» جمع مذكر: هم.","Masculine plural: هم."),
+M("pron",'أكمل: <span class="s">يا فاطمةُ، ……… طالبةٌ مجتهدةٌ.</span>',"Complete: «Fatima, …… are a hard-working student.»",["أنتِ","أنتَ","هي","أنتم"],0,"نخاطب بنتًا واحدة: أنتِ.","Talking to one girl: أنتِ."),
+M("suffix",'<span class="s">هذه حقيبةُ فاطمةَ.</span> = هذه ………',"«This is Fatima's bag» = «This is ……»",["حقيبتُها","حقيبتُه","حقيبتُهم","حقيبتي"],0,"فاطمة = هي: حقيبتُها (ة تصبح ت).","Fatima = she: حقيبتها."),
+M("suffix",'اختر الفعل: <span class="s">نحنُ ……… في الصفِّ السادسِ.</span>',"Choose the verb: «We …… in Grade 6.»",["ندرسُ","يدرسُ","تدرسينَ","أدرسُ"],0,"مع «نحن»: ندرسُ.","With نحن: ندرس."),
+W("suffix",'حوّل إلى (هي): <span class="s">أنتَ تلعبُ.</span>',"Change to «هي» (she) and write the sentence.",["هي تلعب"],"هي تلعبُ.","هي تلعب."),
+M("prep",'اختر حرف الجر: <span class="s">خرجَ الطالبُ ……… الفصلِ.</span>',"Choose: «The student went out …… the classroom.»",["من","إلى","على","عن"],0,"خرجَ من المكان.","Go out «from»: من."),
+M("prep",'اختر حرف الجر: <span class="s">تحدّثَ المعلمُ ……… النظافةِ.</span>',"Choose: «The teacher talked …… cleanliness.»",["عن","إلى","على","من"],0,"تحدّثَ عن (about).","تحدّث عن = talk about."),
+M("conj",'اختر الكلمة: <span class="s">الجوُّ باردٌ، ……… الشمسَ مشرقةٌ.</span>',"Choose: «The weather is cold, …… the sun is shining.»",["لكنَّ","إلى","في","هذه"],0,"«لكنَّ» تربط بين فكرتين مختلفتين.","لكنّ = but."),
+M("read","اقرأ النص ثم أجب: أينَ تعملُ أمُّ عمرَ؟","Read the text: Where does Omar's mother work?",["في مدرسةٍ قريبةٍ","في المستشفى","في مطعمٍ","في البحرِ"],0,"«أمُّه معلمةٌ تعملُ في مدرسةٍ قريبةٍ».","She works in a nearby school.",true),
+W("read",'اكتب مفرد كلمة <span class="s">«أختانِ»</span> من النص:',"Write the singular of «أختان» from the text.",["اخت"],"أختان ← أخت.","The singular is أخت.",true),
+O("gender",["في","تعملُ","المستشفى","الطبيبةُ"],["الطبيبة تعمل في المستشفى","تعمل الطبيبة في المستشفى"],"الجملة الصحيحة: الطبيبةُ تعملُ في المستشفى.","«The doctor (f.) works in the hospital.»")
+]},
+/* ---------------- GRADE 7 ---------------- */
+7:{passage:"في مدرستِنا مكتبةٌ كبيرةٌ. تذهبُ مريمُ وصديقتُها هندُ إلى المكتبةِ كلَّ يومِ خميسٍ. تقرأُ مريمُ القصصَ القصيرةَ، أمّا هندُ فتحبُّ كتبَ العلومِ. أمينُ المكتبةِ رجلٌ لطيفٌ، يساعدُ الطلابَ في البحثِ عن الكتبِ. قالتْ مريمُ: «القراءةُ تفتحُ لنا أبوابَ المعرفةِ».",
+qs:[
+I(W("class",'اكتب جمع ما في الصورة: <span class="s">هذه ………</span>',"Write the plural of what you see: «These are ……»",["ستائر","الستائر","هذه ستائر"],"جمع «ستارة»: ستائر.","The plural of ستارة is ستائر."),{i:"curtain",n:3}),
+I(W("class",'أكمل حسب الصورة: <span class="s">في الفصلِ ……… .</span>',"Complete using the picture: «In the class there are ……»",["سبورتان"],"سبورة + تانِ = سبّورتانِ.","Two boards: سبورتان."),{i:"board",n:2}),
+I(M("class",'أكمل: <span class="s">……… النافذةُ مفتوحةٌ.</span>',"The window is far away. Complete the sentence.",["تلك","ذلك","هذا","أولئك"],0,"«النافذة» مؤنث وبعيدة: تلك.","Feminine and far: تلك."),{i:"window",far:true}),
+I(M("class",'أكمل حسب الصورة: <span class="s">الحقيبةُ ……… الطاولةِ.</span>',"Complete using the picture: «The bag is …… the table.»",["على","في","إلى","عن"],0,"الحقيبة فوق الطاولة: على.","On the table: على."),{i:"bagOnTable"}),
+I(W("class","ما هذا؟ اكتب اسمه بالعربية.","What is this? Write its name in Arabic.",["حاسوب","الحاسوب","هذا حاسوب","حاسب","كمبيوتر","هذا كمبيوتر"],"هذا «حاسوب».","This is a computer: حاسوب."),{i:"computer"}),
+W("gender",'حوّل إلى المؤنث: <span class="s">الطبيبُ الماهرُ يعالجُ المرضى.</span>',"Change the sentence to the feminine and write it.",["الطبيبة الماهرة تعالج المرضى","تعالج الطبيبة الماهرة المرضى"],"الطبيبةُ الماهرةُ تعالجُ المرضى.","الطبيبة الماهرة تعالج."),
+M("gender",'في الجملة خطأ واحد. ما الكلمة الخطأ؟ <span class="s">الممرضةُ النشيطُ تساعدُ المريضَ.</span>',"There is one mistake. Which word is wrong?",["النشيطُ","الممرضةُ","تساعدُ","المريضَ"],0,"الصواب: النشيطةُ.","It should be النشيطة."),
+M("gender",'اختر الكلمة: <span class="s">الشمسُ ……… في الصباحِ.</span>',"Choose: «The sun is …… in the morning.»",["مشرقةٌ","مشرقٌ","مشرقونَ","مشرقانِ"],0,"«الشمس» مؤنثة بلا تاء: مشرقةٌ.","الشمس is feminine: مشرقة."),
+M("number",'اختر الكلمة: <span class="s">جاءَ ……… المجتهدانِ.</span>',"Choose: «The two hard-working …… came.»",["الطالبانِ","الطالبُ","الطلابُ","الطالبةُ"],0,"الصفة مثنى، فالموصوف مثنى: الطالبانِ.","Dual adjective → dual noun."),
+W("number",'حوّل إلى المثنى: <span class="s">الطالبةُ مجتهدةٌ.</span>',"Change to the dual and write the sentence.",["الطالبتان مجتهدتان"],"الطالبتانِ مجتهدتانِ.","الطالبتان مجتهدتان."),
+M("number",'ما جمع كلمة <span class="s">صديق</span>؟',"What is the plural of «صديق»?",["أصدقاء","صديقونَ","صديقاتٌ","صداقة"],0,"جمع «صديق»: أصدقاء.","Plural: أصدقاء."),
+M("demo",'اختر اسم الإشارة: <span class="s">……… المهندسونَ يعملونَ في المصنعِ.</span>',"Choose: «…… engineers work in the factory.»",["هؤلاءِ","هذا","هذانِ","تلك"],0,"جمع عاقل: هؤلاءِ.","Plural of people: هؤلاء."),
+M("demo",'أكمل: <span class="s">……… الجبلُ البعيدُ عالٍ جدًّا.</span>',"Complete: «That far mountain is very high.»",["ذلك","هذه","تلك","هؤلاءِ"],0,"«الجبل» مذكر وبعيد: ذلك.","Masculine and far: ذلك."),
+W("demo",'حوّل إلى الجمع: <span class="s">هذا الطالبُ مجتهدٌ.</span>',"Change to the plural and write the sentence.",["هؤلاء الطلاب مجتهدون"],"هؤلاءِ الطلابُ مجتهدونَ.","هؤلاء الطلاب مجتهدون."),
+M("pron",'أكمل: <span class="s">يا أحمدُ ويا عليُّ، ……… صديقانِ وفيّانِ.</span>',"Complete: «Ahmed and Ali, …… are two loyal friends.»",["أنتما","أنتم","هما","أنتَ"],0,"نخاطب اثنين: أنتما.","Talking to two: أنتما."),
+M("pron",'أكمل: <span class="s">البناتُ في الفصلِ. ……… يرسمنَ لوحةً.</span>',"Complete: «The girls are in class. …… are drawing.»",["هنَّ","هم","هي","هما"],0,"جمع مؤنث: هنَّ.","Feminine plural: هنّ."),
+M("suffix",'أكمل: <span class="s">قابلتُ المعلمَ وسلّمتُ ……… .</span>',"Complete: «I met the teacher and greeted ……»",["عليه","عليها","عليهم","عليكِ"],0,"يعود على «المعلم»: عليه.","Refers to المعلم: عليه."),
+M("suffix",'أكمل: <span class="s">الطلابُ كتبوا ……… .</span>',"Complete: «The students wrote ……»",["واجباتِهم","واجباتِه","واجباتِها","واجباتي"],0,"جمع مذكر: ـهم.","Masculine plural: ـهم."),
+W("suffix",'حوّل إلى (نحن): <span class="s">أنا أذاكرُ دروسي.</span>',"Change to «نحن» (we) and write the sentence.",["نحن نذاكر دروسنا"],"نحن نذاكرُ دروسَنا.","نحن نذاكر دروسنا."),
+M("prep",'اختر حرف الجر: <span class="s">اعتمدَ الطالبُ ……… نفسِه.</span>',"Choose: «The student relied …… himself.»",["على","عن","إلى","في"],0,"اعتمدَ على.","اعتمد على = rely on."),
+M("prep",'اختر حرف الجر: <span class="s">بحثتُ ……… قلمي فوجدتُه تحتَ المكتبِ.</span>',"Choose: «I looked …… my pen.»",["عن","على","من","إلى"],0,"بحثَ عن.","بحث عن = look for."),
+M("conj",'اختر حرف العطف: <span class="s">دخلَ المعلمُ الفصلَ، ……… بدأَ الدرسَ بعدَ خمسِ دقائقَ.</span>',"Choose: «The teacher came in, …… started the lesson five minutes later.»",["ثمَّ","أو","أم","لكنْ"],0,"«ثمَّ» للترتيب مع مهلة.","ثمّ = then, after a while."),
+M("read","اقرأ النص ثم أجب: ماذا تحبُّ هندُ أن تقرأَ؟","Read the text: What does Hind like to read?",["كتبَ العلومِ","القصصَ القصيرةَ","الشعرَ","الجرائدَ"],0,"«أمّا هندُ فتحبُّ كتبَ العلومِ».","Science books.",true),
+M("read",'في جملة <span class="s">«يساعدُ الطلابَ»</span> الفاعل ضمير مستتر يعود على:',"In «يساعد الطلاب», the hidden subject refers to:",["أمين المكتبة","مريم","هند","المعلم"],0,"يعود على «أمين المكتبة».","The librarian.",true),
+W("read",'أكمل بالفعل (قرأ) للمثنى المؤنث: <span class="s">ذهبتْ مريمُ وهندُ إلى المكتبةِ و……… قصصًا.</span>',"Complete with قرأ for two girls.",["قرأتا"],"للمثنى المؤنث في الماضي: قرأتا.","Two females, past: قرأتا.",true)
+]},
+/* ---------------- GRADE 8 ---------------- */
+8:{passage:"قرّرَ طلابُ الصفِّ الثامنِ تنظيمَ حملةٍ لتنظيفِ الشاطئِ. اجتمعوا يومَ السبتِ في الصباحِ الباكرِ، ووزّعتِ المعلمةُ عليهم الأكياسَ والقفازاتِ. عملَ الطلابُ ثلاثَ ساعاتٍ، ثمَّ جلسوا تحتَ الأشجارِ ليستريحوا. قالَ مديرُ المدرسةِ: «أنتم قدوةٌ لغيرِكم، فالمحافظةُ على البيئةِ مسؤوليةُ الجميعِ».",
+qs:[
+I(W("class",'أكمل حسب الصورة: <span class="s">في فصلِنا ……… جديدانِ.</span>',"Complete using the picture: «In our class there are two new ……»",["مكيفان"],"مكيّفانِ جديدانِ (مثنى).","Two air conditioners: مكيّفان."),{i:"ac",n:2}),
+I(W("class",'أكمل حسب الصورة: <span class="s">في الفصلِ ثلاثُ ……… .</span>',"Complete using the picture: «In the class there are three ……»",["نوافذ"],"جمع «نافذة»: نوافذ.","Plural of نافذة: نوافذ."),{i:"window",n:3}),
+I(M("class",'أكمل حسب الصورة: <span class="s">القلمُ ……… الحقيبةِ.</span>',"Complete using the picture: «The pen is …… the bag.»",["في","على","عن","إلى"],0,"القلم داخل الحقيبة: في.","Inside the bag: في."),{i:"penInBag"}),
+I(M("class",'أكمل: <span class="s">……… الساعتانِ معلَّقتانِ على الجدارِ.</span>',"Complete: «These two clocks are hanging on the wall.»",["هاتانِ","هذانِ","هؤلاءِ","هذه"],0,"«الساعتان» مثنى مؤنث: هاتانِ.","Feminine dual: هاتان."),{i:"clock",n:2}),
+I(W("class","اكتب جمع كلمة (كرسيّ):","Write the plural of «كرسيّ» (chair).",["كراسي","الكراسي","كراس"],"جمع «كرسيّ»: كراسيّ.","The plural is كراسي."),{i:"chair",n:3}),
+W("gender",'حوّل إلى المؤنث: <span class="s">المديرُ الجديدُ وصلَ إلى المدرسةِ.</span>',"Change the sentence to the feminine and write it.",["المديرة الجديدة وصلت الى المدرسة","وصلت المديرة الجديدة الى المدرسة"],"المديرةُ الجديدةُ وصلتْ إلى المدرسةِ.","المديرة الجديدة وصلت."),
+M("gender",'ما الكلمة الخطأ؟ <span class="s">اشترتْ أمي سيارةً جديدًا.</span>',"Which word is wrong?",["جديدًا","اشترتْ","أمي","سيارةً"],0,"الصواب: سيارةً جديدةً.","It should be جديدةً."),
+M("gender",'اختر الفعل: <span class="s">الأرضُ ……… حولَ الشمسِ.</span>',"Choose: «The Earth …… around the sun.»",["تدورُ","يدورُ","يدورونَ","تدورانِ"],0,"«الأرض» مؤنثة بلا تاء: تدورُ.","الأرض is feminine: تدور."),
+M("number",'اختر الكلمة: <span class="s">شاهدتُ ……… في الملعبِ.</span>',"Choose: «I watched two players in the stadium.»",["لاعبَيْنِ","لاعبانِ","لاعبونَ","لاعبتانِ"],0,"المثنى مفعولًا به بالياء: لاعبَيْنِ.","As an object, the dual takes ـين."),
+W("number",'حوّل إلى الجمع: <span class="s">المهندسُ يعملُ في المصنعِ.</span>',"Change to the plural and write the sentence.",["المهندسون يعملون في المصنع","يعمل المهندسون في المصنع"],"المهندسونَ يعملونَ في المصنعِ.","المهندسون يعملون."),
+M("number",'ما جمع كلمة <span class="s">مدينة</span>؟',"What is the plural of «مدينة»?",["مُدُن","مدينونَ","مدينتانِ","مدنيّةٌ"],0,"جمع «مدينة»: مُدُن.","Plural: مُدُن."),
+M("demo",'اختر: <span class="s">……… الطالبتانِ فازتا بالجائزةِ.</span>',"Choose: «These two students (f.) won the prize.»",["هاتانِ","هذانِ","هؤلاءِ","هذه"],0,"مثنى مؤنث: هاتانِ.","Feminine dual: هاتان."),
+M("demo",'اختر: <span class="s">……… المدنُ جميلةٌ.</span>',"Choose: «These cities are beautiful.»",["هذه","هؤلاءِ","هذا","هذانِ"],0,"جمع غير العاقل مثل المفرد المؤنث: هذه.","Plural of things → هذه."),
+W("demo",'حوّل إلى المثنى: <span class="s">هذا اللاعبُ ماهرٌ.</span>',"Change to the dual and write the sentence.",["هذان اللاعبان ماهران"],"هذانِ اللاعبانِ ماهرانِ.","هذان اللاعبان ماهران."),
+M("pron",'أكمل: <span class="s">يا طالباتُ، ……… مسؤولاتٌ عن نظافةِ الفصلِ.</span>',"Complete: «Girls, …… are responsible for the class.»",["أنتنَّ","أنتم","هنَّ","أنتِ"],0,"مخاطبة جماعة إناث: أنتنَّ.","Talking to girls: أنتنّ."),
+M("pron",'أكمل: <span class="s">نجحَ الطالبانِ لأنّ……… اجتهدا.</span>',"Complete: «The two students passed because they worked hard.»",["ـهما","ـهم","ـه","ـها"],0,"عن اثنين: لأنّهما.","About two: لأنّهما."),
+M("suffix",'أكمل: <span class="s">شرحتِ المعلمةُ الدرسَ، ففهمَ……… الطلابُ.</span>',"Complete: «The teacher explained the lesson, so the students understood it.»",["ـه (فهمَه)","ـها (فهمَها)","ـهم (فهمَهم)","ـهما (فهمَهما)"],0,"يعود على «الدرس»: فهمَه.","Refers to الدرس: فهمه."),
+W("suffix",'حوّل إلى (هم): <span class="s">هو يحبُّ مدرستَه.</span>',"Change to «هم» (they) and write the sentence.",["هم يحبون مدرستهم"],"هم يحبّونَ مدرستَهم.","هم يحبون مدرستهم."),
+M("suffix",'اختر الفعل: <span class="s">البناتُ ……… واجباتِهنَّ.</span>',"Choose: «The girls wrote their homework.»",["كتبْنَ","كتبوا","كتبتْ","كتبا"],0,"مع «هنّ»: كتبْنَ.","With هنّ: كتبن."),
+M("prep",'اختر: <span class="s">يجبُ أنْ نحافظَ ……… البيئةِ.</span>',"Choose: «We must take care …… the environment.»",["على","عن","من","إلى"],0,"حافظَ على.","حافظ على."),
+M("prep",'اختر: <span class="s">استمعَ الطلابُ ……… نصيحةِ المعلمِ.</span>',"Choose: «The students listened …… the advice.»",["إلى","على","عن","في"],0,"استمعَ إلى.","استمع إلى = listen to."),
+M("conj",'اختر: <span class="s">يمكنُكَ أنْ تكتبَ بالقلمِ الأزرقِ ……… الأسودِ.</span>',"Choose: «You can write with the blue pen …… the black one.»",["أو","ثمَّ","لكنْ","بل"],0,"«أو» للتخيير.","أو = or."),
+M("read","اقرأ النص ثم أجب: ماذا وزّعتِ المعلمةُ على الطلابِ؟","Read the text: What did the teacher hand out?",["الأكياسَ والقفازاتِ","الكتبَ والأقلامَ","الطعامَ والماءَ","الجوائزَ"],0,"«ووزّعتِ المعلمةُ عليهم الأكياسَ والقفازاتِ».","Bags and gloves.",true),
+M("read",'الضمير (هم) في <span class="s">«عليهم»</span> يعود على:',"(هم) in «عليهم» refers to:",["الطلاب","المعلمة","الأشجار","المدير"],0,"على الطلاب.","The students.",true),
+W("read","اكتب من النص حرف العطف الذي يدلّ على الترتيب مع مهلة:","Write the conjunction from the text meaning «then, after a while».",["ثم"],"«…ثلاثَ ساعاتٍ، ثمَّ جلسوا».","ثمّ.",true)
+]},
+/* ---------------- GRADE 9 ---------------- */
+9:{passage:"تُعدُّ دولةُ الإماراتِ من الدولِ التي تهتمُّ بالتعليمِ اهتمامًا كبيرًا؛ فقد أنشأتِ المدارسَ والجامعاتِ في كلِّ إمارةٍ، ووفّرتْ للطلابِ أحدثَ الأجهزةِ. ولا يقتصرُ التعليمُ على الكتبِ، بل يشملُ الرحلاتِ العلميةَ والمسابقاتِ. يقولُ أحدُ المعلمينَ: «الطالبُ الذي يقرأُ كثيرًا يكتبُ جيدًا».",
+qs:[
+I(W("class",'أكمل حسب الصورة: <span class="s">أغلقَ الطالبُ ……… لأنّ الشمسَ قويةٌ.</span>',"Complete using the picture: «The student closed the …… because the sun is strong.»",["الستائر","ستائر"],"جمع «ستارة»: الستائر.","Plural of ستارة: الستائر."),{i:"curtain",n:3}),
+I(M("class",'أكمل حسب الصورة: <span class="s">……… يعملانِ جيدًا.</span>',"Complete using the picture: «…… work well.»",["المكيّفانِ","المكيّفَيْنِ","المكيّفاتُ","المكيّفُ"],0,"الفاعل مثنى مرفوع: المكيّفانِ.","Dual subject: المكيّفان."),{i:"ac",n:2}),
+I(W("class",'أكمل حسب الصورة: <span class="s">نظّفَ الطالبُ ……… .</span>',"Complete using the picture: «The student cleaned the two boards.»",["السبورتين","سبورتين"],"المثنى مفعولًا به بالياء: السبّورتَيْنِ.","As an object, the dual takes ـين: السبورتين."),{i:"board",n:2}),
+I(M("class",'أكمل: <span class="s">……… الكراسيُّ مكسورةٌ.</span>',"The chairs are far away. Complete the sentence.",["تلك","أولئك","هؤلاءِ","ذلك"],0,"جمع غير العاقل البعيد: تلك.","Far plural of things: تلك."),{i:"chair",n:3,far:true}),
+I(M("class",'أكمل حسب الصورة: <span class="s">وضعتُ الكتابَ ……… الحقيبةِ، ……… أغلقتُها.</span>',"Complete using the picture: «I put the book in the bag, then I closed it.»",["في … ثمّ","على … أو","عن … بل","إلى … أم"],0,"الكتاب داخل الحقيبة (في)، والترتيب بـ «ثمّ».","In the bag (في), then (ثمّ)."),{i:"bookInBag"}),
+W("gender",'حوّل إلى المؤنث: <span class="s">الكاتبُ المشهورُ ألّفَ كتابًا جديدًا.</span>',"Change the sentence to the feminine and write it.",["الكاتبة المشهورة الفت كتابا جديدا","الفت الكاتبة المشهورة كتابا جديدا"],"الكاتبةُ المشهورةُ ألّفتْ كتابًا جديدًا.","«كتابًا جديدًا» stays the same."),
+M("gender",'ما الكلمة الخطأ؟ <span class="s">الطالباتُ المجتهداتُ نجحوا في الاختبارِ.</span>',"Which word is wrong?",["نجحوا","الطالباتُ","المجتهداتُ","الاختبارِ"],0,"الصواب: نجحْنَ.","It should be نجحْن."),
+M("gender","اختر الجملة الصحيحة:","Choose the correct sentence.",["النارُ حارّةٌ.","النارُ حارٌّ.","الشمسُ مشرقٌ.","الأرضُ واسعٌ."],0,"النار والشمس والأرض مؤنثة بلا تاء.","النار، الشمس، الأرض are feminine."),
+W("number",'حوّل إلى الجمع: <span class="s">المعلمةُ المخلصةُ تساعدُ طالبتَها.</span>',"Change to the plural and write the sentence.",["المعلمات المخلصات يساعدن طالباتهن","يساعد المعلمات المخلصات طالباتهن","تساعد المعلمات المخلصات طالباتهن","المعلمات المخلصات يساعدن طالبتهن"],"المعلماتُ المخلصاتُ يساعدْنَ طالباتِهنَّ.","المعلمات المخلصات يساعدن طالباتهن."),
+M("number",'اختر: <span class="s">سلّمتُ على ……… الجددِ.</span>',"Choose: «I greeted the new teachers.»",["المعلمينَ","المعلمونَ","المعلمانِ","المعلمةِ"],0,"بعد حرف الجر: المعلمينَ.","After a preposition: المعلمين."),
+M("number",'ما جمع كلمة <span class="s">دولة</span>؟',"What is the plural of «دولة»?",["دُوَل","دولونَ","دولتانِ","دُوَليّة"],0,"جمع «دولة»: دُوَل.","Plural: دُوَل."),
+M("demo",'أكمل: <span class="s">……… الطائراتُ تهبطُ في المطارِ.</span>',"The planes are far away. Complete the sentence.",["تلك","أولئك","هؤلاءِ","ذلك"],0,"جمع غير العاقل البعيد: تلك.","Far plural of things: تلك."),
+W("demo",'حوّل إلى الجمع: <span class="s">هذه الطالبةُ متفوقةٌ.</span>',"Change to the plural and write the sentence.",["هؤلاء الطالبات متفوقات"],"هؤلاءِ الطالباتُ متفوقاتٌ.","هؤلاء الطالبات متفوقات."),
+M("demo",'أكمل: <span class="s">……… الرجالُ هناكَ يعملونَ في البناءِ.</span>',"The men are far away. Complete the sentence.",["أولئك","هؤلاءِ","تلك","ذلك"],0,"جمع العاقل البعيد: أولئك.","Far plural of people: أولئك."),
+M("pron",'أكمل: <span class="s">يا طلابُ، هل ……… مستعدّونَ للرحلةِ؟</span>',"Complete: «Students, are …… ready for the trip?»",["أنتم","أنتنَّ","هم","أنتما"],0,"مخاطبة جماعة ذكور: أنتم.","Talking to boys: أنتم."),
+M("pron",'أكمل: <span class="s">وصلتِ المهندستانِ، و……… تعملانِ في الشركةِ نفسِها.</span>',"Complete: «The two engineers arrived, and …… work in the same company.»",["هما","هنَّ","هي","هم"],0,"للمثنى: هما.","For two: هما."),
+W("suffix",'حوّل إلى (أنتِ): <span class="s">أنتَ تكتبُ واجبَكَ.</span>',"Change to «أنتِ» (you, f.) and write the sentence.",["انت تكتبين واجبك"],"أنتِ تكتبينَ واجبَكِ.","أنتِ تكتبين واجبكِ."),
+M("suffix",'أكمل: <span class="s">احترمَ الطلابُ معلمَـ… لأنّه ساعدَ… .</span>',"Complete: «The students respected their teacher because he helped them.»",["معلمَهم … ساعدَهم","معلمَه … ساعدَه","معلمَها … ساعدَها","معلمَهما … ساعدَهما"],0,"الضميران يعودان على «الطلاب»: ـهم.","Both refer to الطلاب: ـهم."),
+M("suffix",'اختر الفعل: <span class="s">الطالبتانِ ……… الواجبَ.</span>',"Choose: «The two students (f.) wrote the homework.»",["كتبتا","كتبا","كتبْنَ","كتبوا"],0,"للمثنى المؤنث: كتبتا.","Two females, past: كتبتا."),
+M("prep",'اختر: <span class="s">اعتذرَ الطالبُ ……… المعلمِ ……… تأخّرِه.</span>',"Choose: «The student apologised to the teacher for being late.»",["إلى … عن","من … على","على … في","عن … إلى"],0,"اعتذرَ إلى فلان عن الخطأ.","اعتذر إلى (to) … عن (for)."),
+M("prep",'اختر: <span class="s">يتكوّنُ الفصلُ ……… عشرينَ طالبًا.</span>',"Choose: «The class consists …… twenty students.»",["من","على","إلى","عن"],0,"يتكوّنُ من.","يتكوّن من = consists of."),
+M("conj",'اختر: <span class="s">ما حضرَ أحمدُ ……… خالدٌ.</span>',"Choose: «Ahmed did not come; …… Khalid did.»",["بل","ثمَّ","أو","أم"],0,"«بل» بعد النفي.","بل = rather."),
+M("read","اقرأ النص ثم أجب: ماذا وفّرتِ الدولةُ للطلابِ؟","Read the text: What has the country provided for students?",["أحدثَ الأجهزةِ","الكتبَ فقط","المطاعمَ","الحافلاتِ"],0,"«ووفّرتْ للطلابِ أحدثَ الأجهزةِ».","The latest devices.",true),
+M("read",'في كلمة <span class="s">«أنشأتِ»</span> الفاعل ضمير مستتر يعود على:',"In «أنشأتِ», the hidden subject refers to:",["دولة الإمارات","المدارس","الجامعات","المعلمين"],0,"يعود على «دولة الإمارات».","دولة الإمارات.",true),
+W("read","استخرج من النص كلمة واحدة جمعَ مؤنثٍ سالمًا (تنتهي بـ ات):","Write one sound feminine plural (ending in ات) from the text.",["الجامعات","جامعات","الرحلات","رحلات","المسابقات","مسابقات","الامارات","امارات"],"مثل: الجامعات، الرحلات، المسابقات.","e.g. الجامعات، الرحلات، المسابقات.",true)
+]}
+};
+
+/* ============================================================= HELPERS */
+const $=s=>document.querySelector(s);
+const mem={};
+const store={get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return mem[k]||null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){mem[k]=v}},del(k){try{localStorage.removeItem(k)}catch(e){delete mem[k]}}};
+const sess={get(k){try{return JSON.parse(sessionStorage.getItem(k))}catch(e){return mem["s"+k]||null}},set(k,v){try{sessionStorage.setItem(k,JSON.stringify(v))}catch(e){mem["s"+k]=v}},del(k){try{sessionStorage.removeItem(k)}catch(e){delete mem["s"+k]}}};
+function norm(s){return (s||"").replace(/[ً-ٰٟـ]/g,"").replace(/[أإآٱ]/g,"ا").replace(/ى(?=\s|$)/g,"ي")
+  .replace(/[.,،؛:!؟?«»"'()\-]/g," ").replace(/\s+/g," ").trim();}
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function strip(h){const d=document.createElement("div");d.innerHTML=h;return d.textContent}
+function modal(html){$("#modalBox").innerHTML=html;$("#modal").classList.add("show")}
+function closeModal(){$("#modal").classList.remove("show")}
+$("#modal").addEventListener("click",e=>{if(e.target.id==="modal")closeModal()});
+const LETTERS=["أ","ب","ج","د"], LCOL=["#ff6b4a","#f59e0b","#10b4a0","#8b5cf6"];
+function passMark(total){return Math.ceil(total*CFG.passPercent/100)}
+function level(pct){
+  if(pct>=90)return["ممتاز","Excellent","#16a34a"];
+  if(pct>=75)return["جيد جدًّا","Very good","#10b4a0"];
+  if(pct>=60)return["جيد","Good","#2563eb"];
+  if(pct>=CFG.passPercent)return["مقبول","Acceptable","#f59e0b"];
+  return["يحتاج إلى دعم","Needs support","#dc2626"];
+}
+const GRADE_AR={5:"الخامس",6:"السادس",7:"السابع",8:"الثامن",9:"التاسع"};
+
+/* ============================================================= SERVER API */
+function SERVER(){return CFG.scriptURL||store.get("arTest_server")||""}
+function api(action,data){
+  if(!SERVER()) return Promise.reject(new Error("no-server"));
+  return fetch(SERVER(),{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(Object.assign({action},data||{}))})
+    .then(r=>r.json());
+}
+const QKEY="arMonthlyTest_outbox";
+function queue(item){const q=store.get(QKEY)||[];q.push(item);store.set(QKEY,q);return flush();}
+let flushing=false;
+function flush(){
+  if(flushing||!SERVER())return Promise.resolve(false);
+  const q=store.get(QKEY)||[]; if(!q.length)return Promise.resolve(true);
+  flushing=true;
+  return q.reduce((p,item)=>p.then(left=>api(item.action,item).then(r=>{if(!r.ok)left.push(item);return left}).catch(()=>{left.push(item);return left})),Promise.resolve([]))
+   .then(left=>{store.set(QKEY,left);flushing=false;updSent();return !left.length});
+}
+setInterval(flush,20000);
+window.addEventListener("online",flush);
+let errCount=0;
+window.addEventListener("error",e=>{if(errCount++<3&&SERVER())queue({action:"support",type:"auto-error",name:S&&S.name||"",cls:S?S.grade+S.section:"",
+  message:(e.message||"")+" @"+(e.lineno||""),device:navigator.userAgent});});
+
+/* ============================================================= STUDENT: START */
+let S=null, tick=null, section="", gradeSel="";
+const KEY="arMonthlyTest_v2";
+document.querySelectorAll("#inSec button").forEach(b=>b.onclick=()=>{document.querySelectorAll("#inSec button").forEach(x=>x.classList.remove("on"));b.classList.add("on");section=b.dataset.s;});
+document.querySelectorAll("#inGrade button").forEach(b=>b.onclick=()=>{document.querySelectorAll("#inGrade button").forEach(x=>x.classList.remove("on"));b.classList.add("on");gradeSel=b.dataset.g;});
+
+$("#btnStart").onclick=()=>{
+  const name=$("#inName").value.trim().replace(/\s+/g," ");
+  const err=t=>{$("#startErr").textContent=t};
+  if(!/^[A-Za-z][A-Za-z .'-]{2,}$/.test(name)||name.split(" ").length<2)return err("✋ اكتب اسمك الكامل بالإنجليزية (اسمان على الأقل). · Write your full name in English (at least two names).");
+  if(!gradeSel)return err("✋ اختر صفك. · Choose your grade.");
+  if(!section)return err("✋ اختر شعبتك. · Choose your section.");
+  if(!$("#agree").checked)return err("✋ اقرأ التعليمات والقواعد وضع علامة ✔ للموافقة. · Read the rules and tick the box.");
+  const bank=BANK[gradeSel], normal=bank.qs.filter(q=>!q.p), reading=bank.qs.filter(q=>q.p);
+  const order=shuffle(normal).concat(reading).map(q=>bank.qs.indexOf(q)), optOrder={};
+  bank.qs.forEach((q,i)=>{if(q.t==="m")optOrder[i]=shuffle(q.opts.map((_,k)=>k));if(q.t==="o")optOrder[i]=shuffle(q.words.map((_,k)=>k));});
+  S={id:Date.now().toString(36)+Math.random().toString(36).slice(2,7),name:name.replace(/\b\w/g,c=>c.toUpperCase()),grade:gradeSel,section,start:Date.now(),order,optOrder,ans:{},cur:0,away:0,done:false};
+  store.set(KEY,S); runExam();
+};
+
+/* ============================================================= STUDENT: EXAM */
+const bank=()=>BANK[S.grade], TOTAL=()=>S.order.length;
+function runExam(){
+  $("#vStart").classList.add("hide");$("#vExam").classList.remove("hide");document.body.classList.add("exam-on");
+  $("#whoBox").textContent=S.name+" · "+S.grade+S.section;
+  renderQ(); clearInterval(tick); tick=setInterval(updTimer,500); updTimer();
+}
+function left(){return CFG.minutes*60000-(Date.now()-S.start)}
+function updTimer(){
+  if(!S||S.done)return;
+  const ms=Math.max(0,left()),m=Math.floor(ms/60000),s=Math.floor(ms%60000/1000),t=$("#timer");
+  t.textContent=String(m).padStart(2,"0")+":"+String(s).padStart(2,"0"); t.classList.toggle("warn",ms<120000);
+  if(ms<=0)finish(true);
+}
+function renderQ(){
+  const idx=S.order[S.cur],q=bank().qs[idx],tp=TOPICS[q.tp],a=S.ans[idx];
+  let h=`<div class="qhead"><span class="qnum">${S.cur+1} / ${TOTAL()}</span><span class="tag" style="background:${tp.c}">${tp.ar}</span>
+   <span class="tag" style="background:${q.t==="m"?"#475569":"#be185d"}">${q.t==="m"?"📖 قراءة":"✍️ كتابة"}</span></div>`;
+  if(q.p)h+=`<div class="passage">${bank().passage}</div>`;
+  if(q.img)h+=picHTML(q.img);
+  h+=`<div class="qtext">${q.q}</div>`;
+  if(q.t==="m"){
+    h+=`<div class="opts">`+S.optOrder[idx].map((k,i)=>`<button class="opt ${a===k?"sel":""}" data-k="${k}"><span class="l" style="background:${LCOL[i]}">${LETTERS[i]}</span>${q.opts[k]}</button>`).join("")+`</div>`;
+  }else if(q.t==="w"){
+    h+=`<input type="text" class="ansIn" id="wIn" dir="rtl" lang="ar" placeholder="✍️ اكتب الإجابة هنا" value="${esc(a||"")}" autocomplete="off">
+    <button class="kbt" id="kbToggle">⌨ لوحة المفاتيح العربية</button>${kbHTML()}`;
+  }else{
+    const picked=a||[];
+    h+=`<div class="tiles" id="ansTiles">${picked.map((k,i)=>`<span class="tile" data-i="${i}">${q.words[k]}</span>`).join("")||'<span style="color:#94a3b8">👆 اضغط على الكلمات بالترتيب</span>'}</div>
+    <div class="tiles src">${S.optOrder[idx].map(k=>`<span class="tile ${picked.includes(k)?"used":""}" data-k="${k}">${q.words[k]}</span>`).join("")}</div>`;
+  }
+  $("#qCard").innerHTML=h;
+  if(q.t==="m")$("#qCard").querySelectorAll(".opt").forEach(b=>b.onclick=()=>{S.ans[idx]=+b.dataset.k;save();renderQ();});
+  if(q.t==="w"){const inp=$("#wIn");inp.oninput=()=>{S.ans[idx]=inp.value;save();dotsR();};
+    $("#kbToggle").onclick=()=>$("#kb").classList.toggle("show");
+    $("#kb").querySelectorAll("button").forEach(b=>b.onclick=()=>{const v=b.dataset.v;if(v==="⌫")inp.value=inp.value.slice(0,-1);else inp.value+=v==="␣"?" ":v;inp.oninput();});}
+  if(q.t==="o"){
+    $("#qCard").querySelectorAll(".tile[data-k]").forEach(t=>t.onclick=()=>{const p=S.ans[idx]||[];p.push(+t.dataset.k);S.ans[idx]=p;save();renderQ();});
+    $("#qCard").querySelectorAll(".tile[data-i]").forEach(t=>t.onclick=()=>{const p=S.ans[idx];p.splice(+t.dataset.i,1);if(!p.length)delete S.ans[idx];save();renderQ();});
+  }
+  $("#btnPrev").disabled=S.cur===0;$("#btnNext").disabled=S.cur===TOTAL()-1;
+  dotsR();
+}
+function kbHTML(){
+  const rows=["ض ص ث ق ف غ ع ه خ ح ج د","ش س ي ب ل ا ت ن م ك ط ذ","ئ ء ؤ ر ى ة و ز ظ أ إ آ"];
+  return `<div class="kb" id="kb">${rows.map(r=>`<div class="row">${r.split(" ").map(c=>`<button type="button" data-v="${c}">${c}</button>`).join("")}</div>`).join("")}
+  <div class="row"><button type="button" class="wide" data-v="␣">مسافة</button><button type="button" data-v="⌫" style="min-width:80px">⌫ حذف</button></div></div>`;
+}
+const isAns=i=>{const a=S.ans[i];return a!==undefined&&a!==""&&!(Array.isArray(a)&&!a.length)};
+const answered=()=>S.order.filter(isAns).length;
+function dotsR(){
+  $("#dots").innerHTML=S.order.map((i,n)=>`<button class="${isAns(i)?"done":""} ${n===S.cur?"cur":""}" data-n="${n}">${n+1}</button>`).join("");
+  $("#dots").querySelectorAll("button").forEach(b=>b.onclick=()=>{S.cur=+b.dataset.n;save();renderQ();});
+  $("#progBar").style.width=(answered()/TOTAL()*100)+"%";
+}
+function save(){store.set(KEY,S)}
+$("#btnPrev").onclick=()=>{if(S.cur>0){S.cur--;save();renderQ();scrollTo(0,0)}};
+$("#btnNext").onclick=()=>{if(S.cur<TOTAL()-1){S.cur++;save();renderQ();scrollTo(0,0)}};
+$("#btnFinish").onclick=()=>{
+  const un=TOTAL()-answered();
+  modal(`<div class="center"><h3>هل تريد تسليم الاختبار؟</h3>
+  ${un?`<p style="color:var(--r);font-weight:800">⚠️ لم تُجب عن ${un} سؤالًا</p>`:"<p>👍 أجبت عن كل الأسئلة</p>"}
+  <button class="btn green" id="mYes">نعم، سلّم</button> <button class="btn sec" id="mNo">رجوع</button></div>`);
+  $("#mYes").onclick=()=>{closeModal();finish(false)};$("#mNo").onclick=closeModal;
+};
+
+/* ============================================================= PROTECTION (translation, leaving, copy, screenshot) */
+const VIOL={leave:"الخروج من صفحة الاختبار مرتين",copy:"محاولة النسخ",shot:"محاولة تصوير الشاشة",print:"محاولة الطباعة"};
+const CANARY="الاختبار الشهري في اللغة العربية";
+function inExam(){return !!(S&&!S.done&&!$("#vExam").classList.contains("hide"))}
+function shield(on){$("#shield").classList.toggle("show",!!on)}
+function warn(msg,en){modal(`<div class="center"><div style="font-size:3rem">⚠️</div><h3 style="color:var(--r)">${msg}</h3>${en?`<span class="en">${en}</span>`:""}<br><button class="btn" onclick="closeModal()">فهمت · OK</button></div>`)}
+function violate(type){
+  if(!inExam())return;
+  S.violation=VIOL[type];save();closeModal();shield(false);finish(true);
+}
+function leaveStart(){if(!inExam())return;shield(true);if(!S.awayAt){S.awayAt=Date.now();save();}}
+function leaveEnd(){
+  if(!S||S.done||!S.awayAt){shield(false);return}
+  if(document.hidden||!document.hasFocus())return;
+  const d=Date.now()-S.awayAt;S.awayAt=0;shield(false);
+  if(d<1500){save();return}
+  S.away=(S.away||0)+1;save();
+  if(S.away>=2)return violate("leave");
+  warn("خرجت من صفحة الاختبار! هذا تحذير أخير: إذا خرجت مرة أخرى سيُغلق الاختبار ويُسلَّم.","You left the test page! Final warning: if you leave again, the test will be closed and submitted.");
+}
+document.addEventListener("visibilitychange",()=>document.hidden?leaveStart():leaveEnd());
+window.addEventListener("blur",leaveStart);
+window.addEventListener("focus",leaveEnd);
+window.addEventListener("pagehide",()=>{if(inExam()&&!S.awayAt){S.awayAt=Date.now();save();}});
+["copy","cut"].forEach(ev=>document.addEventListener(ev,e=>{if(inExam()){e.preventDefault();violate("copy")}}));
+document.addEventListener("paste",e=>{if(inExam()){e.preventDefault();warn("اللصق غير مسموح.","Pasting is not allowed.")}});
+document.addEventListener("contextmenu",e=>{if(inExam()){e.preventDefault();warn("الزر الأيمن غير مسموح أثناء الاختبار.","Right-click is not allowed during the test.")}});
+document.addEventListener("selectstart",e=>{if(inExam()&&!(e.target.closest&&e.target.closest("input")))e.preventDefault()});
+document.addEventListener("dragstart",e=>{if(inExam())e.preventDefault()});
+window.addEventListener("beforeprint",()=>{if(inExam())violate("print")});
+document.addEventListener("keydown",e=>{
+  if(!inExam())return;
+  const k=(e.key||"").toLowerCase();
+  if(k==="printscreen"){e.preventDefault();shield(true);return violate("shot")}
+  if(k==="meta"||k==="os"){shield(true);return}
+  if(e.metaKey&&e.shiftKey){e.preventDefault();return violate("shot")}
+  if((e.ctrlKey||e.metaKey)&&(k==="c"||k==="x"||k==="insert")){e.preventDefault();return violate("copy")}
+  if((e.ctrlKey||e.metaKey)&&k==="p"){e.preventDefault();return violate("print")}
+  if((e.ctrlKey||e.metaKey)&&["a","s","u","v","f","g"].includes(k)){e.preventDefault();if(k==="v")warn("اللصق غير مسموح.","Pasting is not allowed.");return}
+  if(k==="f12"||((e.ctrlKey||e.metaKey)&&e.shiftKey&&["i","j","c"].includes(k))){e.preventDefault();warn("هذا غير مسموح أثناء الاختبار.","This is not allowed during the test.")}
+},true);
+document.addEventListener("keyup",e=>{
+  if(!inExam())return;
+  const k=(e.key||"").toLowerCase();
+  if(k==="printscreen"){try{navigator.clipboard.writeText("")}catch(x){}violate("shot");return}
+  if(k==="meta"||k==="os"){if(document.hasFocus()&&!S.awayAt)shield(false)}
+},true);
+/* translation detection */
+function isTranslated(){
+  const h=document.documentElement,c=document.getElementById("canary");
+  return /translated/i.test(h.className)||(h.lang&&!/^ar/i.test(h.lang))||!c||c.textContent!==CANARY
+    ||!!document.querySelector("#vExam font, .goog-te-banner-frame, #goog-gt-tt, [_msttexthash], [data-immersive-translate-walked], .immersive-translate-target-wrapper");
+}
+setInterval(()=>{
+  if(!inExam())return;
+  if(isTranslated()){
+    if(!S.transOn){S.transOn=1;S.trans=(S.trans||0)+1;save();}
+    $("#transBlock").classList.add("show");
+  }else if(S.transOn){S.transOn=0;save();$("#transBlock").classList.remove("show");}
+},600);
+
+/* ============================================================= GRADING */
+function gradeIt(){
+  return S.order.map((idx,n)=>{
+    const q=bank().qs[idx],a=S.ans[idx];let ok=false,yours="—",right="";
+    if(q.t==="m"){ok=a===q.a;yours=a!==undefined?q.opts[a]:"—";right=q.opts[q.a];}
+    else if(q.t==="w"){const v=norm(a);ok=!!v&&q.acc.some(x=>norm(x)===v);yours=a||"—";right=q.acc[0];}
+    else{const s=(a||[]).map(k=>q.words[k]).join(" ");ok=(a||[]).length===q.words.length&&q.acc.some(x=>norm(x)===norm(s));yours=s||"—";right=q.ex.replace(/^.*?:\s*/,"");}
+    return {n:n+1,tp:q.tp,t:q.t,q:strip(q.q)+(q.img?" 🖼":""),y:String(yours),r:right,ok:ok?1:0,ex:q.ex,exEn:q.exEn};
+  });
+}
+function finish(auto){
+  if(S.done&&S.result){showResult();return}
+  clearInterval(tick);
+  const r=gradeIt(),score=r.filter(x=>x.ok).length,total=r.length,byT={};
+  r.forEach(x=>{byT[x.tp]=byT[x.tp]||{ok:0,all:0};byT[x.tp].all++;if(x.ok)byT[x.tp].ok++;});
+  const rd=r.filter(x=>x.t==="m"),wr=r.filter(x=>x.t!=="m"),pct=Math.round(score/total*100);
+  S.done=true;S.auto=auto;S.end=Date.now();document.body.classList.remove("exam-on");$("#shield").classList.remove("show");$("#transBlock").classList.remove("show");
+  S.result={score,total,pct,byT,read:[rd.filter(x=>x.ok).length,rd.length],write:[wr.filter(x=>x.ok).length,wr.length],details:r};
+  save();
+  queue({action:"submit",id:S.id,name:S.name,grade:S.grade,section:S.section,score,total,percent:pct,
+    status:score>=passMark(total)?"Pass":"Fail",level:level(pct)[1],reading:S.result.read.join(" من "),writing:S.result.write.join(" من "),
+    minutes:Math.round((S.end-S.start)/600)/100,auto:auto?"Yes":"No",leftPage:S.away,topics:byT,violation:S.violation||"",translateTries:S.trans||0,
+    details:r.map(x=>({n:x.n,tp:x.tp,t:x.t,q:x.q,y:x.y,r:x.r,ok:x.ok})),test:CFG.testNameEn});
+  showResult(); if(score>=passMark(total))confetti();
+}
+function confetti(){const c=["#ff6b4a","#ffc233","#10b4a0","#8b5cf6","#ec4899","#2563eb"];
+  for(let i=0;i<80;i++){const d=document.createElement("i");d.className="confetti";d.style.left=Math.random()*100+"vw";d.style.background=c[i%6];
+    d.style.animationDuration=(2+Math.random()*2.5)+"s";d.style.animationDelay=Math.random()*.8+"s";document.body.appendChild(d);setTimeout(()=>d.remove(),5500);}}
+
+/* ============================================================= CERTIFICATE (shared by student + dashboard) */
+function certHTML(d){
+  // d: {name,grade,section,score,total,read:[a,b],write:[a,b],byT,date}
+  const pct=Math.round(d.score/d.total*100),pass=d.score>=passMark(d.total),[lv,lvEn,lvC]=level(pct);
+  const weak=Object.keys(TOPICS).filter(t=>d.byT[t]&&d.byT[t].ok<d.byT[t].all).sort((a,b)=>(d.byT[a].ok/d.byT[a].all)-(d.byT[b].ok/d.byT[b].all));
+  return `<div class="cert">
+    <div class="school">مدرسة الطلاب الهندية الخاصة – رأس الخيمة · قسم اللغة العربية</div>
+    <div class="en" style="text-align:center">Scholars Indian Private School – Ras Al Khaimah · Arabic Department</div>
+    <h2>🏅 شهادة نتيجة الاختبار الشهري</h2>
+    <div class="en" style="text-align:center;font-size:1rem">Monthly Test Result Certificate</div>
+    <p style="margin:10px 0 0">يشهد قسم اللغة العربية بأنّ الطالب/ـة · This certifies that</p>
+    <div class="nm">${esc(d.name)}</div>
+    <p style="margin:0">الصف ${GRADE_AR[d.grade]||d.grade} – الشعبة ${esc(d.section)} · Grade ${esc(d.grade)} – Section ${esc(d.section)}</p>
+    <p style="margin:4px 0">قد أدّى ${CFG.testName} · has completed the ${CFG.testNameEn}</p>
+    <div class="grid">
+      <div>الدرجة · Score<b>${d.score} / ${d.total}</b></div>
+      <div>النتيجة · Result<b style="color:${pass?"var(--g)":"var(--r)"}">${pass?"ناجح ✔ Pass":"راسب ✘ Fail"}</b></div>
+      <div>📖 القراءة · Reading<b>${d.read[0]} / ${d.read[1]}</b></div>
+      <div>✍️ الكتابة · Writing<b>${d.write[0]} / ${d.write[1]}</b></div>
+    </div>
+    <p style="font-weight:900;color:${lvC};font-size:1.2rem;margin:4px 0">التقدير: ${lv} (${pct}%) · Level: ${lvEn}</p>
+    <table class="br"><tr><th>الموضوع · Topic</th><th style="width:90px">الدرجة</th><th style="width:28%">المستوى · Level</th></tr>
+    ${Object.keys(TOPICS).filter(t=>d.byT[t]).map(t=>{const v=d.byT[t],p=v.ok/v.all,c=p>=.8?"#16a34a":p>=.5?"#f59e0b":"#dc2626";
+      return `<tr><td>${TOPICS[t].ar}<span class="en">${TOPICS[t].en}</span></td><td style="text-align:center">${v.ok} / ${v.all}</td><td><div class="meter"><i style="width:${p*100}%;background:${c}"></i></div></td></tr>`}).join("")}
+    </table>
+    <div style="text-align:right;margin-top:14px"><b>📌 ماذا تفعل الآن؟ والدروس التي تذاكرها · What to do now & lessons to study</b>
+      <ul class="rec">
+      ${weak.length?weak.map(t=>`<li><b>${TOPICS[t].ar}</b> (${d.byT[t].ok}/${d.byT[t].all}): ${TOPICS[t].tip}<span class="en">${TOPICS[t].en}: ${TOPICS[t].tipEn}</span></li>`).join("")
+       +`<li>ادخل منصة «أتعلّم العربية»، وذاكر دروس الموضوعات السابقة، وحلّ تدريباتها حتى تصل إلى 90٪. <span class="en">Go to the «Learn Arabic» platform, study these lessons and practise until you reach 90%.</span></li>
+         <li>اقرأ نصًّا قصيرًا بصوت مرتفع كل يوم، واكتب ثلاث جمل عنه. <span class="en">Read a short text aloud every day and write three sentences about it.</span></li>`
+       :'<li>🌟 أحسنت! كل إجاباتك صحيحة. واصل القراءة اليومية. <span class="en">Excellent! All answers are correct. Keep reading every day.</span></li>'}
+      </ul></div>
+    <div class="sign"><div>التاريخ · Date: ${esc(d.date)}</div><div>رئيس قسم اللغة العربية<br>${CFG.hod}<span class="en" style="text-align:center">${CFG.hodEn} – Head of Arabic Department</span></div></div>
+  </div>`;
+}
+function mistakesHTML(list,all){
+  const show=all?list:list.filter(x=>!x.ok);
+  if(!show.length)return '<p>🌟 لا توجد أخطاء. ممتاز! · No mistakes. Excellent!</p>';
+  return show.map(x=>`<div class="mist ${x.ok?"okk":""}">
+    <div><span class="qnum">${x.n}</span> <span class="tag" style="background:${(TOPICS[x.tp]||{}).c||"#64748b"}">${(TOPICS[x.tp]||{}).ar||""}</span> ${x.ok?"✅":"❌"}</div>
+    <div class="a" style="margin-top:6px">${esc(x.q)}</div>
+    <div>إجابته · Answer: <span class="a ${x.ok?"right":"yours"}">${esc(x.y)}</span></div>
+    ${x.ok?"":`<div>الإجابة الصحيحة · Correct answer: <span class="a right">${esc(x.r)}</span></div>`}
+    ${x.ex&&!x.ok?`<div style="margin-top:4px">💡 ${x.ex}<span class="en">${x.exEn}</span></div>`:""}</div>`).join("");
+}
+/* طباعة مضمونة: نضع الشهادة وحدها في منطقة الطباعة · reliable printing */
+function printHTML(html){
+  $("#printArea").innerHTML=html; document.body.classList.add("pc");
+  const done=()=>{document.body.classList.remove("pc");window.removeEventListener("afterprint",done)};
+  window.addEventListener("afterprint",done);
+  try{window.print()}catch(e){done();downloadHTML(html,"certificate.html")}
+  setTimeout(()=>{if(document.body.classList.contains("pc")&&!matchMedia("print").matches)done()},3000);
+}
+function downloadHTML(html,file){
+  const css=document.querySelector("style").textContent;
+  const doc=`<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><title>${file}</title><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet"><style>${css} body{background:#fff}</style></head><body><div class="wrap">${html}</div><script>setTimeout(()=>print(),800)<\/script></body></html>`;
+  const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([doc],{type:"text/html"}));a.download=file;document.body.appendChild(a);a.click();setTimeout(()=>a.remove(),500);
+}
+
+/* ============================================================= STUDENT: RESULT */
+function updSent(){const el=$("#sentBox");if(!el)return;
+  if(!SERVER()){el.innerHTML="";return}
+  const pending=(store.get(QKEY)||[]).some(x=>x.action==="submit"&&S&&x.id===S.id);
+  el.innerHTML=pending?'<span class="sent" style="background:#fef3c7;color:#92400e">⏳ جارٍ إرسال النتيجة للمعلم… لا تغلق الصفحة · Sending your result to the teacher…</span>'
+                      :'<span class="sent" style="background:#dcfce7;color:#166534">✔ وصلت نتيجتك إلى المعلم · Your result reached the teacher</span>';}
+function showResult(){
+  $("#vStart").classList.add("hide");$("#vExam").classList.add("hide");
+  const R=S.result,pass=R.score>=passMark(R.total),[lv,lvEn,lvC]=level(R.pct);
+  const cd={name:S.name,grade:S.grade,section:S.section,score:R.score,total:R.total,read:R.read,write:R.write,byT:R.byT,date:new Date(S.end).toLocaleDateString("en-GB")};
+  const v=$("#vResult");
+  v.innerHTML=`<div class="card center noprint">
+    ${S.violation?`<div class="closed">🚫 أُغلق الاختبار بسبب: ${esc(S.violation)}<span class="en" style="color:#991b1b;text-align:center">The test was closed because of a rule violation. Your teacher has been informed.</span></div>`
+     :S.auto?'<p style="color:var(--r);font-weight:800">⏰ انتهى الوقت وسُلِّم الاختبار تلقائيًّا · Time is up — submitted automatically</p>':""}
+    <div style="font-size:3rem">${pass?"🎉":"💪"}</div>
+    <p class="score ${pass?"pass":"fail"}">${R.score} / ${R.total}</p>
+    <span class="badge ${pass?"pass":"fail"}">${pass?"ناجح ✔ Pass":"راسب ✘ Fail"}</span>
+    <p style="font-size:1.25rem;font-weight:900;color:${lvC};margin:8px 0 0">${lv} · ${lvEn} (${R.pct}%)</p>
+    <p style="margin:4px 0">${pass?"أحسنت! استمر في التقدّم. · Well done! Keep going.":"لا تقلق، راجع الدروس المقترحة وستتحسن. · Don't worry — study the suggested lessons and you will improve."}</p>
+    <div id="sentBox"></div>
+    <div style="margin-top:14px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+      <button class="btn" id="btnPrint">🖨 طباعة الشهادة / حفظ PDF · Print / Save PDF</button>
+      <button class="btn sec" id="btnDl">⬇ تحميل الشهادة · Download certificate</button></div>
+  </div>
+  ${certHTML(cd)}
+  <div class="card"><h3>❌ أخطائي (${R.total-R.score}) <span class="en">My mistakes</span></h3>${mistakesHTML(R.details,false)}</div>
+  <p class="center noprint"><button class="btn sec" id="btnNew">👤 طالب جديد على هذا الجهاز · New student on this device</button></p>`;
+  v.classList.remove("hide");scrollTo(0,0);updSent();
+  const full=()=>certHTML(cd)+`<div class="card"><h3>أخطائي · My mistakes</h3>${mistakesHTML(R.details,false)}</div>`;
+  $("#btnPrint").onclick=()=>printHTML(full());
+  $("#btnDl").onclick=()=>downloadHTML(full(),"Certificate-"+S.name.replace(/\s/g,"_")+".html");
+  $("#btnNew").onclick=()=>{
+    const pending=(store.get(QKEY)||[]).length;
+    modal(`<div class="center"><p>سيتم مسح نتيجة <b>${esc(S.name)}</b> من هذا الجهاز.${pending?'<br><b style="color:var(--r)">⚠️ النتيجة لم تُرسل بعد للمعلم، وسيستمر إرسالها تلقائيًّا.</b>':""}</p>
+    <span class="en">This result will be cleared from this device.</span><br><button class="btn" id="mYes">متابعة · Continue</button> <button class="btn sec" id="mNo">رجوع · Back</button></div>`);
+    $("#mYes").onclick=()=>{store.del(KEY);location.href=location.pathname};$("#mNo").onclick=closeModal;};
+}
+
+/* ============================================================= HELP / SUPPORT */
+$("#helpBtn").onclick=()=>{
+  modal(`<h3>🆘 الإبلاغ عن مشكلة <span class="en">Report a problem</span></h3>
+  <p style="margin:0">اكتب المشكلة باختصار، وسيصل بلاغك إلى المشرف فورًا. <span class="en">Describe the problem briefly; it goes straight to the supervisor.</span></p>
+  ${S?"":`<label>الاسم · Name</label><input type="text" id="hName" dir="ltr">`}
+  <label>المشكلة · Problem</label><textarea id="hMsg" rows="4"></textarea>
+  <p class="err" id="hErr"></p>
+  <div class="center"><button class="btn" id="hSend">إرسال · Send</button> <button class="btn sec" id="hClose">إغلاق · Close</button></div>`);
+  $("#hClose").onclick=closeModal;
+  $("#hSend").onclick=()=>{
+    const msg=$("#hMsg").value.trim(); if(msg.length<3){$("#hErr").textContent="اكتب المشكلة · Write the problem";return}
+    const who=S?S.name:(($("#hName")||{}).value||""), role=sess.get("cred");
+    const item={action:"support",type:role?role.role:"student",name:role?role.name:who,cls:S?S.grade+S.section:"",message:msg,
+      device:navigator.userAgent+" | "+screen.width+"x"+screen.height+(S?" | Q"+(S.cur+1)+" | left "+Math.round(left()/1000)+"s":"")};
+    if(!SERVER()){$("#modalBox").innerHTML='<div class="center"><p>⚠️ أخبر معلمك مباشرة بالمشكلة. · Please tell your teacher directly.</p><button class="btn" onclick="closeModal()">حسنًا · OK</button></div>';return}
+    queue(item);$("#modalBox").innerHTML='<div class="center"><p style="font-size:1.2rem">✔ تم إرسال بلاغك، شكرًا لك. · Your report was sent. Thank you.</p><button class="btn" onclick="closeModal()">حسنًا · OK</button></div>';
+  };
+};
+
+/* ============================================================= TEACHER / SUPERVISOR DASHBOARD */
+let U=null,CRED=null,DATA=[],TAB="overview",F={grade:"",section:"",q:"",status:""};
+const PASSWORD="12345";   // كلمة مرور المعلم والمشرف والعرض · teacher, supervisor & present-mode password
+function teacherLogin(){
+  $("#vStart").classList.add("hide");
+  const v=$("#vTeacher");v.classList.remove("hide");
+  const saved=sess.get("cred");
+  if(saved&&SERVER()){CRED=saved;return loadDash();}
+  v.innerHTML=`<div class="card" style="max-width:480px;margin:20px auto">
+    <h2 class="center">👩‍🏫 دخول المعلمين والمشرف <span class="en">Teachers & supervisor login</span></h2>
+    ${SERVER()?"":`<div class="closed" style="background:#fef3c7;border-color:#fcd34d;color:#92400e">⚙️ لم يُربط Google Sheet بعد. ادخل بصفة «مشرف» واربطه من تبويب «الإعدادات».<span class="en">Google Sheet not connected yet — log in as Supervisor and connect it from Settings.</span></div>`}
+    <div class="sections" id="roleSel" style="margin-top:12px"><button type="button" class="${SERVER()?"on":""}" data-r="teacher">معلم · Teacher</button><button type="button" class="${SERVER()?"":"on"}" data-r="supervisor">مشرف · Supervisor</button></div>
+    <div id="tnameBox" class="${SERVER()?"":"hide"}"><label>اسم المعلم · Teacher name</label><select id="lName"><option value="">⏳</option></select></div>
+    <label>كلمة المرور · Password</label><input type="password" id="lPass" autocomplete="current-password" inputmode="numeric">
+    <p class="err" id="lErr"></p>
+    <div class="center"><button class="btn" id="lGo">دخول · Log in</button></div>
+    <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+    <div class="center"><button class="btn sec" id="lQR">📱 رابط الاختبار ورمز QR · Test link & QR code</button> <button class="btn sec" onclick="openPresentLogin()">🖥 عرض على السبورة · Present mode</button><br><br><a href="${esc(studentLink())}" style="color:var(--v)">← صفحة الطالب · Student page</a></div>
+  </div>`;
+  let role=SERVER()?"teacher":"supervisor";
+  v.querySelectorAll("#roleSel button").forEach(b=>b.onclick=()=>{v.querySelectorAll("#roleSel button").forEach(x=>x.classList.remove("on"));b.classList.add("on");role=b.dataset.r;$("#tnameBox").classList.toggle("hide",role==="supervisor");});
+  $("#lQR").onclick=()=>modal(qrHTML()+'<div class="center"><button class="btn sec" onclick="closeModal()">إغلاق · Close</button></div>');
+  if(SERVER())api("teacherNames",{}).then(r=>{const n=(r&&r.names)||[];
+    $("#lName").innerHTML=n.length?'<option value="">— اختر اسمك · Choose your name —</option>'+n.map(x=>`<option>${esc(x)}</option>`).join(""):'<option value="">كل الشعب · All classes</option>';}).catch(()=>{$("#lName").innerHTML='<option value="">—</option>'});
+  const go=()=>{
+    const c={role,name:role==="teacher"?$("#lName").value:"",password:$("#lPass").value};
+    if(c.password!==PASSWORD){$("#lErr").textContent="❌ كلمة المرور غير صحيحة · Wrong password";return}
+    if(!SERVER()){
+      if(role!=="supervisor"){$("#lErr").textContent="⚙️ اطلب من المشرف ربط Google Sheet أولًا · Ask the supervisor to connect Google Sheet first";return}
+      CRED=c;U={role:"supervisor",name:"المشرف · Supervisor",classes:"ALL",local:true};DATA=[];TAB="settings";return renderDash();
+    }
+    $("#lErr").textContent="⏳ …";
+    api("login",c).then(r=>{if(!r.ok){$("#lErr").textContent=r.error==="name"?"✋ اختر اسمك من القائمة · Choose your name":"❌ كلمة المرور غير صحيحة · Wrong password";return}
+      CRED=c;sess.set("cred",c);loadDash();}).catch(()=>{$("#lErr").textContent="❌ تعذّر الاتصال بـ Google Sheet. تأكد من الرابط في الإعدادات. · Cannot reach Google Sheet"});
+  };
+  $("#lGo").onclick=go;$("#lPass").onkeydown=e=>{if(e.key==="Enter")go()};
+}
+function testURL(){return location.href.split("?")[0].split("#")[0]}
+/* links carry the Google Sheet address, so no file editing is needed */
+function studentLink(){return testURL()+(SERVER()&&!CFG.scriptURL?"?s="+encodeURIComponent(SERVER()):"")}
+function teacherLink(){return testURL()+"?teacher"+(SERVER()&&!CFG.scriptURL?"&s="+encodeURIComponent(SERVER()):"")}
+function qrHTML(){
+  const link=studentLink();
+  let svg="";try{const qr=qrcode(0,"M");qr.addData(link);qr.make();svg=qr.createSvgTag({cellSize:8,margin:2,scalable:true});}catch(e){svg="<p>QR error</p>"}
+  return `<div class="center"><h3>📱 رابط الاختبار ورمز QR للطلاب <span class="en">Student test link & QR code</span></h3>
+  ${SERVER()?"":'<p class="warnc">⚠️ Google Sheet غير مربوط: النتائج لن تصلك. · Not connected: results will not reach you.</p>'}
+  <div class="qrbox">${svg}</div>
+  <div class="linkbox">${esc(link)}</div>
+  <p><button class="btn sm" onclick="copyTxt(studentLink(),this)">📋 نسخ رابط الطلاب · Copy student link</button>
+  <button class="btn sm sec" onclick="copyTxt(teacherLink(),this)">📋 نسخ رابط المعلمين · Copy teacher link</button>
+  <button class="btn sm sec" onclick="printQR()">🖨 طباعة الرمز · Print QR</button></p>
+  <p style="font-size:.85rem;color:var(--muted)">اعرض الرمز على السبورة الذكية، أو أرسل الرابط في Teams. <span class="en">Show it on the smart board, or post the link in Teams.</span></p></div>`;
+}
+function copyTxt(t,btn){try{navigator.clipboard.writeText(t);btn.textContent="✔ تم النسخ · Copied"}catch(e){prompt("Copy:",t)}}
+function printQR(){printHTML('<div style="text-align:center">'+document.querySelector('.qrbox').outerHTML+'<h2>امسح الرمز لبدء الاختبار الشهري<br>Scan to start the Monthly Arabic Test</h2></div>')}
+function loadDash(){
+  const v=$("#vTeacher");v.innerHTML='<div class="card center">⏳ جارٍ تحميل البيانات… · Loading…</div>';
+  api("results",CRED).then(r=>{
+    if(!r.ok){sess.del("cred");CRED=null;return teacherLogin();}
+    U=r.user;DATA=r.results.reverse();renderDash();
+  }).catch(()=>{v.innerHTML=`<div class="card center"><p>❌ تعذّر الاتصال بـ Google Sheet · Cannot reach Google Sheet</p><button class="btn" onclick="loadDash()">إعادة المحاولة · Retry</button>
+    <button class="btn sec" onclick="sess.del('cred');CRED=null;U={role:'supervisor',name:'المشرف · Supervisor',classes:'ALL',local:true};DATA=[];TAB='settings';renderDash()">⚙️ الإعدادات · Settings</button></div>`;});
+}
+function filtered(){return DATA.filter(r=>(!F.grade||r.grade===F.grade)&&(!F.section||r.section===F.section)&&(!F.status||r.status===F.status)&&(!F.q||r.name.toLowerCase().includes(F.q.toLowerCase())))}
+function renderDash(){
+  const sup=U.role==="supervisor";
+  const tabs=[["overview","📊 نظرة عامة","Overview"],["results","📋 النتائج","Results"],["questions","❓ تحليل الأسئلة","Question analysis"],["qr","📱 الرابط وQR","Link & QR"],["support","🆘 الدعم","Support"]];
+  if(sup)tabs.push(["teachers","👩‍🏫 المعلمون","Teachers"],["settings","⚙️ الإعدادات والربط","Settings & Google Sheet"]);
+  if(U.local){tabs.splice(0,tabs.length,["settings","⚙️ الإعدادات والربط","Settings & Google Sheet"],["qr","📱 الرابط وQR","Link & QR"]);if(!["settings","qr"].includes(TAB))TAB="settings";}
+  const grades=[...new Set(DATA.map(r=>r.grade))].sort(), v=$("#vTeacher");
+  v.innerHTML=`<div class="card" style="padding:14px 18px">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+      <div><b style="font-size:1.15rem">مرحبًا، ${esc(U.name)} 👋</b><span class="en">${sup?"Supervisor – all classes":"Your classes: "+esc(U.classes)}</span></div>
+      <div>${U.sheetUrl?`<a class="btn sm green" href="${esc(U.sheetUrl)}" target="_blank" rel="noopener">📄 Google Sheet</a> `:""}<button class="btn sm sec" id="dRef">🔄 تحديث · Refresh</button> <button class="btn sm red" id="dOut">خروج · Log out</button></div></div>
+    <div class="tabs">${tabs.map(t=>`<button data-t="${t[0]}" class="${TAB===t[0]?"on":""}">${t[1]}<small style="display:block;font-weight:600;font-size:.7rem">${t[2]}</small></button>`).join("")}</div>
+    <div class="filters ${["qr","support","teachers","settings"].includes(TAB)?"hide":""}">
+      <select id="fG"><option value="">كل الصفوف · All grades</option>${grades.map(g=>`<option ${F.grade===g?"selected":""} value="${g}">Grade ${g}</option>`).join("")}</select>
+      <select id="fS"><option value="">كل الشعب · All sections</option>${"ABCD".split("").map(s=>`<option ${F.section===s?"selected":""}>${s}</option>`).join("")}</select>
+      <select id="fP"><option value="">ناجح وراسب · All</option><option ${F.status==="Pass"?"selected":""} value="Pass">ناجح · Pass</option><option ${F.status==="Fail"?"selected":""} value="Fail">راسب · Fail</option></select>
+      <input type="text" id="fQ" placeholder="🔍 بحث بالاسم · Search name" value="${esc(F.q)}" dir="ltr">
+    </div></div>
+  <div id="dBody"></div>`;
+  v.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>{TAB=b.dataset.t;renderDash();});
+  $("#dRef").onclick=()=>U.local?renderDash():loadDash();$("#dOut").onclick=()=>{sess.del("cred");location.href=testURL()+"?teacher"};
+  const fl=()=>{F.grade=$("#fG").value;F.section=$("#fS").value;F.status=$("#fP").value;F.q=$("#fQ").value;body();};
+  ["fG","fS","fP"].forEach(id=>$("#"+id).onchange=fl);$("#fQ").oninput=fl;
+  body();
+}
+function body(){
+  const b=$("#dBody"),L=filtered();
+  if(TAB==="overview")b.innerHTML=overview(L);
+  if(TAB==="results"){b.innerHTML=resultsTable(L);bindResults();}
+  if(TAB==="questions")b.innerHTML=questionsView(L);
+  if(TAB==="qr")b.innerHTML=`<div class="card">${qrHTML()}</div>`;
+  if(TAB==="support")supportView();
+  if(TAB==="teachers")teachersView();
+  if(TAB==="settings")settingsView();
+}
+const avg=a=>a.length?Math.round(a.reduce((s,x)=>s+x,0)/a.length):0;
+function overview(L){
+  if(!L.length)return '<div class="card center">لا توجد نتائج بعد. · No results yet.</div>';
+  const pass=L.filter(r=>r.status==="Pass").length, cls={};
+  L.forEach(r=>{(cls[r.cls]=cls[r.cls]||[]).push(r)});
+  const tp={};L.forEach(r=>Object.keys(r.topics||{}).forEach(t=>{tp[t]=tp[t]||{ok:0,all:0};tp[t].ok+=r.topics[t].ok;tp[t].all+=r.topics[t].all;}));
+  const bar=(p)=>{const c=p>=80?"#16a34a":p>=50?"#f59e0b":"#dc2626";return `<div class="meter"><i style="width:${p}%;background:${c}"></i></div>`};
+  return `<div class="kpis">
+   <div class="kpi" style="background:linear-gradient(135deg,#6d28d9,#2563eb)"><b>${L.length}</b>طالبًا أدّوا الاختبار<span class="en">students tested</span></div>
+   <div class="kpi" style="background:linear-gradient(135deg,#10b4a0,#16a34a)"><b>${avg(L.map(r=>r.percent))}%</b>متوسط الدرجات<span class="en">average score</span></div>
+   <div class="kpi" style="background:linear-gradient(135deg,#f59e0b,#ff6b4a)"><b>${Math.round(pass/L.length*100)}%</b>نسبة النجاح<span class="en">pass rate</span></div>
+   <div class="kpi" style="background:linear-gradient(135deg,#ec4899,#dc2626)"><b>${L.length-pass}</b>يحتاجون إلى دعم<span class="en">need support</span></div></div>
+  <div class="card"><h3>🏫 حسب الشعبة <span class="en">By class</span></h3><div class="tblwrap"><table class="br">
+   <tr><th>الشعبة · Class</th><th>العدد · No.</th><th>المتوسط · Avg</th><th>النجاح · Pass</th><th>ممتاز · Excellent</th><th>راسب · Fail</th><th>🚫</th><th style="width:25%"></th></tr>
+   ${Object.keys(cls).sort().map(k=>{const a=cls[k],p=avg(a.map(r=>r.percent));return `<tr><td><b>${k}</b></td><td>${a.length}</td><td>${p}%</td><td>${a.filter(r=>r.status==="Pass").length}</td><td>${a.filter(r=>r.percent>=90).length}</td><td class="${a.some(r=>r.status==="Fail")?"warnc":""}">${a.filter(r=>r.status==="Fail").length}</td><td class="${a.some(r=>r.violation)?"warnc":""}">${a.filter(r=>r.violation).length}</td><td>${bar(p)}</td></tr>`}).join("")}
+  </table></div></div>
+  <div class="card"><h3>🎯 إتقان الموضوعات <span class="en">Topic mastery</span></h3><table class="br">
+   ${Object.keys(TOPICS).filter(t=>tp[t]).map(t=>{const p=Math.round(tp[t].ok/tp[t].all*100);return `<tr><td>${TOPICS[t].ar}<span class="en">${TOPICS[t].en}</span></td><td style="width:70px">${p}%</td><td style="width:40%">${bar(p)}</td></tr>`}).join("")}
+  </table><p style="font-size:.85rem;color:var(--muted)">الموضوعات الأقل نسبة تحتاج إلى إعادة شرح في الحصة. <span class="en">Topics with the lowest % need re-teaching.</span></p></div>`;
+}
+function resultsTable(L){
+  if(!L.length)return '<div class="card center">لا توجد نتائج. · No results.</div>';
+  const seen={};DATA.forEach(r=>{const k=r.name.toLowerCase()+r.cls;seen[k]=(seen[k]||0)+1});
+  return `<div class="card"><div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:center">
+    <h3 style="margin:0">📋 النتائج (${L.length}) <span class="en">Results</span></h3>
+    <div><button class="btn sm green" id="xCsv">⬇ Excel (CSV)</button> <button class="btn sm sec" id="xPrint">🖨 طباعة القائمة · Print list</button></div></div>
+   <div class="tblwrap" id="resTbl"><table class="br">
+   <tr><th>#</th><th>الاسم · Name</th><th>الشعبة</th><th>الدرجة</th><th>%</th><th>النتيجة</th><th>📖</th><th>✍️</th><th>⏱ min</th><th>🚪</th><th>التاريخ</th><th class="noprint"></th></tr>
+   ${L.map((r,i)=>{const pc=r.percent>=CFG.passPercent?"#16a34a":"#dc2626",dup=seen[r.name.toLowerCase()+r.cls]>1;
+    return `<tr><td>${i+1}</td><td dir="ltr" style="text-align:left"><b>${esc(r.name)}</b>${dup?' <span class="pill" style="background:#f59e0b" title="أكثر من محاولة">🔁</span>':""}${r.violation?` <span class="pill" style="background:#dc2626">🚫 ${esc(r.violation)}</span>`:""}${r.trans>0?` <span class="pill" style="background:#7c3aed">🌐 ترجمة ×${r.trans}</span>`:""}</td><td>${r.cls}</td>
+    <td><b>${r.score}/${r.total}</b></td><td style="color:${pc};font-weight:800">${r.percent}%</td>
+    <td><span class="pill" style="background:${r.status==="Pass"?"#16a34a":"#dc2626"}">${r.status==="Pass"?"ناجح":"راسب"}</span><br><small>${esc(level(r.percent)[0])}</small></td>
+    <td style="white-space:nowrap">${esc(r.reading)}</td><td style="white-space:nowrap">${esc(r.writing)}</td><td>${r.minutes}${r.auto==="Yes"?" ⏰":""}</td><td class="${r.left>0?"warnc":""}">${r.left}</td><td><small>${esc(r.date)}</small></td>
+    <td class="noprint" style="white-space:nowrap"><button class="btn sm" data-d="${r.id}">التفاصيل</button> <button class="btn sm gold" data-c="${r.id}">🏅</button>${U.role==="supervisor"?` <button class="btn sm red" data-x="${r.id}">🗑</button>`:""}</td></tr>`}).join("")}
+   </table></div>
+   <p style="font-size:.8rem;color:var(--muted)">🚫 أُغلق الاختبار لمخالفة · closed for a violation &nbsp; 🌐 محاولات ترجمة · translation attempts &nbsp; 🔁 أكثر من محاولة · more than one attempt &nbsp; ⏰ سُلِّم تلقائيًّا · auto-submitted &nbsp; 🚪 مرات الخروج من الصفحة · times the student left the page</p></div>`;
+}
+const byId=id=>DATA.find(r=>r.id===id);
+function certData(r){const p=s=>String(s).split(/\D+/).filter(Boolean).map(Number);return {name:r.name,grade:r.grade,section:r.section,score:r.score,total:r.total,read:p(r.reading),write:p(r.writing),byT:r.topics||{},date:String(r.date).slice(0,10)};}
+function bindResults(){
+  const b=$("#dBody");
+  b.querySelectorAll("[data-d]").forEach(x=>x.onclick=()=>{const r=byId(x.dataset.d);
+    modal(`<h3 dir="ltr" style="text-align:left">${esc(r.name)} – ${r.cls}</h3>
+     <p><b>${r.score}/${r.total}</b> (${r.percent}%) · ${r.status} · ⏱ ${r.minutes} min · 🚪 ${r.left} · 🌐 ${r.trans||0} · ${esc(r.date)}</p>${r.violation?`<div class="closed">🚫 أُغلق الاختبار بسبب: ${esc(r.violation)}</div>`:""}
+     ${mistakesHTML(r.details||[],true)}<div class="center"><button class="btn sec" onclick="closeModal()">إغلاق · Close</button></div>`);});
+  b.querySelectorAll("[data-c]").forEach(x=>x.onclick=()=>{const r=byId(x.dataset.c);printHTML(certHTML(certData(r))+`<div class="card"><h3>الأخطاء · Mistakes</h3>${mistakesHTML(r.details||[],false)}</div>`);});
+  b.querySelectorAll("[data-x]").forEach(x=>x.onclick=()=>{const r=byId(x.dataset.x);
+    modal(`<div class="center"><p>حذف محاولة <b>${esc(r.name)}</b> (${r.score}/${r.total})؟ لا يمكن التراجع.<span class="en">Delete this attempt? This cannot be undone.</span></p>
+    <button class="btn red" id="mYes">حذف · Delete</button> <button class="btn sec" id="mNo">رجوع · Back</button></div>`);
+    $("#mNo").onclick=closeModal;$("#mYes").onclick=()=>api("delResult",Object.assign({id:r.id},CRED)).then(()=>{closeModal();loadDash();});});
+  $("#xCsv").onclick=()=>{
+    const L=filtered(),head=["Name","Class","Score","Total","Percent","Status","Level","Reading","Writing","Minutes","AutoSubmitted","LeftPage","Date","Violation","TranslationTries"].concat(Object.keys(TOPICS).map(t=>TOPICS[t].en));
+    const rows=L.map(r=>[r.name,r.cls,r.score,r.total,r.percent,r.status,level(r.percent)[1],r.reading,r.writing,r.minutes,r.auto,r.left,r.date,r.violation||"",r.trans||0]
+      .concat(Object.keys(TOPICS).map(t=>r.topics&&r.topics[t]?r.topics[t].ok+" of "+r.topics[t].all:"")));
+    const csv="﻿"+[head].concat(rows).map(a=>a.map(c=>'"'+String(c).replace(/"/g,'""')+'"').join(",")).join("\r\n");
+    const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv"}));a.download="Monthly-Test-Results.csv";document.body.appendChild(a);a.click();a.remove();};
+  $("#xPrint").onclick=()=>printHTML(`<h2 style="text-align:center">نتائج الاختبار الشهري · Monthly Test Results ${F.grade?"– Grade "+F.grade:""}${F.section?F.section:""}</h2>`+$("#resTbl").outerHTML);
+}
+function questionsView(L){
+  if(!F.grade)return '<div class="card center">👆 اختر صفًّا من القائمة لعرض تحليل الأسئلة. · Choose a grade to see the question analysis.</div>';
+  if(!L.length)return '<div class="card center">لا توجد نتائج. · No results.</div>';
+  const st={};L.forEach(r=>(r.details||[]).forEach(d=>{const k=d.q;st[k]=st[k]||{q:d.q,tp:d.tp,r:d.r,ok:0,all:0,wrong:{}};st[k].all++;if(d.ok)st[k].ok++;else st[k].wrong[d.y]=(st[k].wrong[d.y]||0)+1;}));
+  const arr=Object.values(st).sort((a,b)=>a.ok/a.all-b.ok/b.all);
+  return `<div class="card"><h3>❓ تحليل الأسئلة – الصف ${F.grade} <span class="en">Question analysis (hardest first)</span></h3>
+  ${arr.map(s=>{const p=Math.round(s.ok/s.all*100),c=p>=80?"#16a34a":p>=50?"#f59e0b":"#dc2626",top=Object.entries(s.wrong).sort((a,b)=>b[1]-a[1])[0];
+   return `<div class="mist" style="border-right-color:${c};background:#fff">
+    <div style="display:flex;justify-content:space-between;gap:8px"><span class="tag" style="background:${(TOPICS[s.tp]||{}).c}">${(TOPICS[s.tp]||{}).ar}</span><b style="color:${c}">${p}% صحيح · correct (${s.ok}/${s.all})</b></div>
+    <div class="a">${esc(s.q)}</div><div>✔ ${esc(s.r)}${top?` &nbsp; | &nbsp; أكثر خطأ شائع · most common wrong answer: <span class="yours a">${esc(top[0])}</span> (${top[1]})`:""}</div>
+    <div class="meter" style="margin-top:4px"><i style="width:${p}%;background:${c}"></i></div></div>`}).join("")}</div>`;
+}
+function supportView(){
+  const b=$("#dBody");
+  if(U.role!=="supervisor"){
+    b.innerHTML=`<div class="card"><h3>🆘 الدعم الفني <span class="en">Support</span></h3>
+     <p>إذا واجهتك أو واجهت طلابك مشكلة، اكتبها هنا وتصل إلى المشرف. <span class="en">Report any problem here; it goes to the supervisor.</span></p>
+     <textarea id="tMsg" rows="4"></textarea><p><button class="btn" id="tSend">إرسال · Send</button></p><div id="myT"></div></div>`;
+    $("#tSend").onclick=()=>{const m=$("#tMsg").value.trim();if(!m)return;api("support",{type:"teacher",name:U.name,message:m,device:navigator.userAgent}).then(()=>{$("#tMsg").value="";supportView();});};
+    api("mytickets",CRED).then(r=>{if(r.ok)$("#myT").innerHTML=r.tickets.reverse().map(t=>`<div class="mist ${t.status==="done"?"okk":""}"><small>${esc(t.date)}</small><div>${esc(t.message)}</div>${t.reply?`<div>💬 <b>رد المشرف · Reply:</b> ${esc(t.reply)}</div>`:""}<div>${t.status==="done"?"✅ تم الحل · Solved":"⏳ قيد المتابعة · Open"}</div></div>`).join("");});
+    return;
+  }
+  b.innerHTML='<div class="card center">⏳</div>';
+  api("tickets",CRED).then(r=>{
+    const T=r.tickets||[],open=T.filter(t=>t.status!=="done");
+    b.innerHTML=`<div class="card"><h3>🆘 بلاغات الدعم والأخطاء (${open.length} مفتوح · open) <span class="en">Support tickets & automatic error reports</span></h3>
+     ${T.length?T.map(t=>`<div class="mist ${t.status==="done"?"okk":""}">
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap"><b>${t.type==="auto-error"?"🤖 خطأ تلقائي · Auto error":t.type==="teacher"?"👩‍🏫 معلم · Teacher":"🎒 طالب · Student"} – ${esc(t.name)} ${esc(t.cls)}</b><small>${esc(t.date)}</small></div>
+      <div>${esc(t.message)}</div><small style="color:var(--muted);direction:ltr;display:block">${esc(t.device)}</small>
+      ${t.reply?`<div>💬 ${esc(t.reply)}</div>`:""}
+      ${t.status!=="done"?`<div style="display:flex;gap:6px;margin-top:6px"><input type="text" placeholder="الرد / ما تم إصلاحه · Reply / fix done" data-rp="${t.id}" style="padding:6px"><button class="btn sm green" data-done="${t.id}">✔ تم الحل · Solved</button></div>`:"<div>✅</div>"}
+     </div>`).join(""):"<p>لا توجد بلاغات 🎉 · No tickets</p>"}</div>`;
+    b.querySelectorAll("[data-done]").forEach(x=>x.onclick=()=>{const id=x.dataset.done,rp=b.querySelector(`[data-rp="${id}"]`).value;
+      api("ticket",Object.assign({id,status:"done",reply:rp},CRED)).then(supportView);});
+  }).catch(()=>b.innerHTML='<div class="card center">❌ تعذّر الاتصال · Cannot connect</div>');
+}
+function teachersView(){
+  const b=$("#dBody");b.innerHTML='<div class="card center">⏳</div>';
+  api("teachers",CRED).then(r=>{
+    b.innerHTML=`<div class="card"><h3>👩‍🏫 المعلمون وشُعبهم <span class="en">Teachers and their classes</span></h3>
+     <p style="font-size:.9rem">كل المعلمين يدخلون بكلمة المرور <b>12345</b>، ويختار المعلم اسمه فيرى شُعبه فقط. اكتب الشعب مفصولة بفواصل مثل <b dir="ltr">9A, 6B, 7C</b>، أو رقم الصف كاملًا مثل <b>7</b>، أو <b>ALL</b>.
+     <span class="en">All teachers use password 12345 and choose their name to see only their classes. Classes: 9A, 6B — or a whole grade (7) — or ALL.</span></p>
+     <div class="filters"><input type="text" id="tN" placeholder="الاسم · Name"><input type="text" id="tC" placeholder="9A, 6B" dir="ltr"><button class="btn sm" id="tAdd">➕ حفظ · Save</button></div>
+     <table class="br" style="margin-top:12px"><tr><th>الاسم · Name</th><th>الشعب · Classes</th><th></th></tr>
+     ${(r.teachers||[]).map(t=>`<tr><td>${esc(t.name)}</td><td dir="ltr">${esc(t.classes)}</td>
+      <td><button class="btn sm sec" data-en="${esc(t.name)}" data-ec="${esc(t.classes)}">✏️</button> <button class="btn sm red" data-del="${esc(t.name)}">🗑</button></td></tr>`).join("")}</table></div>`;
+    $("#tAdd").onclick=()=>{const n=$("#tN").value.trim(),c=$("#tC").value.trim();if(!n||!c)return;
+      api("saveTeacher",Object.assign({tname:n,tclasses:c},CRED)).then(teachersView);};
+    b.querySelectorAll("[data-en]").forEach(x=>x.onclick=()=>{$("#tN").value=x.dataset.en;$("#tC").value=x.dataset.ec;});
+    b.querySelectorAll("[data-del]").forEach(x=>x.onclick=()=>api("delTeacher",Object.assign({tname:x.dataset.del},CRED)).then(teachersView));
+  }).catch(()=>b.innerHTML='<div class="card center">❌ غير متصل · Not connected</div>');
+}
+function connectCard(){
+  return `<div class="card"><h3>🔗 الربط مع Google Sheet <span class="en">Connect Google Sheet</span></h3>
+   <p>الحالة · Status: <b id="cState">${SERVER()?"⏳":"🔴 غير مربوط · Not connected"}</b></p>
+   ${CFG.scriptURL?'<p style="font-size:.9rem">الرابط مثبّت داخل الملف. · The address is built into the file.</p>':`
+   <label>رابط Web app (ينتهي بـ /exec) · Web-app URL</label>
+   <input type="text" id="cURL" dir="ltr" placeholder="https://script.google.com/macros/s/…/exec" value="${esc(SERVER())}">
+   <p><button class="btn green" id="cSave">🔗 ربط واختبار · Connect & test</button> ${SERVER()?'<button class="btn sm red" id="cDel">فصل · Disconnect</button>':""}</p>`}
+   <div id="cSheet"></div>
+   <details style="margin-top:8px"><summary style="cursor:pointer;font-weight:800">📘 خطوات الحصول على الرابط (مرة واحدة) · How to get the URL</summary>
+    <ol style="line-height:2">
+     <li>أنشئ Google Sheet جديدًا ← <b dir="ltr">Extensions → Apps Script</b>.</li>
+     <li>احذف الكود الموجود والصق كود ملف <b dir="ltr">monthly-test-server.gs</b> ← <b>Save</b>.</li>
+     <li><b dir="ltr">Deploy → New deployment → Web app</b>: Execute as <b>Me</b>، Who has access <b>Anyone</b> ← <b>Deploy</b> ← وافق على الصلاحيات.</li>
+     <li>انسخ الرابط الذي ينتهي بـ <b dir="ltr">/exec</b> والصقه هنا ثم اضغط «ربط واختبار».</li>
+     <li>بعد الربط استعمل <b>رابط الطلاب</b> و<b>رابط المعلمين</b> من هذه الصفحة (أو رمز QR)؛ فهما يحملان الربط تلقائيًّا.</li>
+    </ol></details></div>`;
+}
+function bindConnect(){
+  const st=$("#cState");
+  const test=()=>api("status",{}).then(r=>{if(!r.ok)throw 0;st.innerHTML="🟢 مربوط ويعمل · Connected";
+     if(U&&!U.local&&U.sheetUrl)$("#cSheet").innerHTML=`<p><a class="btn sm" href="${esc(U.sheetUrl)}" target="_blank" rel="noopener">📄 فتح Google Sheet · Open the Sheet</a></p>`;
+     $("#cSheet").innerHTML+=`<p><b>رابط الطلاب · Student link:</b></p><div class="linkbox">${esc(studentLink())}</div><p><button class="btn sm" onclick="copyTxt(studentLink(),this)">📋 نسخ · Copy</button></p>
+       <p><b>رابط المعلمين · Teacher link:</b></p><div class="linkbox">${esc(teacherLink())}</div><p><button class="btn sm" onclick="copyTxt(teacherLink(),this)">📋 نسخ · Copy</button></p>`;
+     return true;})
+    .catch(()=>{st.innerHTML='🔴 تعذّر الاتصال. تأكد أن الرابط ينتهي بـ /exec وأن الوصول Anyone. · Connection failed';return false});
+  if(SERVER())test();
+  if($("#cSave"))$("#cSave").onclick=()=>{
+    const u=$("#cURL").value.trim();
+    if(!/^https:\/\/script\.google(usercontent)?\.com\/.+\/exec/.test(u)){st.innerHTML="🔴 الرابط غير صحيح، يجب أن يبدأ بـ https://script.google.com وينتهي بـ /exec";return}
+    store.set("arTest_server",u);st.innerHTML="⏳";
+    test().then(ok=>{if(ok){CRED={role:"supervisor",name:"",password:PASSWORD};sess.set("cred",CRED);setTimeout(loadDash,900);}});
+  };
+  if($("#cDel"))$("#cDel").onclick=()=>{store.del("arTest_server");sess.del("cred");location.href=testURL()+"?teacher"};
+}
+function settingsView(){
+  const b=$("#dBody");
+  b.innerHTML=connectCard()+'<div id="sBody"></div>';bindConnect();
+  if(!SERVER()||U.local)return;
+  $("#sBody").innerHTML='<div class="card center">⏳</div>';
+  api("status",{}).then(r=>{
+    $("#sBody").innerHTML=`<div class="card"><h3>⚙️ فتح الاختبار وإغلاقه <span class="en">Open / close the test</span></h3>
+     <p>حالة الاختبار الآن: <b style="color:${r.open?"var(--g)":"var(--r)"}">${r.open?"🟢 مفتوح · Open":"🔴 مغلق · Closed"}</b></p>
+     <label>رسالة تظهر للطلاب عند إغلاق الاختبار · Message shown when closed</label><input type="text" id="sNote" value="${esc(r.note)}" placeholder="مثال: يبدأ الاختبار يوم الأحد الساعة 9">
+     <p><button class="btn green" id="sOpen">🟢 فتح الاختبار · Open</button> <button class="btn red" id="sClose">🔴 إغلاق الاختبار · Close</button></p>
+     <p style="font-size:.9rem">🔐 كلمة المرور للمعلمين والمشرف ووضع العرض: <b>12345</b>.<br>📄 كل البيانات محفوظة في Google Sheet (Results · Support · Teachers). · All data lives in your Google Sheet.</p></div>`;
+    const set=o=>api("setStatus",Object.assign({open:o,note:$("#sNote").value},CRED)).then(settingsView);
+    $("#sOpen").onclick=()=>set(true);$("#sClose").onclick=()=>set(false);
+  }).catch(()=>$("#sBody").innerHTML='');
+}
+
+
+/* ============================================================= PRESENT MODE (smart board, paper answers) */
+const PRESENT_PASSWORD=PASSWORD;
+let P=null,pTick=null;
+function seeded(seed){return()=>{seed|=0;seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function seededShuffle(a,rnd){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(rnd()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+/* fixed order for the whole class, so the paper answer key always matches */
+function presentSet(g){
+  const rnd=seeded(+g*7919+2026),qs=BANK[g].qs,normal=qs.filter(q=>!q.p),reading=qs.filter(q=>q.p);
+  return seededShuffle(normal,rnd).concat(reading).map(q=>({q,opt:q.t==="m"?seededShuffle(q.opts.map((_,k)=>k),rnd):q.t==="o"?seededShuffle(q.words.map((_,k)=>k),rnd):null}));
+}
+function keyOf(it){const q=it.q;
+  if(q.t==="m"){const pos=it.opt.indexOf(q.a);return LETTERS[pos]+" ("+q.opts[q.a]+")"}
+  if(q.t==="w")return q.acc[0];
+  return q.ex.replace(/^.*?:\s*/,"");}
+function openPresentLogin(){
+  modal(`<div class="center"><h3>🖥 وضع العرض على السبورة الذكية <span class="en">Smart-board present mode</span></h3>
+   <p style="margin:0">للطلاب الذين ليس معهم جهاز: يظهر كل سؤال بخط كبير، ويكتب الطالب إجابته على الورق.<span class="en">For students without a device: each question appears in large font and students answer on paper.</span></p>
+   <label>كلمة المرور · Password</label><input type="password" id="pwP" style="text-align:center">
+   <label>الصف · Grade</label>
+   <div class="grades" id="pG">${[5,6,7,8,9].map(g=>`<button type="button" data-g="${g}">${g}<small>${GRADE_AR[g]}</small></button>`).join("")}</div>
+   <p class="err" id="pErr"></p>
+   <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+    <button class="btn green" id="pGo">▶ ابدأ العرض · Start</button>
+    <button class="btn sec" id="pSheet">🖨 ورقة الإجابة للطلاب · Answer sheet</button>
+    <button class="btn sec" id="pKey">🔑 مفتاح الإجابة · Answer key</button>
+    <button class="btn sec" onclick="closeModal()">إغلاق · Close</button></div></div>`);
+  let g="";
+  document.querySelectorAll("#pG button").forEach(b=>b.onclick=()=>{document.querySelectorAll("#pG button").forEach(x=>x.classList.remove("on"));b.classList.add("on");g=b.dataset.g;});
+  const ok=()=>{if($("#pwP").value!==PRESENT_PASSWORD){$("#pErr").textContent="❌ كلمة المرور غير صحيحة · Wrong password";return false}
+    if(!g){$("#pErr").textContent="✋ اختر الصف · Choose the grade";return false}return true};
+  $("#pGo").onclick=()=>{if(ok()){closeModal();startPresent(g)}};
+  $("#pSheet").onclick=()=>{if(ok())printHTML(answerSheet(g))};
+  $("#pKey").onclick=()=>{if(ok())printHTML(answerKey(g))};
+}
+function answerSheet(g){
+  const set=presentSet(g),rows=[];
+  for(let i=0;i<set.length;i+=1){const t=set[i].q.t;rows.push(`<tr><td style="width:50px;text-align:center"><b>${i+1}</b></td><td>${t==="m"?"أ &nbsp;&nbsp; ب &nbsp;&nbsp; ج &nbsp;&nbsp; د":""}</td></tr>`)}
+  return `<div class="sheet" style="font-family:Cairo"><h2 style="text-align:center;margin:0">${CFG.testName} – الصف ${GRADE_AR[g]}</h2>
+  <p style="text-align:center;margin:0">ورقة الإجابة · Answer sheet – Grade ${g}</p>
+  <p>الاسم · Name: ........................................ &nbsp; الشعبة · Section: ......... &nbsp; الدرجة · Score: ....... / ${set.length}</p>
+  <p style="font-size:.9rem">ضع دائرة حول حرف الإجابة الصحيحة، أو اكتب الإجابة. · Circle the correct letter, or write the answer.</p>
+  <table>${rows.join("")}</table></div>`;
+}
+function answerKey(g){
+  const set=presentSet(g);
+  return `<div class="sheet" style="font-family:Cairo"><h2 style="text-align:center;margin:0">🔑 مفتاح الإجابة – الصف ${GRADE_AR[g]}</h2><p style="text-align:center">Answer key – Grade ${g} (للمعلم فقط · teacher only)</p>
+  <table><tr><th>#</th><th>الموضوع</th><th>الإجابة الصحيحة · Correct answer</th></tr>
+  ${set.map((it,i)=>`<tr><td style="text-align:center"><b>${i+1}</b></td><td>${TOPICS[it.q.tp].ar}</td><td style="font-family:Amiri;font-size:1.3rem">${esc(keyOf(it))}</td></tr>`).join("")}</table>
+  <p style="font-size:.9rem">إجابات الكتابة المقبولة الأخرى موجودة في الشرح. التشكيل غير مطلوب. · Spelling must be correct; diacritics are not required.</p></div>`;
+}
+function startPresent(g){
+  const set=presentSet(g),total=CFG.minutes*60000;
+  P={g,set,cur:0,used:0,qUsed:0,last:Date.now(),paused:false,slot:total/set.length,ended:false};
+  $("#vPresent").classList.remove("hide");document.body.style.overflow="hidden";
+  try{document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen()}catch(e){}
+  renderP();clearInterval(pTick);pTick=setInterval(stepP,250);
+}
+function stepP(){
+  if(!P||P.paused||P.ended)return;
+  const now=Date.now(),d=now-P.last;P.last=now;P.used+=d;P.qUsed+=d;
+  const total=CFG.minutes*60000;
+  if(P.used>=total){P.ended=true;renderEnd();return}
+  if(P.qUsed>=P.slot){if(P.cur<P.set.length-1){P.cur++;P.qUsed=0;renderP();}else{P.qUsed=P.slot;}}
+  updP();
+}
+function fmt(ms){ms=Math.max(0,ms);const m=Math.floor(ms/60000),s=Math.floor(ms%60000/1000);return String(m).padStart(2,"0")+":"+String(s).padStart(2,"0")}
+function updP(){
+  const tl=CFG.minutes*60000-P.used,el=$("#pTime");if(!el)return;
+  el.textContent="⏱ "+fmt(tl);el.classList.toggle("warn",tl<120000);
+  $("#pQBar").style.width=Math.min(100,P.qUsed/P.slot*100)+"%";
+  $("#pQLeft").textContent=P.cur<P.set.length-1?"السؤال التالي بعد · next in "+Math.ceil(Math.max(0,P.slot-P.qUsed)/1000)+"s":"آخر سؤال · last question";
+}
+function renderP(){
+  const it=P.set[P.cur],q=it.q,tp=TOPICS[q.tp];
+  let h=`<div class="ptop"><span class="pnum">${P.cur+1} / ${P.set.length}</span><span class="ptime" id="pTime"></span>
+   <div style="flex:1;min-width:200px"><div class="pbar"><i id="pQBar"></i></div><small id="pQLeft" style="font-weight:700"></small></div>
+   <span class="tag" style="background:${tp.c};font-size:1.1rem">${tp.ar}</span></div>`;
+  if(q.p)h+=`<div class="ppass">${BANK[P.g].passage}</div>`;
+  if(q.img)h+=picHTML(q.img);
+  h+=`<div class="pq">${q.q}</div>`;
+  if(q.t==="m")h+=`<div class="popts">${it.opt.map((k,i)=>`<div class="popt"><span class="l" style="background:${LCOL[i]}">${LETTERS[i]}</span>${q.opts[k]}</div>`).join("")}</div>`;
+  else if(q.t==="w")h+=`<div class="pwrite">✍️ اكتب الإجابة في ورقتك أمام رقم ${P.cur+1}</div>`;
+  else h+=`<div class="ptiles">${it.opt.map(k=>`<span>${q.words[k]}</span>`).join("")}</div><div class="pwrite">🧩 رتّب الكلمات واكتب الجملة في ورقتك</div>`;
+  h+=`<div class="pctl"><button id="pPrev">→ السابق</button><button id="pPause">${P.paused?"▶ متابعة":"⏸ إيقاف مؤقت"}</button><button id="pNext">التالي ←</button>
+   <button id="pFull">⛶</button><button id="pExit" style="background:#fecaca">✖ خروج</button></div>`;
+  $("#vPresent").innerHTML=h;$("#vPresent").scrollTop=0;
+  $("#pPrev").onclick=()=>{if(P.cur>0){P.cur--;P.qUsed=0;renderP()}};
+  $("#pNext").onclick=()=>{if(P.cur<P.set.length-1){P.cur++;P.qUsed=0;renderP()}};
+  $("#pPause").onclick=()=>{P.paused=!P.paused;P.last=Date.now();renderP()};
+  $("#pFull").onclick=()=>{try{document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}catch(e){}};
+  $("#pExit").onclick=exitPresent;
+  updP();
+}
+function renderEnd(){
+  clearInterval(pTick);
+  $("#vPresent").innerHTML=`<div class="center" style="margin-top:8vh"><div style="font-size:6rem">⏰</div>
+   <h1 style="font-size:4rem;margin:0">انتهى الوقت!</h1><p style="font-size:2rem;margin:0;color:#c7d2fe">Time is up! Put your pens down.</p>
+   <p style="font-size:1.8rem">سلّموا أوراق الإجابة للمعلم · Hand in your answer sheets</p>
+   <div class="pctl" style="position:static;transform:none;display:inline-flex;margin-top:20px">
+    <button id="pShowKey">🔑 عرض الإجابات · Show answers</button><button id="pPrintKey">🖨 طباعة المفتاح · Print key</button><button id="pExit2" style="background:#fecaca">✖ خروج · Exit</button></div></div>`;
+  $("#pShowKey").onclick=()=>{$("#vPresent").innerHTML=`<h1 class="center" style="margin:0">🔑 الإجابات الصحيحة – الصف ${GRADE_AR[P.g]} · Answers</h1>
+    <div class="keygrid">${P.set.map((it,i)=>`<div><b>${i+1}</b><br>${esc(keyOf(it))}</div>`).join("")}</div>
+    <div class="center" style="margin:20px"><button class="btn" id="pExit3">✖ خروج · Exit</button></div>`;$("#pExit3").onclick=exitPresent;};
+  $("#pPrintKey").onclick=()=>printHTML(answerKey(P.g));
+  $("#pExit2").onclick=exitPresent;
+}
+function exitPresent(){
+  modal(`<div class="center"><p>هل تريد الخروج من العرض؟ · Exit present mode?</p><button class="btn red" id="mYes">خروج · Exit</button> <button class="btn sec" id="mNo">رجوع · Back</button></div>`);
+  $("#mNo").onclick=closeModal;
+  $("#mYes").onclick=()=>{closeModal();clearInterval(pTick);P=null;$("#vPresent").classList.add("hide");document.body.style.overflow="";try{document.fullscreenElement&&document.exitFullscreen()}catch(e){}};
+}
+$("#btnPresent").onclick=openPresentLogin;
+document.addEventListener("keydown",e=>{if(!P||P.ended)return;if(e.key==="ArrowLeft")$("#pNext").click();if(e.key==="ArrowRight")$("#pPrev").click();if(e.key===" "){e.preventDefault();$("#pPause").click();}});
+
+/* ============================================================= BOOT */
+(function(){
+  const p=new URLSearchParams(location.search);
+  if(p.get("s")&&/^https:\/\/script\.google/.test(p.get("s")))store.set("arTest_server",p.get("s"));
+  if(p.has("teacher")){teacherLogin();return}
+  if(p.get("grade")&&BANK[p.get("grade")]){const b=document.querySelector(`#inGrade [data-g="${p.get("grade")}"]`);if(b)b.click();}
+  flush();
+  const old=store.get(KEY);
+  if(old&&old.order){S=old;if(S.done){showResult();return}if(left()<=0){finish(true);return}
+    const wasAway=!!S.awayAt;runExam();if(wasAway){S.awayAt=Date.now()-5000;setTimeout(leaveEnd,300);}return}
+  if(SERVER())api("status",{}).then(r=>{if(r.ok&&!r.open){$("#closedBox").innerHTML="🔒 الاختبار مغلق الآن. · The test is closed now."+(r.note?"<br>"+esc(r.note):"");
+    $("#closedBox").classList.remove("hide");$("#btnStart").disabled=true;}}).catch(()=>{});
+})();
+</script>
+</body>
+</html>
