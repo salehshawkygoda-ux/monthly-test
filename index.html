@@ -3094,9 +3094,9 @@ function downloadHTML(html,file){
 
 /* ============================================================= STUDENT: RESULT */
 function updSent(){const el=$("#sentBox");if(!el)return;
-  if(!SERVER()){el.innerHTML="";return}
+  if(!SERVER()){el.innerHTML='<span class="sent" style="background:#fee2e2;color:#991b1b">⚠️ الاختبار غير مربوط بالمعلم: أرِ المعلم هذه الشاشة · Not connected — show this screen to your teacher</span>';return}
   const pending=(store.get(QKEY)||[]).some(x=>x.action==="submit"&&S&&x.id===S.id);
-  el.innerHTML=pending?'<span class="sent" style="background:#fef3c7;color:#92400e">⏳ جارٍ إرسال النتيجة للمعلم… لا تغلق الصفحة · Sending your result to the teacher…</span>'
+  el.innerHTML=pending?'<span class="sent" style="background:#fef3c7;color:#92400e">⏳ جارٍ إرسال النتيجة للمعلم… لا تغلق الصفحة · Sending your result to the teacher…</span> <button class="btn sm" onclick="flush()">🔄 أعد الإرسال · Send again</button>'
                       :'<span class="sent" style="background:#dcfce7;color:#166534">✔ وصلت نتيجتك إلى المعلم · Your result reached the teacher</span>';}
 function showResult(){
   $("#vStart").classList.add("hide");$("#vExam").classList.add("hide");
